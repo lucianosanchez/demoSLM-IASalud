@@ -10,7 +10,7 @@ modelos sobre el mismo informe, con los mismos prompts.
 | 1 Anonimización | identificadores detectados (de 46) | 30/46 | 33/46 | 46/46 | 46/46 |
 | 2 Extracción estructurada | campos correctos (de 14) | 13/14 | 14/14 | 14/14 | 14/14 |
 | 3 Reescritura para el paciente | mensajes críticos (de 13) | 11/13 | 12/13 | 13/13 | 13/13 |
-| 4 Codificación CIE-10-ES | códigos exactos (de 16) | 1/16 | 2/16 | 5/16 | 16/16 |
+| 4 Codificación CIE-10-ES | códigos exactos (de 16) | 1/16 | 2/16 | 5/16 | 15/16 |
 | 5 Revisión de coherencia | incoherencias detectadas (de 3) | 1/3 | 2/3 | 3/3 | 3/3 |
 | | **tok/s medios** | 80 | 60 | 22 | — |
 

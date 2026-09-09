@@ -14,14 +14,15 @@
   "params": {
     "temperature": "0",
     "top_p": "1",
-    "max_tokens": "—",
-    "context_length": "—",
-    "structured_output": "prompts/schemas/…"
+    "repeat_penalty": "1.0",
+    "max_tokens": "32768",
+    "context_length": "65536",
+    "structured_output": "prompts/schemas/05-razonamiento.schema.json"
   },
-  "maquina": "referencia en la nube",
-  "servidor": "API de Anthropic",
+  "maquina": "referencia de frontera",
+  "servidor": "sesión aislada",
   "contexto": null,
   "sin_razonar": false,
-  "_nota": "REFERENCIA NO CIEGA. Estas salidas las produjo Claude Opus 5 dentro de la sesión de trabajo en la que se revisaron los patrones de oro de evaluacion/, así que el modelo los había visto. Marcan el techo de lo que la tarea admite, NO son una medición comparable con las de los modelos locales, que se ejecutaron a ciegas. Para una referencia válida hay que repetirla contra la API en una sesión limpia: protocolo en docs/REFERENCIA-NUBE.md. Tampoco son comparables en tok/s: se ejecutó en la nube, no en el banco local.",
-  "momento": "2026-09-09T23:32:05"
+  "_nota": "Referencia ejecutada A CIEGAS: la sesión sólo tuvo delante el informe y el prompt de la tarea, sin los patrones de evaluacion/ ni los resultados de los demás modelos. No es comparable en tok/s —se ejecutó fuera del banco local— pero sí en calidad. Ver docs/REFERENCIA-NUBE.md.",
+  "momento": "2026-09-10T00:22:03"
 }

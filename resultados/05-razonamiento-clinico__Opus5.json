@@ -1,28 +1,44 @@
 {
   "incoherencias": [
     {
-      "elemento": "Amoxicilina-clavulánico 875/125 mg cada 8 horas durante 5 días",
+      "elemento": "Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días",
       "tipo": "contraindicacion_por_alergia",
       "gravedad": "grave",
-      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras",
+      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras amoxicilina en 2019, confirmada por el Servicio de Alergología del HUCA).",
       "conocimiento_aplicado": "ninguno",
-      "correccion_propuesta": "Retirar la amoxicilina-clavulánico: es un betalactámico y el paciente tiene alergia documentada a ese grupo. Además, el urocultivo la informa resistente y el paciente ya ha completado 7 días de meropenem, por lo que no precisa antibiótico al alta."
+      "correccion_propuesta": "Retirar la amoxicilina-clavulánico del tratamiento al alta y hacer constar la alergia a betalactámicos en la hoja de tratamiento. No pautar ningún betalactámico oral en este paciente."
     },
     {
-      "elemento": "Metformina 850 mg cada 12 horas",
+      "elemento": "Amoxicilina-clavulánico 875/125 mg para la infección urinaria por E. coli BLEE",
+      "tipo": "farmaco_ineficaz_segun_antibiograma",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "Urocultivo (14/02/2025): Escherichia coli productora de betalactamasas de espectro extendido (BLEE), más de 100.000 UFC/mL. Sensible a fosfomicina, nitrofurantoína, amikacina y meropenem. Resistente a amoxicilina-clavulánico, ciprofloxacino y cotrimoxazol.",
+      "conocimiento_aplicado": "ninguno",
+      "correccion_propuesta": "Suspender la amoxicilina-clavulánico por resistencia documentada del microorganismo aislado; si se considerase necesario prolongar el tratamiento, emplear un fármaco al que el aislamiento sea sensible."
+    },
+    {
+      "elemento": "Prescripción de antibiótico al alta (amoxicilina-clavulánico 5 días) tras tratamiento dirigido ya completado",
+      "tipo": "farmaco_innecesario",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "se inicia antibioterapia empírica con meropenem 500 mg cada 8 horas ajustado a función renal, que se mantiene durante 7 días tras confirmarse Escherichia coli BLEE en el urocultivo. Queda afebril a las 48 horas del inicio del tratamiento, con normalización progresiva de reactantes de fase aguda (PCR 18 mg/L al alta).",
+      "conocimiento_aplicado": "Una infección urinaria con tratamiento dirigido completo, desaparición de la fiebre y descenso de los reactantes de fase aguda no precisa continuar antibiótico al alta.",
+      "correccion_propuesta": "No pautar antibiótico al alta: el ciclo dirigido está completado y la infección resuelta clínica y analíticamente. Vigilancia de síntomas miccionales y nueva valoración si reaparecen."
+    },
+    {
+      "elemento": "Metformina 850 mg, 1 comprimido cada 12 horas",
       "tipo": "contraindicacion_por_funcion_renal",
       "gravedad": "grave",
-      "evidencia_en_el_informe": "Durante el ingreso se suspende la metformina por el deterioro de la función",
-      "conocimiento_aplicado": "La metformina está contraindicada con filtrado glomerular por debajo de 30 mL/min por riesgo de acidosis láctica.",
-      "correccion_propuesta": "No reanudar la metformina al alta: el FGe al alta es de 22 mL/min/1,73 m² y el propio informe documenta su suspensión durante el ingreso por deterioro renal."
+      "evidencia_en_el_informe": "Durante el ingreso se suspende la metformina por el deterioro de la función renal y se pauta insulina rápida según pauta correctora, con glucemias entre 140 y 210 mg/dL. / Creatinina al alta 1,9 mg/dL, FGe 22 mL/min/1,73 m².",
+      "conocimiento_aplicado": "La metformina está contraindicada con filtrado glomerular estimado por debajo de 30 mL/min/1,73 m² por riesgo de acidosis láctica.",
+      "correccion_propuesta": "Mantener suspendida la metformina. Controlar la diabetes con insulina, ajustando la basal y añadiendo pauta de insulina rápida si es preciso, con revisión de glucemias en el seguimiento."
     },
     {
-      "elemento": "Apixabán 5 mg cada 12 horas",
+      "elemento": "Apixabán 5 mg, 1 comprimido cada 12 horas",
       "tipo": "dosis_incorrecta",
-      "gravedad": "moderada",
-      "evidencia_en_el_informe": "Peso 58 kg. Talla 170 cm.",
-      "conocimiento_aplicado": "El apixabán se reduce a 2,5 mg cada 12 horas si se cumplen dos de estos tres criterios: edad igual o mayor de 80 años, peso igual o menor de 60 kg, creatinina igual o mayor de 1,5 mg/dL.",
-      "correccion_propuesta": "Reducir el apixabán a 2,5 mg cada 12 horas: el paciente cumple dos de los tres criterios, peso 58 kg y creatinina 1,9 mg/dL."
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "Peso 58 kg. Talla 170 cm. IMC 20,1 kg/m². / Creatinina al alta 1,9 mg/dL, FGe 22 mL/min/1,73 m².",
+      "conocimiento_aplicado": "La dosis de apixabán debe reducirse a 2,5 mg cada 12 horas cuando se cumplen al menos dos de estos criterios: edad igual o superior a 80 años, peso igual o inferior a 60 kg o creatinina igual o superior a 1,5 mg/dL; aquí se cumplen el peso y la creatinina.",
+      "correccion_propuesta": "Reducir apixabán a 2,5 mg cada 12 horas y reevaluar la dosis en la analítica de control de función renal prevista en 7-10 días."
     }
   ],
   "sin_incoherencias_adicionales": true

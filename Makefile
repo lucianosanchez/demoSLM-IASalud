@@ -45,7 +45,7 @@ OPCIONES = --context-length $(CONTEXTO) \
            $(if $(MAX_TOKENS),--max-tokens $(MAX_TOKENS)) \
            $(if $(SIN_RAZONAR),--sin-razonar)
 
-.PHONY: ayuda todo comprobar demo demo-3b demo-8b demo-27b evaluar trazador tabla extractos hardware presentacion publicar limpiar limpiar-resultados
+.PHONY: ayuda todo referencia-recoger comprobar demo demo-3b demo-8b demo-27b evaluar trazador tabla extractos hardware referencia presentacion publicar limpiar limpiar-resultados
 
 # Nunca en paralelo: dos modelos generando a la vez se reparten el ancho de
 # banda de la memoria y los tok/s medidos dejan de significar nada.
@@ -63,6 +63,7 @@ ayuda:
 	@echo "make extractos     - recorta de resultados/ el texto que se proyecta en las diapositivas"
 	@echo "make hardware      - imprime la tabla de niveles de hardware"
 	@echo "make presentacion  - compila el PDF de la charla"
+	@echo "make referencia    - prepara la referencia de frontera, para ejecutarla a ciegas"
 	@echo "make publicar      - prepara publicar/ para subir a GitHub (sin las notas del ponente)"
 	@echo "make limpiar       - borra los auxiliares de LaTeX y los __pycache__"
 	@echo "make limpiar-resultados - vacía resultados/ (¡se pierden las medidas!)"
@@ -120,6 +121,12 @@ hardware:
 
 presentacion: extractos
 	$(MAKE) -C presentacion
+
+referencia:
+	python3 scripts/referencia.py
+
+referencia-recoger:
+	python3 scripts/referencia.py --recoger
 
 limpiar:
 	$(MAKE) -C presentacion limpiar

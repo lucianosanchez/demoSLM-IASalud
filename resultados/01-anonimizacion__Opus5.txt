@@ -2,7 +2,7 @@ INFORME DE ALTA HOSPITALARIA
 
 [CENTRO]
 Servicio de Medicina Interna — Planta 5.ª, Unidad C
-[DIRECCION]
+[DIRECCION], [LOCALIDAD] ([PROVINCIA])
 
 ===============================================================================
 DATOS DEL PACIENTE
@@ -13,16 +13,16 @@ DNI: [DNI]
 NASS: [NASS]
 Fecha de nacimiento: [FECHA_NACIMIENTO]
 Sexo: Varón
-Domicilio: [DIRECCION]
+Domicilio: [DIRECCION], [LOCALIDAD] ([PROVINCIA])
 Teléfono: [TELEFONO] / [TELEFONO]
-Centro de salud: [CENTRO]. Médico de familia: [NOMBRE_PROFESIONAL_1].
+Centro de salud: [CENTRO] ([LOCALIDAD]). Médico de familia: Dr. [NOMBRE_PROFESIONAL_1].
 Persona de contacto: [NOMBRE_FAMILIAR_1] (hija), teléfono [TELEFONO]
 
 Fecha de ingreso: [FECHA]
 Fecha de alta: [FECHA]
 Servicio: Medicina Interna
-Médico responsable: [NOMBRE_PROFESIONAL_2] (n.º colegiado [N_COLEGIADO])
-Médico adjunto: [NOMBRE_PROFESIONAL_3]
+Médico responsable: Dra. [NOMBRE_PROFESIONAL_2] (n.º colegiado [N_COLEGIADO])
+Médico adjunto: Dr. [NOMBRE_PROFESIONAL_3]
 
 ===============================================================================
 MOTIVO DE INGRESO
@@ -200,5 +200,5 @@ CITAS
 - Consultas Externas de Nefrología, [CENTRO]: [FECHA] a las [HORA]
 
 Firmado electrónicamente:
-[NOMBRE_PROFESIONAL_2]. Servicio de Medicina Interna.
+Dra. [NOMBRE_PROFESIONAL_2]. Servicio de Medicina Interna.
 [LOCALIDAD], [FECHA].
