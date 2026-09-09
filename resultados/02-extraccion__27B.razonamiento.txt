@@ -1,0 +1,424 @@
+We need answer user's request in Spanish likely. Need produce JSON only. Need extract info from discharge report according to schema. Need be careful.
+
+We need parse document.
+
+Patient:
+Fecha nacimiento 14/03/1957. Fecha ingreso 12/02/2025. Edad cumplida en fecha ingreso: from 1957-03-14 to 2025-02-12. Birthday not yet reached in 2025 (March 14), so age 67 (2025-1957=68, minus 1 =67). Sexo Varón -> "hombre". Peso 58 kg, Talla 170 cm.
+
+Alergias: alergia documentada a betalactámicos (exantema generalizado tras amoxicilina en 2019, confirmada...). So agente "betalactámicos" maybe "betalactámicos". manifestacion "exantema generalizado tras amoxicilina" or "exantema generalizado". documentada true.
+
+Hábito tabáquico: exfumador desde 2018, dosis acumulada 45 paquetes-año. estado "exfumador", paquetes_ano 45.
+
+Antecedentes: list from ANTECEDENTES PERSONALES. Need include all? likely yes. Need activo boolean false if remission/resolved/inactive. Let's list:
+- Alergias? Usually not antecedente? Could include? Schema antecedentes likely medical history. Alergias separate. We can include medical conditions, not allergies? The section includes ALERGIAS, Hábitos, EPOC, IC, FA, DM, ERC, HTA, Crohn, hernia. We should extract antecedentes maybe all personal antecedents except allergies and habits? The schema has separate allergies and smoking, so antecedentes should include diseases. Could include "Intervenido de hernia inguinal derecha en 2011" as antecedente? It's a surgical history. activo? false? It says intervenido, not active. Rule 6: activo false when document describes antecedente as en remisión, resuelto, curado o intervenido. So hernia intervenido -> activo false. But is it an antecedente? yes.
+- EPOC: active? It's chronic, not in remission. activo true.
+- Insuficiencia cardíaca crónica ... active true.
+- Fibrilación auricular permanente active true.
+- Diabetes mellitus tipo 2 ... active true.
+- Enfermedad renal crónica estadio 4 active true.
+- Hipertensión arterial esencial active true.
+- Enfermedad de Crohn ... en remisión clínica sin tratamiento desde 2016 -> activo false.
+- Intervenido de hernia inguinal derecha en 2011 -> activo false.
+Maybe include "Exfumador de 45 paquetes-año"? Already habit. Not in antecedentes.
+Maybe include "Índice de Charlson"? no.
+Need descriptions concise but explicit.
+
+Medicación previa: section TRATAMIENTO HABITUAL PREVIO AL INGRESO.
+- Metformina 850 mg, 1 comprimido cada 12 horas, vía oral. principio_activo "metformina", dosis 850, unidad mg, via oral, frecuencia "cada 12 horas", duracion null.
+- Insulina glargina 100 U/mL, 22 unidades subcutáneas a las 22:00 h. Need represent. principio_activo "insulina glargina". dosis? 22? unidad "unidades"? But concentration 100 U/mL. Schema unit options include "UI", "unidades", "mL". It says 22 unidades subcutáneas. Use dosis 22, unidad "unidades", via subcutánea, frecuencia? "a las 22:00 h" normalized? Could be "1 vez al día" or "a las 22:00 h". Schema says literal normalizado: 'cada 12 horas', 'cada 24 horas', '1 vez al día'... For once daily at 22:00, maybe "1 vez al día". But document says a las 22:00 h. We can use "1 vez al día". duracion null.
+- Apixabán 5 mg, 1 comprimido cada 12 horas, vía oral. principio "apixabán" (lowercase? apixabán has accent; minúsculas: "apixabán"). dosis 5, mg, oral, cada 12 horas, null.
+- Furosemida 40 mg, 1 comprimido por la mañana, vía oral. frecuencia "1 vez al día" or "por la mañana". Normalized maybe "1 vez al día". Use "1 vez al día".
+- Bisoprolol 5 mg, 1 comprimido al día, vía oral. frecuencia "1 vez al día".
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día. principio_activo "tiotropio/olodaterol". dosis? It's combination 2.5/2.5 mcg. Schema dosis number|string. Could use "2,5/2,5" string, unidad "mcg", via inhalada, frecuencia "2 inhalaciones al día" or "cada 12 horas"? Document says 2 inhalaciones al día. Use "2 inhalaciones al día". But normalized examples? It says literal normalizado: 'cada 12 horas', 'cada 24 horas', '1 vez al día'... For inhalations maybe "2 inhalaciones al día". Could be acceptable. Or "cada 12 horas"? Tiotropio/olodaterol usually once daily, but document says 2 inhalaciones al día (maybe 2 puffs once daily? Actually 2 inhalaciones al día could mean twice daily? But we document as is. Use "2 inhalaciones al día".
+- Atorvastatina 40 mg, 1 comprimido en la cena, vía oral. frecuencia "1 vez al día".
+- Omeprazol 20 mg, 1 comprimido en ayunas, vía oral. frecuencia "1 vez al día".
+
+Medicación alta: section TRATAMIENTO AL ALTA.
+- Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días. principio_activo "amoxicilina/clavulánico"? Rule normalize active ingredients lowercase no brand, use "/" for associations. Document says Amoxicilina-clavulánico. Could be "amoxicilina/clavulánico". Dosis "875/125" string, unidad "mg", via oral, frecuencia "cada 8 horas", duracion "5 días".
+- Metformina 850 mg, 1 comprimido cada 12 horas. no duration -> null.
+- Insulina glargina 100 U/mL, 26 unidades subcutáneas a las 22:00 h. dosis 26, unidad unidades, via subcutánea, frecuencia "1 vez al día", duracion null.
+- Apixabán 5 mg, 1 comprimido cada 12 horas.
+- Furosemida 40 mg, 1 comprimido por la mañana.
+- Bisoprolol 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día.
+- Atorvastatina 40 mg, 1 comprimido en la cena.
+- Omeprazol 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria 16 h/día a 2 lpm. Rule 8: No incluyas oxigenoterapia domiciliaria como fármaco. So omit.
+
+Need ensure no other drugs from evolution included. Meropenem, prednisona, salbutamol, ipratropio, furosemida IV not in alta list except furosemida oral. Do not include.
+
+Parametros_clave: values at discharge when multiple.
+- fevi_pct: FEVI 55 % in antecedents and echo 17/02. At alta? It says FEVI 55 in echo during admission, not explicitly at alta? But parameter key likely FEVI. Document offers 55. Use 55.
+- fge_ml_min: FGe al alta: "FGe 22 mL/min/1,73 m²" at alta. Use 22.
+- creatinina_mg_dl: creatinina al alta 1,9. Use 1.9.
+- hba1c_pct: HbA1c 8,4 % at admission and diagnosis. At alta? Not repeated. Use 8.4.
+- nt_probnp_pg_ml: NT-proBNP 4.870 pg/mL at admission. No alta value. Rule 5 says values correspond to ALTA when document offers several values of same parameter throughout admission. It only offers one at admission. Should we use it? The field is nt_probnp_pg_ml, not explicitly "al alta" in schema? It says parameters_clave values are corresponding to ALTA when document offers several values. If only one, likely use available. But if no value at alta, maybe null? Need decide. The document has NT-proBNP at ingreso 4870. No discharge value. The instruction: "Los valores de `parametros_clave` son los correspondientes AL ALTA cuando el documento ofrece varios valores del mismo parámetro a lo largo del ingreso." It doesn't say if only one at admission, use it. But field names: fge_ml_min // FGe al alta, creatinina_mg_dl // creatinina al alta. For nt_probnp no comment. Could be key parameter, likely use latest available? But strict: extract only explicit. If no value at alta, maybe null? However if only one value, it's the only value; but not at alta. The rule says when document offers several values, use alta. If only one, maybe use that one. But for fge and creatinina they explicitly say al alta. For NT-proBNP, no explicit al alta. In clinical extraction, key parameters often latest or at discharge if available, otherwise admission? Need infer? But no infer. The document offers NT-proBNP 4870 at admission. If we put 4870, is that explicit? yes. But is it "al alta"? no. The schema doesn't specify al alta for NT-proBNP. Could be acceptable. But if strict "parametros_clave" maybe values at alta when multiple; if only one, use it. I'd use 4870. But check: "Los valores de `parametros_clave` son los correspondientes AL ALTA cuando el documento ofrece varios valores del mismo parámetro a lo largo del ingreso." This implies if multiple, choose alta; if not multiple, maybe the only one. So 4870.
+
+Episodio:
+fecha_ingreso 2025-02-12, fecha_alta 2025-02-21, estancia_dias: difference? From 12 to 21 inclusive? Usually estancia days = alta - ingreso = 9 days. If count inclusive 10? In hospital discharge, estancia_dias likely difference in days. 21-12=9. Use 9.
+servicio: "Medicina Interna".
+diagnosticos_alta: list from DIAGNÓSTICOS AL ALTA. Need include all 10 as strings. Could normalize line breaks.
+1. "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso."
+2. "Agudización de EPOC (GOLD 3, grupo E)."
+3. "Infección del tracto urinario por Escherichia coli productora de BLEE."
+4. "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso."
+5. "Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética no proliferativa. Mal control metabólico (HbA1c 8,4 %)."
+6. "Fibrilación auricular permanente, anticoagulada."
+7. "Insuficiencia respiratoria crónica agudizada, hipercápnica."
+8. "Hipertensión arterial esencial."
+9. "Exfumador de 45 paquetes-año."
+10. "Enfermedad de Crohn ileal en remisión."
+
+Need output JSON only, no markdown. Ensure valid JSON. Use Spanish accents. Numbers: use decimal comma? JSON numbers cannot have comma. Use 1.9, 8.4, 4870. For dosis combination use string "875/125" and "2,5/2,5"? JSON string can contain comma. But if number? For combination, string. For unit "mcg". For insulina: dosis 22/26 number, unidad "unidades". But concentration 100 U/mL not captured. Could use dosis "22 unidades"? Schema dosis number|string. Better number 22, unidad "unidades". For amoxicilina-clavulánico: dosis "875/125", unidad "mg". For tiotropio/olodaterol: dosis "2,5/2,5", unidad "mcg".
+
+Need consider "unidad" allowed values: "mg" | "mcg" | "g" | "UI" | "unidades" | "mL" | "mg/mg" | "mcg/mcg" | "no consta". For combination 875/125 mg, unit mg is okay? It's two components in mg. For 2,5/2,5 mcg, unit mcg. Could also use "mcg/mcg" but schema includes. Which is better? The dose is 2.5/2.5 mcg, unit could be "mcg/mcg". But if dosis string "2,5/2,5" and unit "mcg" maybe okay. For amoxicilina/clavulánico 875/125 mg, unit "mg/mg"? The schema includes mg/mg. But document says 875/125 mg, meaning both mg. Could use unit "mg/mg" and dosis "875/125". For tiotropio/olodaterol 2,5/2,5 mcg, unit "mcg/mcg". But allowed. Which is more precise? Use "mg/mg" and "mcg/mcg"? However if unit is "mg/mg", dose string "875/125". That seems consistent. But for single component use mg. For insulina, unit "unidades" not "UI" because document says unidades. Allowed both. Use "unidades".
+
+Need consider via for tiotropio/olodaterol: "inhalada". Document says inhalaciones. yes.
+
+Frecuencia normalization: Need consistent. For "1 comprimido cada 12 horas" -> "cada 12 horas". For "1 comprimido cada 8 horas" -> "cada 8 horas". For "1 comprimido por la mañana" -> "1 vez al día". For "1 comprimido al día" -> "1 vez al día". For "1 comprimido en la cena" -> "1 vez al día". For "1 comprimido en ayunas" -> "1 vez al día". For "2 inhalaciones al día" -> maybe "2 inhalaciones al día". For insulina "a las 22:00 h" -> "1 vez al día". Could include time? Schema says literal normalizado examples. Maybe "1 vez al día" is normalized. Good.
+
+Need consider medicacion_previa: Insulina glargina 100 U/mL, 22 unidades subcutáneas a las 22:00 h. If unit "unidades", dose 22. But concentration 100 U/mL not captured. Could use dosis "22 unidades" and unidad "no consta"? No. Better number.
+
+Need consider allergies: "agente": "betalactámicos". manifestacion: "exantema generalizado tras amoxicilina". documentada true. Could include "amoxicilina"? The allergy is to betalactámicos, confirmed after amoxicilina. Agent should be "betalactámicos". Good.
+
+Antecedentes active flags:
+- EPOC: true.
+- Insuficiencia cardíaca crónica con FEVI preservada: true.
+- Fibrilación auricular permanente: true.
+- Diabetes mellitus tipo 2: true.
+- Enfermedad renal crónica estadio 4: true.
+- Hipertensión arterial esencial: true.
+- Enfermedad de Crohn ileal: false (remisión).
+- Hernia inguinal derecha intervenida: false (intervenido).
+Should we include "Oxigenoterapia domiciliaria"? It's treatment, not antecedent. No.
+Should we include "Nefropatía diabética establecida y retinopatía diabética no proliferativa" as separate? It's part of diabetes. Could include as separate? The antecedents list has diabetes with those. We can keep one description.
+Should we include "Insuficiencia cardíaca crónica con fracción de eyección preservada (FEVI 55 % en ecocardiograma de 09/2024). Clase funcional NYHA III basal." Maybe description concise.
+Need ensure activo false only if remission/resolved/curado/intervenido. For hernia, "Intervenido de hernia inguinal derecha en 2011" -> false. For Crohn en remisión -> false. Others true.
+
+Potential issue: "activo" for "Exfumador"? Not in antecedentes. If included, active? no. But separate.
+
+Need ensure JSON keys exact. No extra. Use null where no data. peso_kg 58, talla_cm 170.
+
+Need think about date age: born 14/03/1957, admission 12/02/2025. Age 67. yes.
+
+Need consider "estancia_dias": If admission 12/02 and discharge 21/02, in Spanish hospital reports often "estancia: 9 días" (difference). Use 9.
+
+Need consider "servicio": "Medicina Interna" or "Medicina Interna — Planta 5.ª, Unidad C"? Schema servicio string. Use "Medicina Interna".
+
+Need consider diagnosticos_alta: Should include exactly as listed. Could remove numbering. yes.
+
+Need consider "medicacion_alta" includes amoxicilina-clavulánico despite allergy to betalactámicos. Rule 9: document what report says, even if dangerous. Include.
+
+Need consider "medicacion_previa" includes tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día. Is that a combination? yes.
+
+Need consider "principio_activo" lowercase no brand. "insulina glargina" lower. "tiotropio/olodaterol". "amoxicilina/clavulánico" or "amoxicilina-clavulánico"? Rule says use "/" for associations. So "amoxicilina/clavulánico". For "tiotropio/olodaterol" already slash.
+
+Need consider "dosis" for combination: If unit "mg/mg", dose "875/125". If unit "mcg/mcg", dose "2,5/2,5". JSON string with comma. Good.
+
+Need consider "unidad" for amoxicilina/clavulánico: allowed "mg/mg". Use that. For tiotropio/olodaterol: "mcg/mcg". For single: mg, unidades.
+
+Need consider "via" for insulina: "subcutánea". For inhalada: "inhalada". For oral: "oral".
+
+Need consider "duracion": For amoxicilina/clavulánico "5 días". Others null. For chronic no end. For furosemida etc null.
+
+Need consider "parametros_clave" fevi_pct: 55. fge 22. creatinina 1.9. hba1c 8.4. nt_probnp 4870.
+
+Potential issue: HbA1c at admission 8.4, diagnosis says mal control. No discharge. Use 8.4.
+
+Potential issue: NT-proBNP only at admission. If strict "al alta" maybe null. Let's analyze instruction: "Los valores de `parametros_clave` son los correspondientes AL ALTA cuando el documento ofrece varios valores del mismo parámetro a lo largo del ingreso." This is a rule for when multiple values. It doesn't explicitly require null if only admission. The field names: fge_ml_min // FGe al alta, creatinina_mg_dl // creatinina al alta. For nt_probnp no comment. In schema: "nt_probnp_pg_ml": number | null. It might expect latest or discharge if available. Since only one, use it. If they wanted only at alta, they'd say. Also "parametros_clave" likely key parameters from report, not necessarily all at alta. But rule says if several, use alta. So use 4870.
+
+Need ensure no markdown. Final only JSON.
+
+Double-check all values:
+Paciente:
+edad_anos: 67
+sexo: "hombre"
+peso_kg: 58
+talla_cm: 170
+
+Alergias:
+[{"agente":"betalactámicos","manifestacion":"exantema generalizado tras amoxicilina","documentada":true}]
+
+habito_tabaquico:
+{"estado":"exfumador","paquetes_ano":45}
+
+antecedentes:
+[
+{"descripcion":"EPOC de fenotipo enfisematoso, GOLD 3, grupo E, con dos agudizaciones con ingreso en los últimos 12 meses","activo":true},
+{"descripcion":"Insuficiencia cardíaca crónica con fracción de eyección preservada, clase funcional NYHA III basal","activo":true},
+{"descripcion":"Fibrilación auricular permanente desde 2021","activo":true},
+{"descripcion":"Diabetes mellitus tipo 2 con nefropatía diabética establecida y retinopatía diabética no proliferativa","activo":true},
+{"descripcion":"Enfermedad renal crónica estadio 4","activo":true},
+{"descripcion":"Hipertensión arterial esencial","activo":true},
+{"descripcion":"Enfermedad de Crohn de localización ileal en remisión clínica sin tratamiento desde 2016","activo":false},
+{"descripcion":"Intervenido de hernia inguinal derecha en 2011","activo":false}
+]
+Could include "Oxigenoterapia domiciliaria"? no.
+Could include "Dos agudizaciones..." maybe not necessary. But explicit.
+
+Medicación previa:
+[
+{"principio_activo":"metformina","dosis":850,"unidad":"mg","via":"oral","frecuencia":"cada 12 horas","duracion":null},
+{"principio_activo":"insulina glargina","dosis":22,"unidad":"unidades","via":"subcutánea","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"apixabán","dosis":5,"unidad":"mg","via":"oral","frecuencia":"cada 12 horas","duracion":null},
+{"principio_activo":"furosemida","dosis":40,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"bisoprolol","dosis":5,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"tiotropio/olodaterol","dosis":"2,5/2,5","unidad":"mcg/mcg","via":"inhalada","frecuencia":"2 inhalaciones al día","duracion":null},
+{"principio_activo":"atorvastatina","dosis":40,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"omeprazol","dosis":20,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null}
+]
+
+Medicación alta:
+[
+{"principio_activo":"amoxicilina/clavulánico","dosis":"875/125","unidad":"mg/mg","via":"oral","frecuencia":"cada 8 horas","duracion":"5 días"},
+{"principio_activo":"metformina","dosis":850,"unidad":"mg","via":"oral","frecuencia":"cada 12 horas","duracion":null},
+{"principio_activo":"insulina glargina","dosis":26,"unidad":"unidades","via":"subcutánea","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"apixabán","dosis":5,"unidad":"mg","via":"oral","frecuencia":"cada 12 horas","duracion":null},
+{"principio_activo":"furosemida","dosis":40,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"bisoprolol","dosis":5,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"tiotropio/olodaterol","dosis":"2,5/2,5","unidad":"mcg/mcg","via":"inhalada","frecuencia":"2 inhalaciones al día","duracion":null},
+{"principio_activo":"atorvastatina","dosis":40,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null},
+{"principio_activo":"omeprazol","dosis":20,"unidad":"mg","via":"oral","frecuencia":"1 vez al día","duracion":null}
+]
+Omit oxygen.
+
+Parametros:
+{"fevi_pct":55,"fge_ml_min":22,"creatinina_mg_dl":1.9,"hba1c_pct":8.4,"nt_probnp_pg_ml":4870}
+
+Episodio:
+{"fecha_ingreso":"2025-02-12","fecha_alta":"2025-02-21","estancia_dias":9,"servicio":"Medicina Interna","diagnosticos_alta":[...]}
+
+Need ensure JSON valid: strings with accents okay. Use double quotes. No trailing commas.
+
+Potential nuance: "FEVI" in report is "FEVI 55 %" (probably FEVI = fracción de eyección del ventrículo izquierdo). Use 55.
+
+Potential nuance: "FGe basal 25" but at alta 22. Use 22.
+
+Potential nuance: "creatinina al alta 1,9". Use 1.9.
+
+Potential nuance: "NT-proBNP 4.870 pg/mL" Spanish dot thousands. Use 4870.
+
+Potential nuance: "HbA1c 8,4 %" use 8.4.
+
+Potential nuance: "peso 58 kg" at admission. No weight at alta. Use 58.
+
+Potential nuance: "talla 170 cm".
+
+Potential nuance: "alergias documentada" true.
+
+Potential nuance: "manifestacion" could be "exantema generalizado". Include "tras amoxicilina"? It's part of manifestation. Good.
+
+Potential nuance: "documentada" boolean true because "alergia documentada".
+
+Potential nuance: "habito_tabaquico" paquetes_ano: 45. It says dosis acumulada 45 paquetes-año. yes.
+
+Potential nuance: "antecedentes" active for "Insuficiencia cardíaca crónica ... descompensada"? At antecedents it's chronic, active. true.
+
+Potential nuance: "activo" for "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso" in diagnosis. In antecedents it's active. true.
+
+Potential nuance: Should include "Infección del tracto urinario" as antecedente? No, it's current diagnosis, not personal antecedent.
+
+Potential nuance: Should include "Exfumador de 45 paquetes-año" in diagnosticos_alta yes as listed.
+
+Potential nuance: "diagnosticos_alta" includes "Exfumador de 45 paquetes-año." It's a diagnosis? yes listed. Include.
+
+Potential nuance: "diagnosticos_alta" includes "Enfermedad de Crohn ileal en remisión." Include.
+
+Potential nuance: "servicio" maybe "Medicina Interna — Planta 5.ª, Unidad C"? The header says Servicio de Medicina Interna — Planta 5.ª, Unidad C. In DATOS: Servicio: Medicina Interna. Use "Medicina Interna".
+
+Potential nuance: "estancia_dias" if inclusive? Let's think. In many extraction tasks, estancia_dias = fecha_alta - fecha_ingreso in days. 9. If they count both days, 10. Which is more likely? The schema says integer, no comment. In hospital, length of stay often number of days between admission and discharge, e.g., admitted 12, discharged 21 = 9 days. Use 9.
+
+Potential nuance: "frecuencia" for "2 inhalaciones al día" maybe should be "cada 12 horas"? The document says 2 inhalaciones al día, not necessarily twice daily. Tiotropio/olodaterol (Stalven) is once daily, 2 inhalations once daily. But document says "2 inhalaciones al día" could be interpreted as 2 puffs per day. The normalized frequency could be "2 inhalaciones al día". The examples include '1 vez al día', but not inhalations. It's okay. If we want normalized to "1 vez al día"? But that would lose "2 inhalaciones". The field is frequency, not dose. Dose is 2.5/2.5 mcg, but number of inhalations is frequency? Actually "2 inhalaciones al día" is frequency. Use as is.
+
+Potential nuance: For "insulina glargina ... a las 22:00 h", frequency could be "a las 22:00 h" but normalized examples prefer "1 vez al día". Use "1 vez al día".
+
+Potential nuance: For "furosemida 40 mg, 1 comprimido por la mañana" frequency "1 vez al día". Good.
+
+Potential nuance: For "atorvastatina ... en la cena" frequency "1 vez al día". Good.
+
+Potential nuance: For "omeprazol ... en ayunas" frequency "1 vez al día". Good.
+
+Potential nuance: "dosis" for combination with unit mg/mg: If dose string "875/125" and unit "mg/mg", okay. But schema unit allowed "mg/mg". For "tiotropio/olodaterol" unit "mcg/mcg". Good.
+
+Potential nuance: "principio_activo" for amoxicilina-clavulánico: Should it be "amoxicilina/clavulánico" or "amoxicilina-clavulánico"? Rule 7: Usa el separador "/" para las asociaciones. So slash.
+
+Potential nuance: "clavulánico" accent? yes.
+
+Potential nuance: "apixabán" accent. yes.
+
+Potential nuance: "bisoprolol" no accent. yes.
+
+Potential nuance: "atorvastatina". yes.
+
+Potential nuance: "omeprazol". yes.
+
+Potential nuance: "furosemida". yes.
+
+Potential nuance: "metformina". yes.
+
+Potential nuance: "insulina glargina". yes.
+
+Potential nuance: "tiotropio/olodaterol". yes.
+
+Potential nuance: "amoxicilina/clavulánico" in alta despite allergy. Include.
+
+Potential nuance: "medicacion_previa" includes "Oxigenoterapia domiciliaria"? It's in antecedents, not in treatment habitual section. The section TRATAMIENTO HABITUAL PREVIO AL INGRESO does not list oxygen. So no.
+
+Potential nuance: "medicacion_alta" includes oxygen but rule says omit.
+
+Potential nuance: "parametros_clave" fevi_pct: The report says FEVI 55 % in antecedents and echo. It's not "al alta" but only value. Use 55.
+
+Potential nuance: "fge_ml_min" at alta 22. yes.
+
+Potential nuance: "creatinina_mg_dl" at alta 1.9. yes.
+
+Potential nuance: "hba1c_pct" 8.4. yes.
+
+Potential nuance: "nt_probnp_pg_ml" 4870. yes.
+
+Need final JSON only. Ensure no comments.
+
+Let's consider if "alergias" should include "amoxicilina" as agent? The document: "alergia documentada a betalactámicos (exantema generalizado tras amoxicilina en 2019...)". The agent is betalactámicos. Good.
+
+Consider if "documentada" true for allergy. yes.
+
+Consider if "manifestacion" null? no.
+
+Consider if "habito_tabaquico" estado "exfumador". yes.
+
+Consider if "antecedentes" should include "Alergias"? Since separate, no.
+
+Consider if "antecedentes" should include "Hábitos"? separate.
+
+Consider if "antecedentes" should include "Oxigenoterapia domiciliaria"? It's a treatment, not antecedent. no.
+
+Consider if "activo" for "Intervenido de hernia inguinal derecha en 2011" false due to intervenido. yes.
+
+Consider if "activo" for "Enfermedad de Crohn ... en remisión" false. yes.
+
+Consider if "activo" for "Fibrilación auricular permanente" true. yes.
+
+Consider if "activo" for "Hipertensión arterial esencial de larga evolución" true. yes.
+
+Consider if "activo" for "Diabetes mellitus tipo 2 de 18 años de evolución" true. yes.
+
+Consider if "activo" for "Enfermedad renal crónica estadio 4" true. yes.
+
+Consider if "activo" for "Insuficiencia cardíaca crónica" true. yes.
+
+Consider if "activo" for "EPOC" true. yes.
+
+Potential issue: "activo" for "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada" in diagnosis? In antecedents it's chronic. true.
+
+Potential issue: "descripcion" should be exact? We can summarize but must be explicit. It's okay.
+
+Potential issue: JSON number for edad integer. 67.
+
+Potential issue: JSON number for peso 58, talla 170.
+
+Potential issue: JSON number for paquetes_ano 45.
+
+Potential issue: JSON number for dosis 850 etc.
+
+Potential issue: JSON string for dosis combination with comma. okay.
+
+Potential issue: "unidad" for insulina: "unidades" allowed. yes.
+
+Potential issue: "via" for tiotropio/olodaterol: "inhalada". yes.
+
+Potential issue: "frecuencia" for "2 inhalaciones al día" maybe not normalized? Could be "2 veces al día"? But "2 inhalaciones al día" is explicit. The examples: 'cada 12 horas', 'cada 24 horas', '1 vez al día'... It says literal normalizado. Maybe for inhalations, "2 inhalaciones al día" is acceptable. If they expect "2 veces al día", but that would change meaning? 2 inhalations per day could be once daily 2 puffs. "2 veces al día" would imply twice daily. Better keep "2 inhalaciones al día".
+
+Potential issue: "duracion" for amoxicilina/clavulánico: "5 días". yes.
+
+Potential issue: "duracion" for others null. yes.
+
+Potential issue: "diagnosticos_alta" strings: Need preserve accents. yes.
+
+Let's draft final JSON.
+
+Double-check valid JSON:
+{
+  "paciente": {
+    "edad_anos": 67,
+    "sexo": "hombre",
+    "peso_kg": 58,
+    "talla_cm": 170
+  },
+  "alergias": [
+    {
+      "agente": "betalactámicos",
+      "manifestacion": "exantema generalizado tras amoxicilina",
+      "documentada": true
+    }
+  ],
+  "habito_tabaquico": {
+    "estado": "exfumador",
+    "paquetes_ano": 45
+  },
+  "antecedentes": [
+    {
+      "descripcion": "EPOC de fenotipo enfisematoso, GOLD 3, grupo E, con dos agudizaciones con ingreso en los últimos 12 meses",
+      "activo": true
+    },
+...
+  ],
+...
+}
+
+Need ensure no trailing comma after last array element.
+
+One more thought: "FEVI" in report is "FEVI 55 %" but schema fevi_pct. In Spanish, FEVI maybe "FEVI" (fracción de eyección del ventrículo izquierdo). Use 55.
+
+One more thought: "fge_ml_min" unit in schema mL/min, but report FGe 22 mL/min/1,73 m². Use 22.
+
+One more thought: "creatinina_mg_dl" 1.9.
+
+One more thought: "nt_probnp_pg_ml" 4870.
+
+One more thought: "hba1c_pct" 8.4.
+
+One more thought: Should "parametros_clave" include null for nt_probnp because not at alta? Let's re-evaluate with strict rule. The user says: "Los valores de `parametros_clave` son los correspondientes AL ALTA cuando el documento ofrece varios valores del mismo parámetro a lo largo del ingreso." This could be interpreted: For parameters_clave, if there are multiple values, choose the one at alta. It doesn't say if only one value at admission, choose it. But the field is "nt_probnp_pg_ml" not "nt_probnp_alta". In many tasks, they want key lab values, often at discharge if available, otherwise admission? The phrase "correspondientes AL ALTA cuando el documento ofrece varios valores" suggests the default is not necessarily alta, but if multiple, use alta. If only one, use that. So 4870.
+
+But for fge and creatinina, comments explicitly say al alta. For NT-proBNP no comment. Could be because only one value. Use it.
+
+One more thought: "medicacion_previa" includes "Insulina glargina 100 U/mL, 22 unidades subcutáneas a las 22:00 h". The unit could be "UI" instead of "unidades". The allowed includes both. Document says unidades. Use "unidades".
+
+One more thought: "dosis" for insulina could be "22" and unit "unidades". Good.
+
+One more thought: "dosis" for amoxicilina/clavulánico: If unit "mg/mg", dose "875/125". Good.
+
+One more thought: "dosis" for tiotropio/olodaterol: If unit "mcg/mcg", dose "2,5/2,5". Good.
+
+One more thought: "principio_activo" for "Tiotropio/olodaterol" lower: "tiotropio/olodaterol". yes.
+
+One more thought: "via" for "Tiotropio/olodaterol" is inhalada. yes.
+
+One more thought: "frecuencia" for "Tiotropio/olodaterol" maybe "2 inhalaciones al día". yes.
+
+One more thought: "duracion" for chronic meds null. yes.
+
+One more thought: "medicacion_alta" includes "Metformina" despite evolution says suspended during admission due renal deterioration, but at alta it's listed. Include.
+
+One more thought: "medicacion_alta" includes "Amoxicilina-clavulánico" despite allergy and urocultivo resistant to amoxicilina-clavulánico. Rule 9 include.
+
+One more thought: "diagnosticos_alta" includes "Infección del tracto urinario por Escherichia coli productora de BLEE." yes.
+
+One more thought: "diagnosticos_alta" includes "Insuficiencia respiratoria crónica agudizada, hipercápnica." yes.
+
+One more thought: "diagnosticos_alta" includes "Exfumador de 45 paquetes-año." yes.
+
+One more thought: "diagnosticos_alta" includes "Enfermedad de Crohn ileal en remisión." yes.
+
+One more thought: Should "diagnosticos_alta" include "Killip II al ingreso" as part of first diagnosis? yes as listed.
+
+One more thought: Should "diagnosticos_alta" include "Mal control metabólico (HbA1c 8,4 %)" as part of diabetes diagnosis? yes.
+
+One more thought: Should "diagnosticos_alta" include "con empeoramiento agudo transitorio durante el ingreso" as part of ERC? yes.
+
+One more thought: "servicio" maybe "Medicina Interna" not "Planta 5.ª, Unidad C". yes.
+
+One more thought: "fecha_ingreso" and "fecha_alta" format AAAA-MM-DD. yes.
+
+One more thought: "estancia_dias" integer 9.
+
+Now final. Ensure no explanatory text. final JSON only.

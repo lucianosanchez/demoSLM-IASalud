@@ -1,0 +1,37 @@
+Okay, let's tackle this query. The user wants me to encode the diagnoses from the discharge report using CIE-10-ES. I need to make sure I follow the strict rules they provided.
+
+First, I'll check the "DIAGNÓSTICOS AL ALTA" section. The main diagnosis is the one that motivated the admission. The report mentions "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso." So that's the primary diagnosis. I need to find the correct CIE-10 code for that. I recall that I50.2 is for chronic heart failure with preserved ejection fraction, but the report specifies "descompensada," which might be I50.21 for decompensated. Wait, but the exact code might be I50.21. Let me confirm. Also, the Killip II is mentioned, which is a classification for acute decompensation, but the main code here is I50.21. The text from the origin should be the exact phrase from the report. 
+
+Next, the secondary diagnoses. The second one is "Agudización de EPOC (GOLD 3, grupo E)." The code for acute exacerbation of COPD is J44.0. The text should be the exact phrase from the report. 
+
+Third, "Infección del tracto urinario por Escherichia coli productora de BLEE." The code for urinary tract infection is N39.0, but since it's specified as a specific organism, maybe N39.0 is sufficient. Wait, but the exact code might be N39.0. The text here is the exact phrase from the report. 
+
+Fourth, "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso." The code for stage 4 CKD due to diabetes is N18.5. The text should be the exact phrase. 
+
+Fifth, "Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética no proliferativa. Mal control metabólico (HbA1c 8,4 %)." The code for type 2 diabetes with complications is E11.22. 
+
+Sixth, "Fibrilación auricular permanente, anticoagulada." The code is I48.0. 
+
+Seventh, "Insuficiencia respiratoria crónica agudizada, hipercápnica." The code is J96.0. 
+
+Eighth, "Hipertensión arterial esencial." Code I10. 
+
+Ninth, "Exfumador de 45 paquetes-año." Code Z87.890. 
+
+Tenth, "Enfermedad de Crohn ileal en remisión." Code K50.2. 
+
+Now, I need to check each code for maximum specificity. For example, I50.21 is for decompensated chronic heart failure with preserved ejection fraction. The text from the origin is the exact phrase. 
+
+For the secondary diagnoses, I need to ensure that each code is correct. For example, J44.0 is for acute exacerbation of COPD. 
+
+I should also check if any codes require additional codes. For example, if there's a combination code, but in this case, the main codes seem to be standalone. 
+
+Confidence levels: For the main diagnosis, since the text is specific, confidence is alta. For others, if the code is certain, alta, otherwise media or baja. 
+
+Wait, the user said if I'm not sure about the exact code, it's better to omit. So for example, if I'm unsure about the exact code for the urinary tract infection, but the report mentions Escherichia coli, but the code N39.0 is for unspecified, but maybe N39.0 is correct. 
+
+I think I have all the codes. Now, structure the JSON accordingly, making sure each entry has the code, description, text from origin, and confidence. Also, ensure that the main diagnosis is the first one, and the rest are secondary. 
+
+Double-checking the codes again. For example, the main diagnosis is I50.21, which is correct. The secondary diagnoses are J44.0, N39.0, N18.5, E11.22, I48.0, J96.0, I10, Z87.890, K50.2. 
+
+Yes, that seems right. Now, format the JSON as per the schema, ensuring no extra keys and correct structure.

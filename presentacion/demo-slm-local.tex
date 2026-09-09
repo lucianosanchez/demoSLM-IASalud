@@ -1,0 +1,797 @@
+% =====================================================================
+%  Modelos de lenguaje pequeños en local: qué se pierde y qué se gana
+%  Demostración — congreso de IA en salud
+%
+%  Compilar:   make            (o: latexmk -pdf demo-slm-local.tex)
+%  Compila aunque falten las capturas: en su lugar sale un recuadro
+%  con el nombre del fichero que falta (ver docs/CAPTURAS.md).
+% =====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noquoting,es-tabla]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}   % para \rowcolor
+\usepackage{listings}
+\usepackage{qrcode}
+
+% --- tema, con reserva por si el asistente no tiene metropolis ---------
+\IfFileExists{beamerthememetropolis.sty}{%
+  \usetheme[progressbar=frametitle,numbering=fraction,block=fill]{metropolis}%
+}{%
+  \usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}%
+}
+
+\definecolor{acento}{HTML}{B03A2E}
+\definecolor{bueno}{HTML}{1E7B4F}
+\definecolor{gris}{HTML}{6B6B6B}
+\setbeamercolor{alerted text}{fg=acento}
+
+\newcommand{\bien}[1]{\textcolor{bueno}{\textbf{#1}}}
+\newcommand{\mal}[1]{\textcolor{acento}{\textbf{#1}}}
+
+% --- capturas con marcador de hueco ------------------------------------
+\newlength{\anchocaptura}
+\newlength{\altocaptura}\setlength{\altocaptura}{0.42\textheight}
+\newcommand{\captura}[3][\linewidth]{%
+  \setlength{\anchocaptura}{#1}%
+  \IfFileExists{img/#2}{\includegraphics[width=\anchocaptura]{img/#2}}{%
+    \fcolorbox{gris}{black!4}{\parbox[c][\altocaptura][c]{0.94\anchocaptura}{\centering
+      \textcolor{gris}{\ttfamily\small img/#2}\\[.6em]
+      \textcolor{gris}{\footnotesize #3}}}}}
+
+% El `literate` tiene que cubrir TODO carácter no ASCII que aparezca en un
+% listing o en un extracto: con cualquier otro, listings aborta la compilación
+% con «Invalid UTF-8 byte sequence». scripts/extractos.py avisa si genera uno
+% que no esté aquí.
+\lstdefinestyle{js}{basicstyle=\ttfamily\tiny,breaklines=true,columns=fullflexible,
+  keywordstyle=\color{acento},stringstyle=\color{bueno},showstringspaces=false,
+  literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ü}{{\"u}}1
+           {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ü}{{\"U}}1
+           {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {"}{{\textquotedbl}}1
+           {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1
+           {·}{{\textperiodcentered}}1 {—}{{---}}1
+           {º}{{\textordmasculine}}1 {ª}{{\textordfeminine}}1 {°}{{\textdegree}}1
+           {²}{{\textsuperscript{2}}}1 {³}{{\textsuperscript{3}}}1 {µ}{{$\mu$}}1
+           {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1}
+\lstset{style=js}
+
+% --- salidas reales de los modelos -------------------------------------
+% No son capturas de pantalla: scripts/extractos.py las recorta de resultados/
+% y quedan en presentacion/extractos/. Se leen en el proyector y se actualizan
+% solas al volver a ejecutar la demo. Si el extracto todavía no existe (modelo
+% sin ejecutar), sale el mismo recuadro de hueco que con una captura que falta.
+\newcommand{\huecosalida}[2]{%
+  \fcolorbox{gris}{black!4}{\parbox[c][\altocaptura][c]{0.94\linewidth}{\centering
+    \textcolor{gris}{\ttfamily\small extractos/#1.txt}\\[.6em]
+    \textcolor{gris}{\footnotesize #2}}}}
+\newcommand{\salida}[3][\tiny]{%
+  \IfFileExists{extractos/#2.txt}%
+    {\lstinputlisting[basicstyle=\ttfamily#1,breakautoindent=false,breakindent=0pt,
+                      xleftmargin=0pt]{extractos/#2.txt}}%
+    {\huecosalida{#2}{#3}}}
+
+% >>> PONGA AQUÍ LA URL DEL REPOSITORIO <<<
+% Aparece impresa en la última diapositiva y, además, el QR se genera con ella
+% al compilar: no hace falta ninguna imagen.
+\newcommand{\urlrepo}{https://github.com/lucianosanchez/demoSLM-IASalud}
+\newcommand{\urlcongreso}{https://asturiasias.github.io/ias2026/}
+
+\title{Modelos de lenguaje pequeños en local}
+\subtitle{Qué se pierde y qué se gana}
+\date{IAS 2026 \textbullet\ \texttt{\small asturiasias.github.io/ias2026}}
+\author{Luciano Sánchez}
+
+\begin{document}
+
+\maketitle
+
+% =====================================================================
+\begin{frame}{Todo esto está publicado}
+  \begin{columns}[c]
+    \column{.55\textwidth}
+      Puede seguir la charla desde el móvil:
+      \vspace{.5em}
+      \begin{itemize}\small
+        \item El \textbf{informe de alta} completo
+        \item Las \textbf{salidas de los tres modelos}, tarea por tarea
+        \item Los patrones de evaluación y la rúbrica
+        \item Los prompts y los scripts, sin dependencias
+      \end{itemize}
+      \vspace{.6em}
+      {\footnotesize\ttfamily \urlrepo}
+      \vspace{.8em}
+
+      {\scriptsize El informe es \textbf{sintético}: ningún dato corresponde a
+      una persona real.\par}
+    \column{.4\textwidth}
+      \centering
+      \qrcode[height=3.4cm]{\urlrepo}\\[.4em]
+      {\scriptsize Repositorio de la demostración}
+  \end{columns}
+\end{frame}
+
+% =====================================================================
+\section{1 — El informe}
+% =====================================================================
+
+\begin{frame}{Esto es un informe de alta}
+  \centering
+  \salida[\scriptsize]{01-informe}{Cabecera del informe de alta con los datos
+  con la cabecera de datos personales bien visible}
+
+  \vspace{.6em}
+  {\footnotesize\color{gris} Informe \textbf{sintético}. Ningún dato corresponde a una persona real.}
+\end{frame}
+
+\begin{frame}{Qué contiene exactamente ese documento}
+  \begin{columns}[T]
+    \column{.52\textwidth}
+      \textbf{33 identificadores} en \textbf{46 apariciones}:
+      \vspace{.4em}
+      \begin{itemize}\small
+        \item nombre del paciente, de su hija y de tres profesionales
+        \item NHC, DNI, número de la Seguridad Social, número de colegiado
+        \item domicilio, tres teléfonos, centro de salud
+        \item cuatro centros hospitalarios y cuatro topónimos
+        \item diez fechas, dos de ellas escritas con palabras
+      \end{itemize}
+    \column{.44\textwidth}
+      \vspace{.6em}
+      Y \textbf{categoría especial} del art. 9 RGPD\\ en cada párrafo:
+      \vspace{.4em}
+      \begin{itemize}\small
+        \item diagnósticos y pronóstico funcional
+        \item resultados microbiológicos
+        \item alergias medicamentosas
+        \item consumo de tabaco y alcohol
+        \item situación de convivencia
+      \end{itemize}
+  \end{columns}
+  \vspace{.5em}
+  \centering\footnotesize Pegarlo en un servicio en la nube es una comunicación
+  de datos, con todo lo que exige el art. 23.
+\end{frame}
+
+\begin{frame}{La anonimización es circular}
+  \begin{center}
+    \alert{\large Para anonimizar el texto hay que transmitirlo.}\\[.2em]
+    \alert{\large Sin anonimizar.}
+  \end{center}
+  \vspace{.7em}
+  \small
+  No hay forma de salir del círculo por contrato: un encargado de tratamiento
+  sigue recibiendo el documento identificado, y un acuerdo de confidencialidad
+  regula el tratamiento, no lo evita.
+  \vspace{.5em}
+
+  Las salidas reales son tres, y sólo una es viable en un servicio clínico:
+  \begin{itemize}\small
+    \item anonimizar a mano, que es el trabajo que se pretendía ahorrar;
+    \item reglas y expresiones regulares, que fallan con las variantes;
+    \item \textbf{procesar en local}, sin que el documento salga del equipo.
+  \end{itemize}
+  \vspace{.4em}
+  \centering\footnotesize De las cinco tareas, ésta es la única donde el modelo
+  local no es una preferencia técnica.
+\end{frame}
+
+% =====================================================================
+\section{2 — El marco: Decreto 98/2025}
+% =====================================================================
+
+\begin{frame}{Decreto 98/2025: qué obliga y qué significa aquí}
+  \footnotesize
+  \begin{tabular}{@{}p{2.1cm}p{4.3cm}p{5.6cm}@{}}
+    \toprule
+    \textbf{Artículo} & \textbf{Qué obliga} & \textbf{Qué significa aquí} \\
+    \midrule
+    art. 3.h & Supervisión humana & Ninguna de las cinco tareas se despliega sin revisión. Cambia el producto, no el papeleo. \\[.15em]
+    art. 12 & Verificación previa en entorno controlado & Esta demostración \textbf{es} una prueba en entorno controlado. \\[.15em]
+    art. 12.3 & No contratar sin haber superado el proceso & El comprador no firma antes que el técnico. \\[.15em]
+    art. 13 & Excepción de riesgo mínimo & Las tareas 1 y 2 pueden caer aquí. La 4 y la 5, no. \\[.15em]
+    art. 17.3.a & Registro automático de eventos & Cada ejecución deja un fichero \texttt{.meta.json}. Trazabilidad no es una promesa. \\[.15em]
+    art. 29 & Retirada & Lo verán ustedes en la tarea 5. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{El artículo 23 y lo que desaparece}
+  \begin{center}\large Encargado del tratamiento. Subencargados.\\
+  Ubicación de los datos. Transferencias internacionales. Confidencialidad.\end{center}
+  \vspace{.6em}
+  \pause
+  \begin{center}
+    \bien{\Large Todas esas preguntas desaparecen}\\[.3em]
+    \bien{\Large si el modelo corre en este portátil.}
+  \end{center}
+  \pause
+  \vspace{.9em}
+  {\centering\small No desaparecen el art. 12, ni el 17.3.a, ni el 3.h.\\
+  Cumplir es \emph{más fácil}. No es automático.\par}
+\end{frame}
+
+% ATENCIÓN: verificar las fechas la semana de la charla.
+% El calendario del Reglamento (UE) 2024/1689 ha sido objeto de propuestas de
+% modificación. Consultar el estado vigente antes de proyectar esta diapositiva.
+\begin{frame}{Calendario europeo}
+  \small
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    \textbf{Fecha} & \textbf{Qué entra en aplicación} \\
+    \midrule
+    1 ago 2024 & Entrada en vigor del Reglamento (UE) 2024/1689 \\
+    2 feb 2025 & Prácticas prohibidas y alfabetización en IA \\
+    2 ago 2025 & Obligaciones de los modelos de uso general y gobernanza \\
+    2 ago 2026 & Sistemas de alto riesgo del anexo III \\
+    2 ago 2027 & Sistemas de alto riesgo integrados en productos (anexo I) \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  \begin{center}\footnotesize\color{acento}
+  [Verificar el estado vigente de este calendario la semana de la charla.]
+  \end{center}
+\end{frame}
+
+% =====================================================================
+\section{3 — El prompt es un contrato}
+% =====================================================================
+
+\begin{frame}{Los tres tamaños de hoy}
+  \centering
+  \captura[0.8\linewidth]{02-lmstudio-modelos.png}{Lista de modelos en LM Studio
+  con los tres tamaños y los GB que ocupa cada uno}
+
+  \vspace{.6em}
+  \begin{tabular}{@{}lccl@{}}
+    \toprule
+    Modelo & Bits & Ocupa & Papel \\
+    \midrule
+    4B & 4 & 2,4 GB & El suelo \\
+    8B & 4 & 5,0 GB & El punto dulce \\
+    27B & \textbf{8} & 30 GB & El techo local (máquina de 128 GB) \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{.5em}
+  {\footnotesize El grande va a 8 bits: la mejor versión posible de sí mismo.\\
+  El mismo modelo a 4 bits cabe en un portátil de 32 GB.\\
+  Recuérdenlo cuando falle las tareas 4 y 5.\par}
+\end{frame}
+
+\begin{frame}[fragile]{Un modelo local no se usa hablando con él}
+  El usuario habla con una aplicación. El modelo va por debajo y recibe
+  \alert{un contrato}, no una conversación:
+  \vspace{.5em}
+\begin{lstlisting}
+"codigo": {
+  "type": "string",
+  "pattern": "^[A-Z][0-9][0-9A-Z](\\.[0-9A-Z]{1,4})?$"
+},
+"texto_de_origen": {
+  "type": "string",
+  "description": "Fragmento LITERAL del informe que justifica el codigo"
+},
+"confianza": { "type": "string", "enum": ["alta","media","baja"] }
+\end{lstlisting}
+  \vspace{.3em}
+  El esquema se compila a una gramática. El modelo \textbf{no puede} salirse de
+  ella. No le pedimos un favor: le hemos cerrado las demás puertas.
+\end{frame}
+
+\begin{frame}{Las cinco tareas}
+  \centering
+  \begin{tabular}{@{}clll@{}}
+    \toprule
+    & \textbf{Tarea} & \textbf{Qué exige} & \textbf{Tamaño mínimo} \\
+    \midrule
+    1 & Anonimización & Reconocer entidades & \alert{27B} \\
+    2 & Extracción estructurada & Leer y ordenar & 8B \\
+    3 & Reescritura para el paciente & Reformular sin perder & 8B \\
+    \midrule
+    4 & Codificación CIE-10 & \alert{Recordar una tabla} & \alert{---} \\
+    5 & Razonamiento clínico & \alert{Aplicar conocimiento} & 27B \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1.2em}
+  \small Mismo informe. Misma máquina. Mismos ajustes. Sin red.
+\end{frame}
+
+\begin{frame}{Tarea 1 — Anonimización}
+  \begin{columns}[T]
+    \column{.5\textwidth}
+      \centering {\small 3B}\\
+      \salida{03-t1-3b-antecedentes}{Sección ANTECEDENTES anonimizada por el
+      3B: quedan centros y topónimos sin etiquetar}
+    \column{.5\textwidth}
+      \centering {\small 27B}\\
+      \salida{04-t1-27b-antecedentes}{La misma sección por el 27B: 46 de 46
+      identificadores etiquetados}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Lo que hay que mirar no son los nombres}
+  \begin{center}\large Estos términos \textbf{tienen que sobrevivir}:\end{center}
+  \vspace{.5em}
+  \begin{center}\large
+  enfermedad de \textbf{Crohn} \quad índice de \textbf{Charlson} \quad signo de \textbf{Homans}\\[.3em]
+  clasificación de \textbf{Killip} \quad líneas B de \textbf{Kerley} \quad \textbf{Escherichia coli}
+  \end{center}
+  \vspace{.8em}
+  \begin{center}\small
+  Los tres modelos los conservaron: \bien{0 de 13 destruidos}. El riesgo existe
+  y aquí no se materializó.
+  \end{center}
+  \pause
+  \vspace{.6em}
+  \begin{center}
+  \alert{\large El fallo no fue borrar un diagnóstico. Fue dejarse nombres:}\\[.2em]
+  \alert{\large 16 de 46 el 3B, 13 el 8B, \bien{ninguno el 27B}.}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Una prescripción contradicha por el propio informe}
+  \begin{center}
+  \colorbox{black!6}{\parbox{.9\linewidth}{\centering\ttfamily\footnotesize
+  TRATAMIENTO AL ALTA\\[.2em]
+  --- Amoxicilina-clavulánico 875/125 mg, 1 comp. cada 8 h durante 5 días}}
+  \end{center}
+  \vspace{.8em}
+  El mismo documento contiene, en otras tres secciones:
+  \vspace{.4em}
+  \begin{itemize}\small
+    \item «ALERGIAS: alergia documentada a betalactámicos»
+    \item «\textbf{Resistente} a amoxicilina-clavulánico»
+    \item «meropenem [\ldots] se mantiene durante 7 días» \emph{(ya tratado)}
+  \end{itemize}
+  \vspace{.5em}
+  \begin{center}\small
+  Toda la evidencia necesaria para saber que la prescripción es incorrecta
+  \textbf{está dentro del documento}: no requiere conocimiento clínico externo,
+  sólo comparar tres párrafos.\\[.3em]
+  Este dato se sigue a lo largo de las cinco tareas.
+  \end{center}
+\end{frame}
+
+\begin{frame}{Tarea 2 — Extracción con contrato}
+  \centering
+  \salida{06-t2-con-esquema}{JSON limpio, válido a la primera}
+
+  \vspace{.6em}
+  {\small El esquema se compila a una gramática: el modelo \textbf{no puede}
+  emitir otra cosa.\\
+  Un 3B devuelve JSON válido el 100\,\% de las veces, igual que un 27B.\par}
+\end{frame}
+
+\begin{frame}{El esquema garantiza la forma, no el contenido}
+  \centering
+  {\setlength{\altocaptura}{0.26\textheight}%
+  \salida[\scriptsize]{07-t2-edad}{El bloque «paciente» del JSON, con edad\_anos}}
+
+  \vspace{.6em}
+  \begin{flushleft}\small
+  Nacido el 14/03/1957, ingresa el 12/02/2025: la edad cumplida es \bien{67}.
+  La resta de años naturales da \mal{68}, que es lo que devuelve el \mal{3B}.
+  El esquema declara el campo como \texttt{integer} y lo valida: el JSON es
+  correcto y el dato es falso. El 8B y el 27B sí restan bien.
+  \end{flushleft}
+  \vspace{.3em}
+  \begin{center}\alert{\large El formato se puede imponer. La verdad, no.}\end{center}
+\end{frame}
+
+% =====================================================================
+\section{4 — Reescritura}
+% =====================================================================
+
+\begin{frame}{Tarea 3 — Reescritura para el paciente}
+  \centering
+  \begin{columns}[T]
+    \column{.49\textwidth}
+      \centering {\small 8B}\\
+      \salida{08a-t3-8b}{Primeras líneas de la reescritura del 8B}
+    \column{.49\textwidth}
+      \centering {\small 27B}\\
+      \salida{08b-t3-27b}{Primeras líneas de la reescritura del 27B}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Los tres textos se leen bien}
+  \centering
+  \salida[\scriptsize]{09-t3-cobertura}{Cobertura de la tarea 3 por modelo:
+  mensajes críticos conservados, legibilidad y lo que se ha dejado cada uno}
+
+  \vspace{.8em}
+  \alert{\large Se lee mejor y es peor.}
+\end{frame}
+
+\begin{frame}{Fidelidad documental frente a criterio clínico}
+  \begin{columns}[T]
+    \column{.46\textwidth}
+      {\scriptsize Regla 10 del contrato de la tarea 3:}
+      \vspace{.2em}
+      \colorbox{black!6}{\parbox{.95\linewidth}{\scriptsize\itshape
+      NO corrijas ni comentes el tratamiento. Si alguna prescripción te parece
+      equivocada, explícala al paciente tal como está escrita.}}
+      \vspace{.6em}
+
+      {\small Si el modelo añade «no tome este antibiótico, usted es alérgico»:}
+      \vspace{.3em}
+      \begin{center}
+        \bien{Tiene razón clínicamente.}\\[.2em]
+        \mal{Ha incumplido el contrato.}
+      \end{center}
+    \column{.5\textwidth}
+      {\setlength{\altocaptura}{0.46\textheight}%
+      \salida{18-t3-trazador}{Qué hizo la tarea 3 con la
+      amoxicilina-clavulánico: la transmitió tal cual, o le añadió una
+      advertencia}}
+  \end{columns}
+  \vspace{.4em}
+  \centering\scriptsize Un reescritor que decide por su cuenta cuándo desobedecer
+  hará, el día que se equivoque, que el paciente deje de tomar algo que necesitaba.
+\end{frame}
+
+\begin{frame}{Tareas 1--3: reformulación de información presente}
+  \centering
+  \begin{tabular}{@{}clll@{}}
+    \toprule
+    & \textbf{Operación} & \textbf{Entrada} & \textbf{Salida} \\
+    \midrule
+    1 & suprimir y sustituir & el documento & el mismo documento \\
+    2 & seleccionar y ordenar & el documento & un subconjunto estructurado \\
+    3 & reformular el registro & el documento & el mismo contenido, otro nivel \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1.2em}
+  \begin{center}
+    Ninguna de las tres exige que el modelo \emph{sepa} nada de medicina.\\[.3em]
+    Exigen que lea bien, que siga instrucciones y que no invente.
+  \end{center}
+  \vspace{.8em}
+  \centering\small Por eso el tamaño influye poco: lo que separa un 3B de un 27B
+  aquí es el seguimiento de instrucciones, no el conocimiento.
+\end{frame}
+
+% =====================================================================
+\section{5 — Donde se rompe}
+% =====================================================================
+
+\begin{frame}{Tarea 4 — Codificación CIE-10-ES}
+  \centering
+  \salida{10-t4-json}{Salida JSON de la tarea 4 en el 27B,
+  con los códigos y el campo texto\_de\_origen visibles}
+\end{frame}
+
+\begin{frame}{El gradiente}
+  \centering
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+     & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Opus~5} \\
+    \midrule
+    Categoría (3 caracteres) & 6/14 & 9/14 & 10/14 & \bien{14/14} \\
+    Código completo & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{16/16} \\
+    Diagnóstico principal & \mal{no} & \mal{no} & \mal{no} & \bien{sí} \\
+    \midrule
+    Códigos fuera del patrón & 9 & 8 & 8 & 0 \\
+    Códigos que \textbf{no existen} & & & & \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{.8em}
+  {\footnotesize La última fila se rellena a mano, comprobando cada código en
+  eCIE-Maps. Es el paso que no se puede automatizar y el más elocuente.\par}
+
+  \vspace{.6em}
+  \alert{Sabe de qué va. No sabe el código.}\\[.2em]
+  {\small Ninguno acierta el principal: la norma de combinación I13.0 exige
+  conocer la regla, no leer el texto.}
+\end{frame}
+
+\begin{frame}{El esquema le obliga a devolver algo con forma de código}
+  \centering
+  \captura[0.62\linewidth]{11-ecie-sin-resultados.png}{eCIE-Maps buscando un
+  código inventado por el modelo de 27B: «sin resultados»}
+
+  \vspace{.8em}
+  \texttt{I50.34} tiene exactamente el mismo aspecto que \texttt{I50.33}.\\[.3em]
+  \mal{Y no existe.}
+\end{frame}
+
+\begin{frame}{Tarea 5 — Tres incoherencias plantadas}
+  \small
+  \begin{tabular}{@{}cp{4.4cm}p{3.0cm}cccc@{}}
+    \toprule
+    & \textbf{Incoherencia} & \textbf{Dónde vive} & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Op.5} \\
+    \midrule
+    T1 & Amoxicilina-clavulánico con alergia a betalactámicos & \bien{en el texto} & \bien{sí} & \bien{sí} & \bien{sí} & \bien{sí} \\[.4em]
+    T2 & Metformina reanudada con FGe 22 & mitad y mitad & \mal{no} & \bien{sí} & \bien{sí} & \bien{sí} \\[.4em]
+    T3 & Apixabán 5\,mg con 2 de 3 criterios de reducción & \mal{en los pesos} & \mal{no} & \mal{no} & \bien{sí} & \bien{sí} \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{.8em}
+  \footnotesize Los datos de T3 (58 kg, creatinina 1,9, 67 años) están todos en el
+  informe. Lo que falta es la \emph{regla}, y el 27B la tiene: propone bajar a
+  2,5\,mg cada 12 horas, que es la corrección exacta.\\[.3em]
+  La frontera no está entre tareas. Está \textbf{dentro} de una misma tarea, y la
+  marca dónde vive la información.
+\end{frame}
+
+\begin{frame}{El precio de acertar}
+  \centering
+  \salida{12-t5-falsas-alarmas}{Los hallazgos de la tarea 5 en el 27B}
+
+  \vspace{.6em}
+  \small El 27B encontró las tres. Y devolvió \textbf{seis} hallazgos:
+  desdobla la primera en tres y añade uno más, \mal{«cambiar el tiotropio a una
+  inhalación al día»}, que es incorrecto.\\[.4em]
+  \alert{Un revisor que acierta tres de seis veces obliga a revisarlo todo.}
+\end{frame}
+
+\begin{frame}{El mismo dato, cinco tareas}
+  \centering\small
+  \begin{tabular}{@{}clcc@{}}
+    \toprule
+    & \textbf{Tarea} & \textbf{Qué debe hacer con la prescripción} & \textbf{Modelo} \\
+    \midrule
+    1 & Anonimización & \bien{conservarla intacta} & \\
+    2 & Extracción & \bien{extraerla tal cual} & \\
+    3 & Reescritura & \bien{contársela al paciente sin comentarios} & \\
+    4 & Codificación & \emph{no le afecta} & \\
+    \midrule
+    5 & Razonamiento & \mal{señalarla} & \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  \footnotesize Generada por \texttt{python3 scripts/evaluar.py -{}-trazador}
+
+  \vspace{.8em}
+  \alert{Lo que cambia no es el dato. Es qué se le está pidiendo al sistema.}
+\end{frame}
+
+\begin{frame}{El mismo dato, en un modelo real}
+  \centering
+  \salida[\scriptsize]{19-trazador-matriz}{Salida de
+  \texttt{scripts/evaluar.py -{}-trazador}: la misma prescripción a través de las
+  cinco tareas, en los tres tamaños}
+
+  \vspace{.5em}
+  \small Conservado en 1--3 · señalado en 5 · corrección indebida.\\
+  El resultado deseable es \textbf{3 / sí / 0}.
+\end{frame}
+
+\begin{frame}{Transformar no es validar}
+  \begin{center}
+    \Large Las tareas 1--3 miden \bien{fidelidad documental}.\\[.6em]
+    \Large La tarea 5 mide \mal{validación clínica}.
+  \end{center}
+  \vspace{1.4em}
+  \pause
+  \begin{center}
+    Son dos productos distintos, con dos evaluaciones distintas\\
+    y dos regímenes de supervisión distintos.
+  \end{center}
+  \vspace{1em}
+  \pause
+  \begin{center}\small
+    Y el circuito de codificación —la tarea 4— no ve ninguna de las dos cosas:\\
+    un error de prescripción lo atraviesa entero sin dejar rastro en el CMBD.
+  \end{center}
+\end{frame}
+
+\begin{frame}{Artículo 29}
+  \begin{center}
+    \Large No falla por callarse.\\[.4em]
+    \Large \alert{Falla por hablar de más.}
+  \end{center}
+  \vspace{1.5em}
+  \begin{center}
+    Un sistema con una falsa alarma de cada cinco\\
+    genera más trabajo del que ahorra.
+  \end{center}
+  \vspace{1em}
+  \begin{center}\textbf{Modelo retirado.}\end{center}
+\end{frame}
+
+\begin{frame}{Resumen de la matriz}
+  \centering\small
+  % `make tabla` escribe tabla-resultados.tex con los resultados reales.
+  \IfFileExists{tabla-resultados.tex}{\input{tabla-resultados.tex}}{%
+  \begin{tabular}{@{}llcccc@{}}
+    \toprule
+    Tarea & Métrica & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Opus~5} \\
+    \midrule
+    \multicolumn{6}{c}{\emph{ejecute} \texttt{make tabla} \emph{para rellenarla}} \\
+    \bottomrule
+  \end{tabular}}
+
+  \vspace{.8em}
+  {\footnotesize La columna \textbf{Opus~5} es el techo de referencia y
+  \alert{no es una medición ciega}: se produjo con los patrones de evaluación a
+  la vista. Dice qué admite cada tarea, no cuánto separa a un modelo de otro.\par}
+\end{frame}
+
+% =====================================================================
+% ---------------------------------------------------------------------
+% BLOQUE OPCIONAL. Si el tiempo aprieta, esta diapositiva se pasa a la
+% reserva de preguntas: contesta «¿y con un modelo grande?», que es la
+% objeción que sale siempre.
+% ---------------------------------------------------------------------
+\begin{frame}{El techo}
+  \centering\small
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+    \textbf{Tarea} & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Modelo de frontera} \\
+    \midrule
+    1 Anonimización & & & & \\
+    2 Extracción & & & & \\
+    3 Reescritura & & & & \\
+    \midrule
+    4 Codificación & & & & \\
+    5 Razonamiento & & & & \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  \begin{center}\footnotesize
+  La última columna se obtuvo enviando el informe a un servicio en la nube.\\
+  \textbf{Sólo es posible porque el informe es sintético.}
+  \end{center}
+  \vspace{.6em}
+  \centering\small Es el techo, no una opción: para un informe real hay que enviar
+  el documento.
+\end{frame}
+
+% =====================================================================
+\section{6 — Hardware}
+% =====================================================================
+
+\begin{frame}{Una sola regla}
+  \vspace{.5em}
+  \begin{center}
+    {\Large tokens/s $=\ \dfrac{\text{ancho de banda de la memoria (GB/s)}}{\text{tamaño del modelo (GB)}}$}
+  \end{center}
+  \vspace{1.2em}
+  Generar un token obliga a leer \textbf{todos} los pesos del modelo.
+  \vspace{.6em}
+
+  Es un problema de \alert{ancho de banda}, no de potencia de cálculo.
+  \vspace{1em}
+  \pause
+
+  Y la regla de memoria, en cuantización de 4 bits:
+  \begin{center}
+    \textbf{0,6 GB por cada mil millones de parámetros} $+$ 1--3 GB de contexto\\[.4em]
+    8B $\approx$ 5 GB \qquad 27B $\approx$ 17 GB \qquad 70B $\approx$ 42 GB
+  \end{center}
+\end{frame}
+
+\begin{frame}{Seis niveles}
+  \centering\scriptsize
+  \begin{tabular}{@{}lrrrrl@{}}
+    \toprule
+    \textbf{Nivel} & \textbf{Memoria} & \textbf{GB/s} & \textbf{Modelo} & \textbf{tok/s} & \textbf{Techo clínico} \\
+    \midrule
+    a) Móvil & 6 GB & 50 & 3B & 10--15 & Anonimización, plantillas, dictado \\
+    b) Portátil sin GPU & 32 GB & 80 & 8B & 7--11 & Extracción por lotes, no interactiva \\
+    c) Portátil Apple Silicon & 48 GB & 300 & 27B & 8--13 & \ + reescritura para el paciente \\
+    \rowcolor{black!8}
+    d) Servidor sin GPU & 512 GB & 100 & 70B & \mal{1--2} & Casi nada interactivo \\
+    e) Servidor con 1 GPU & 48 GB & 1.000 & 32B & 24--38 & Codificación asistida, pocos usuarios \\
+    f) Servidor multi-GPU & 160 GB & 6.700 & 120B & 44--71 & Servicio concurrente con lotes \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  \footnotesize Calculado con \texttt{python3 scripts/hardware.py -{}-tabla}.
+  Los tok/s son el 50--80\,\% del techo teórico.
+\end{frame}
+
+\begin{frame}{Medido, no estimado}
+  \begin{columns}[c]
+    \column{.48\textwidth}\centering
+      \captura{13-lmstudio-velocidad.png}{Barra de estado de LM Studio con los
+      tok/s de un modelo grande}
+    \column{.48\textwidth}\centering
+      \captura{14-monitor-memoria.png}{Monitor de actividad con la memoria
+      ocupada al cargar el 27B}
+  \end{columns}
+  \vspace{.6em}
+  \centering\footnotesize Estas dos cifras están medidas en la máquina de la demo, no sacadas de una tabla.
+\end{frame}
+
+\begin{frame}{La fila d}
+  \begin{center}
+    {\Large Un servidor con \textbf{512 GB de RAM} y sin GPU}\\[.5em]
+    {\Large carga un modelo de 70B}\\[.5em]
+    {\Large y lo ejecuta a \mal{uno o dos tokens por segundo}.}
+  \end{center}
+  \vspace{1.3em}
+  \pause
+  \begin{center}
+    Más lento que leer en voz alta. Con 512 GB de RAM.
+  \end{center}
+  \vspace{1em}
+  \pause
+  \begin{center}
+    \alert{\Large «Mucha RAM» y «rápido» no son lo mismo.}\\[.3em]
+    Esa confusión es un error de compra de seis cifras.
+  \end{center}
+\end{frame}
+
+\begin{frame}{Concurrencia}
+  \begin{center}
+    Un portátil sirve a \textbf{una} persona.\\[.6em]
+    \pause
+    Doscientos usuarios simultáneos exigen procesar por lotes.\\[.3em]
+    Procesar por lotes exige GPU.
+  \end{center}
+  \vspace{1.5em}
+  \pause
+  \begin{center}
+    \alert{\Large El coste no escala con lo listo que sea el modelo.}\\[.3em]
+    \alert{\Large Escala con cuánta gente lo usa a la vez.}
+  \end{center}
+\end{frame}
+
+% =====================================================================
+\section{7 — Cierre}
+% =====================================================================
+
+\begin{frame}{La frontera}
+  \centering
+  \begin{tabular}{@{}p{5.4cm}p{5.4cm}@{}}
+    \toprule
+    \textbf{Tareas 1--3} & \textbf{Tareas 4--5} \\
+    \midrule
+    La información está \bien{en el texto} & La información está \mal{en los pesos} \\[.5em]
+    Extracción y reformulación & Conocimiento memorizado \\[.5em]
+    Un modelo pequeño basta & Ningún modelo pequeño basta \\[.5em]
+    El tamaño casi no importa & El tamaño importa, y aun así no llega \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{}
+  \vspace{1.5em}
+  \begin{center}
+    {\Large Los parámetros gastan memoria.}\\[.8em]
+    {\Large El tamaño importa muchísimo en unas tareas}\\[.3em]
+    {\Large y casi nada en otras.}
+  \end{center}
+  \vspace{2em}
+  \pause
+  \begin{center}
+    \alert{\large Lo primero que hay que decidir no es qué modelo se compra.}\\[.3em]
+    \alert{\large Es en cuál de las dos columnas está el problema.}
+  \end{center}
+\end{frame}
+
+\begin{frame}{El repositorio}
+  \begin{columns}[c]
+    \column{.55\textwidth}
+      Todo lo que han visto se puede ejecutar en su portátil:
+      \vspace{.6em}
+      \begin{itemize}\small
+        \item El informe sintético
+        \item Los cinco prompts y sus esquemas JSON
+        \item Instrucciones de LM Studio y los modelos
+        \item Los patrones de evaluación y la rúbrica
+        \item Los scripts, sin dependencias
+      \end{itemize}
+      \vspace{.8em}
+      {\footnotesize\ttfamily \urlrepo}
+    \column{.4\textwidth}
+      \centering
+      \qrcode[height=3cm]{\urlrepo}
+  \end{columns}
+\end{frame}
+
+\end{document}

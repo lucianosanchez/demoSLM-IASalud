@@ -1,0 +1,100 @@
+{
+  "name": "extraccion_informe_alta",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["paciente", "alergias", "habito_tabaquico", "antecedentes", "medicacion_previa", "medicacion_alta", "parametros_clave", "episodio"],
+    "properties": {
+      "paciente": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edad_anos", "sexo", "peso_kg", "talla_cm"],
+        "properties": {
+          "edad_anos": {"type": "integer", "description": "Edad cumplida en la fecha de INGRESO. Calcúlela a partir de la fecha de nacimiento y la de ingreso."},
+          "sexo": {"type": "string", "enum": ["hombre", "mujer", "no consta"]},
+          "peso_kg": {"type": ["number", "null"]},
+          "talla_cm": {"type": ["number", "null"]}
+        }
+      },
+      "alergias": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["agente", "manifestacion", "documentada"],
+          "properties": {
+            "agente": {"type": "string"},
+            "manifestacion": {"type": ["string", "null"]},
+            "documentada": {"type": "boolean"}
+          }
+        }
+      },
+      "habito_tabaquico": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["estado", "paquetes_ano"],
+        "properties": {
+          "estado": {"type": "string", "enum": ["fumador", "exfumador", "nunca fumador", "no consta"]},
+          "paquetes_ano": {"type": ["number", "null"]}
+        }
+      },
+      "antecedentes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["descripcion", "activo"],
+          "properties": {
+            "descripcion": {"type": "string"},
+            "activo": {"type": "boolean", "description": "false si el informe dice que está en remisión, resuelto o inactivo"}
+          }
+        }
+      },
+      "medicacion_previa": {"$ref": "#/$defs/lista_farmacos"},
+      "medicacion_alta": {"$ref": "#/$defs/lista_farmacos"},
+      "parametros_clave": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fevi_pct", "fge_ml_min", "creatinina_mg_dl", "hba1c_pct", "nt_probnp_pg_ml"],
+        "properties": {
+          "fevi_pct": {"type": ["number", "null"]},
+          "fge_ml_min": {"type": ["number", "null"], "description": "FGe al alta"},
+          "creatinina_mg_dl": {"type": ["number", "null"], "description": "creatinina al alta"},
+          "hba1c_pct": {"type": ["number", "null"]},
+          "nt_probnp_pg_ml": {"type": ["number", "null"]}
+        }
+      },
+      "episodio": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fecha_ingreso", "fecha_alta", "estancia_dias", "servicio", "diagnosticos_alta"],
+        "properties": {
+          "fecha_ingreso": {"type": "string", "description": "AAAA-MM-DD"},
+          "fecha_alta": {"type": "string", "description": "AAAA-MM-DD"},
+          "estancia_dias": {"type": "integer"},
+          "servicio": {"type": "string"},
+          "diagnosticos_alta": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "$defs": {
+      "lista_farmacos": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["principio_activo", "dosis", "unidad", "via", "frecuencia", "duracion"],
+          "properties": {
+            "principio_activo": {"type": "string", "description": "En minúsculas, sin marca comercial"},
+            "dosis": {"type": ["number", "string"]},
+            "unidad": {"type": "string", "enum": ["mg", "mcg", "g", "UI", "unidades", "mL", "mg/mg", "mcg/mcg", "no consta"]},
+            "via": {"type": "string", "enum": ["oral", "subcutánea", "intravenosa", "inhalada", "tópica", "no consta"]},
+            "frecuencia": {"type": "string", "description": "Literal normalizado: 'cada 12 horas', 'cada 24 horas', '1 vez al día'..."},
+            "duracion": {"type": ["string", "null"], "description": "null si es tratamiento crónico sin fin definido"}
+          }
+        }
+      }
+    }
+  }
+}

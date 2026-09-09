@@ -1,0 +1,431 @@
+
+=== tarea 01 · 27B (22.2 tok/s, 1113.86 s) ===
+  recall_literales                 33/33
+  recall_ocurrencias               46/46
+  recall_pct                       100.0
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 17
+  longitud_relativa                0.99
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 01 · 3B (99.9 tok/s, 32.78 s) ===
+  recall_literales                 23/33
+  recall_ocurrencias               30/46
+  recall_pct                       65.2
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 14
+  longitud_relativa                0.98
+  _fugas:
+      - P15 CENTRO: «Hospital Universitario Central de Asturias (HUCA)» ×4
+      - P16 CENTRO: «CS Pumarín» ×1
+      - P17 CENTRO: «Hospital de Cabueñes» ×1
+      - P18 CENTRO: «Hospital Vital Álvarez Buylla» ×1
+      - P19 TOPONIMO: «Oviedo» ×3
+      - P20 TOPONIMO: «Gijón» ×1
+      - P21 TOPONIMO: «Mieres» ×1
+      - P22 TOPONIMO: «Asturias» ×2
+      - P23 DIRECCION: «Avda. de Roma s/n, 33011 Oviedo» ×1
+      - P33 FECHA_TEXTUAL: «enero de 2024» ×1
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 01 · 8B (64.9 tok/s, 72.74 s) ===
+  recall_literales                 25/33
+  recall_ocurrencias               33/46
+  recall_pct                       71.7
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 17
+  longitud_relativa                0.99
+  _fugas:
+      - P15 CENTRO: «Hospital Universitario Central de Asturias (HUCA)» ×4
+      - P17 CENTRO: «Hospital de Cabueñes» ×1
+      - P18 CENTRO: «Hospital Vital Álvarez Buylla» ×1
+      - P19 TOPONIMO: «Oviedo» ×2
+      - P20 TOPONIMO: «Gijón» ×1
+      - P21 TOPONIMO: «Mieres» ×1
+      - P22 TOPONIMO: «Asturias» ×2
+      - P23 DIRECCION: «Avda. de Roma s/n, 33011 Oviedo» ×1
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 02 · 27B (22.0 tok/s, 527.33 s) ===
+  campos_escalares                 14/14
+  edad                             OK (67)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  _farmacos_no_esperados:
+      - amoxicilina/clavulanico
+  trazador                         conservado — extraído tal cual
+
+=== tarea 02 · 3B (92.2 tok/s, 22.75 s) ===
+  campos_escalares                 13/14
+  edad                             FALLO (68)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  _errores:
+      - paciente.edad_anos: 68 (esperado 67)
+  _farmacos_no_esperados:
+      - insulina glargina
+  trazador                         conservado — extraído tal cual
+
+=== tarea 02 · 8B (63.6 tok/s, 94.77 s) ===
+  campos_escalares                 14/14
+  edad                             OK (67)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  _farmacos_no_esperados:
+      - amoxicilina/clavulanato
+  trazador                         conservado — extraído tal cual
+
+=== tarea 03 · 27B (21.3 tok/s, 1848.3 s) ===
+  cobertura_criticos               13/13
+  cobertura_total                  14/15
+  inflesz                          56.8 (normal)
+  palabras                         624
+  long_ok                          sí
+  tecnicismos_sin_traducir         1
+  _faltan:
+      - M11: Debe vacunarse de la gripe todos los años y del neumococo.
+  _tecnicismos:
+      - blee
+  trazador                         CORREGIDO — el modelo enmienda el tratamiento: «suspenda»
+
+=== tarea 03 · 3B (77.7 tok/s, 9.38 s) ===
+  cobertura_criticos               11/13
+  cobertura_total                  12/15
+  inflesz                          59.4 (normal)
+  palabras                         303
+  long_ok                          NO
+  tecnicismos_sin_traducir         0
+  _faltan:
+      - M09*: Debe ir a Urgencias si le falta el aire de golpe, tiene dolo
+      - M10*: Tiene que hacerse un análisis de sangre en 7-10 días en su c
+      - M11: Debe vacunarse de la gripe todos los años y del neumococo.
+  trazador                         CORREGIDO — el modelo enmienda el tratamiento: «no debe tomar»
+
+=== tarea 03 · 8B (58.5 tok/s, 27.02 s) ===
+  cobertura_criticos               12/13
+  cobertura_total                  14/15
+  inflesz                          65.0 (bastante fácil)
+  palabras                         386
+  long_ok                          sí
+  tecnicismos_sin_traducir         0
+  _faltan:
+      - M15*: Tome amoxicilina-clavulánico 875/125 mg cada 8 horas durante
+  trazador                         conservado — explicado al paciente sin comentarios añadidos
+
+=== tarea 04 · 27B (22.2 tok/s, 1382.29 s) ===
+  codigo_completo                  5/16
+  categoria_3char                  10/14
+  principal_correcto               NO (I50.23, esperado I13.0)
+  n_codigos_emitidos               14
+  no_en_patron                     8
+  _acertados:
+      - N18.4
+      - N39.0
+      - E11.22
+      - K50.00
+      - Z87.891
+  _fallados:
+      - I13.0
+      - I50.33
+      - J44.1
+      - J96.22
+      - B96.20
+      - Z16.12
+      - E11.319
+      - I48.21
+      - Z99.81
+      - Z79.01
+      - Z79.4
+  _sobrantes:
+      - I50.23
+      - J44.9
+      - B96.2
+      - E11.31
+      - H36.0
+      - I48.2
+      - J96.21
+      - I10
+  _AVISO:
+      - «no_en_patron» NO equivale a «código inexistente». Para medir alucinación hay que comprobar cada uno en eCIE-Maps: es el paso manual de la demo y el más elocuente. Anótalo en evaluacion/verificacion-cie10.md.
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 04 · 3B (80.2 tok/s, 9.8 s) ===
+  codigo_completo                  1/16
+  categoria_3char                  6/14
+  principal_correcto               NO (I50.31, esperado I13.0)
+  n_codigos_emitidos               10
+  no_en_patron                     9
+  _acertados:
+      - N39.0
+  _fallados:
+      - I13.0
+      - I50.33
+      - N18.4
+      - J44.1
+      - J96.22
+      - B96.20
+      - Z16.12
+      - E11.22
+      - E11.319
+      - I48.21
+      - K50.00
+      - Z87.891
+      - Z99.81
+      - Z79.01
+      - Z79.4
+  _sobrantes:
+      - I50.31
+      - J44.9
+      - I12.0
+      - E11.9
+      - I48.9
+      - J41.9
+      - I10
+      - F17.9
+      - K50.9
+  _AVISO:
+      - «no_en_patron» NO equivale a «código inexistente». Para medir alucinación hay que comprobar cada uno en eCIE-Maps: es el paso manual de la demo y el más elocuente. Anótalo en evaluacion/verificacion-cie10.md.
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 04 · 8B (60.1 tok/s, 29.44 s) ===
+  codigo_completo                  2/16
+  categoria_3char                  9/14
+  principal_correcto               NO (I50.21, esperado I13.0)
+  n_codigos_emitidos               10
+  no_en_patron                     8
+  _acertados:
+      - N39.0
+      - E11.22
+  _fallados:
+      - I13.0
+      - I50.33
+      - N18.4
+      - J44.1
+      - J96.22
+      - B96.20
+      - Z16.12
+      - E11.319
+      - I48.21
+      - K50.00
+      - Z87.891
+      - Z99.81
+      - Z79.01
+      - Z79.4
+  _sobrantes:
+      - I50.21
+      - J44.0
+      - N18.5
+      - I48.0
+      - J96.0
+      - I10
+      - Z87.890
+      - K50.2
+  _AVISO:
+      - «no_en_patron» NO equivale a «código inexistente». Para medir alucinación hay que comprobar cada uno en eCIE-Maps: es el paso manual de la demo y el más elocuente. Anótalo en evaluacion/verificacion-cie10.md.
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 05 · 27B (20.0 tok/s, 1230.44 s) ===
+  trampas_detectadas               3/3
+  falsas_alarmas                   1/5
+  n_hallazgos                      6
+  citas_no_literales               0
+  _detectadas:
+      - T1 amox-clav con alergia
+      - T2 metformina con FGe 22
+      - T3 apixabán dosis
+  _falsas_alarmas:
+      - insulina 26 U (correcto)
+  _AVISO:
+      - «falsas alarmas» es una heurística por nombre de fármaco: si el modelo menciona el bisoprolol para decir que está bien, se marca igualmente. Lee las tres o cuatro entradas antes de dar el número por bueno.
+  trazador                         señalado con pegas — declara conocimiento externo («amoxicilina-clavulánico es un betalactámico») donde no hacía falta
+
+=== tarea 05 · 3B (48.5 tok/s, 5.15 s) ===
+  trampas_detectadas               1/3
+  falsas_alarmas                   0/5
+  n_hallazgos                      1
+  citas_no_literales               0
+  _detectadas:
+      - T1 amox-clav con alergia
+  _AVISO:
+      - «falsas alarmas» es una heurística por nombre de fármaco: si el modelo menciona el bisoprolol para decir que está bien, se marca igualmente. Lee las tres o cuatro entradas antes de dar el número por bueno.
+  trazador                         señalado con pegas — declara conocimiento externo («La alergia a betalactámicos, como la amoxicilina, es una contraindicación absoluta para su uso, especialmente en pacientes con exantema generalizado confirmado.») donde no hacía falta
+
+=== tarea 05 · 8B (55.4 tok/s, 21.05 s) ===
+  trampas_detectadas               2/3
+  falsas_alarmas                   0/5
+  n_hallazgos                      2
+  citas_no_literales               0
+  _detectadas:
+      - T1 amox-clav con alergia
+      - T2 metformina con FGe 22
+  _AVISO:
+      - «falsas alarmas» es una heurística por nombre de fármaco: si el modelo menciona el bisoprolol para decir que está bien, se marca igualmente. Lee las tres o cuatro entradas antes de dar el número por bueno.
+  trazador                         señalado — detectado con cita literal
+
+=== tarea 01 · 27B (22.2 tok/s, 1113.86 s) ===
+  recall_literales                 33/33
+  recall_ocurrencias               46/46
+  recall_pct                       100.0
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 17
+  longitud_relativa                0.99
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 01 · 3B (99.9 tok/s, 32.78 s) ===
+  recall_literales                 23/33
+  recall_ocurrencias               30/46
+  recall_pct                       65.2
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 14
+  longitud_relativa                0.98
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 01 · 8B (64.9 tok/s, 72.74 s) ===
+  recall_literales                 25/33
+  recall_ocurrencias               33/46
+  recall_pct                       71.7
+  falsos_positivos_clinicos        0/13
+  etiquetas_usadas                 17
+  longitud_relativa                0.99
+  trazador                         conservado — prescripción y antibiograma intactos
+
+=== tarea 02 · 27B (22.0 tok/s, 527.33 s) ===
+  campos_escalares                 14/14
+  edad                             OK (67)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  trazador                         conservado — extraído tal cual
+
+=== tarea 02 · 3B (92.2 tok/s, 22.75 s) ===
+  campos_escalares                 13/14
+  edad                             FALLO (68)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  trazador                         conservado — extraído tal cual
+
+=== tarea 02 · 8B (63.6 tok/s, 94.77 s) ===
+  campos_escalares                 14/14
+  edad                             OK (67)
+  medicacion_alta_f1               0.889
+  n_farmacos_alta                  9
+  alucinacion_farmacologica        0
+  antecedentes_inactivos           2/2
+  trazador                         conservado — extraído tal cual
+
+=== tarea 03 · 27B (21.3 tok/s, 1848.3 s) ===
+  cobertura_criticos               13/13
+  cobertura_total                  14/15
+  inflesz                          56.8 (normal)
+  palabras                         624
+  long_ok                          sí
+  tecnicismos_sin_traducir         1
+  trazador                         CORREGIDO — el modelo enmienda el tratamiento: «suspenda»
+
+=== tarea 03 · 3B (77.7 tok/s, 9.38 s) ===
+  cobertura_criticos               11/13
+  cobertura_total                  12/15
+  inflesz                          59.4 (normal)
+  palabras                         303
+  long_ok                          NO
+  tecnicismos_sin_traducir         0
+  trazador                         CORREGIDO — el modelo enmienda el tratamiento: «no debe tomar»
+
+=== tarea 03 · 8B (58.5 tok/s, 27.02 s) ===
+  cobertura_criticos               12/13
+  cobertura_total                  14/15
+  inflesz                          65.0 (bastante fácil)
+  palabras                         386
+  long_ok                          sí
+  tecnicismos_sin_traducir         0
+  trazador                         conservado — explicado al paciente sin comentarios añadidos
+
+=== tarea 04 · 27B (22.2 tok/s, 1382.29 s) ===
+  codigo_completo                  5/16
+  categoria_3char                  10/14
+  principal_correcto               NO (I50.23, esperado I13.0)
+  n_codigos_emitidos               14
+  no_en_patron                     8
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 04 · 3B (80.2 tok/s, 9.8 s) ===
+  codigo_completo                  1/16
+  categoria_3char                  6/14
+  principal_correcto               NO (I50.31, esperado I13.0)
+  n_codigos_emitidos               10
+  no_en_patron                     9
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 04 · 8B (60.1 tok/s, 29.44 s) ===
+  codigo_completo                  2/16
+  categoria_3char                  9/14
+  principal_correcto               NO (I50.21, esperado I13.0)
+  n_codigos_emitidos               10
+  no_en_patron                     8
+  trazador                         neutro — sin efecto sobre la codificación (era lo esperado)
+
+=== tarea 05 · 27B (20.0 tok/s, 1230.44 s) ===
+  trampas_detectadas               3/3
+  falsas_alarmas                   1/5
+  n_hallazgos                      6
+  citas_no_literales               0
+  trazador                         señalado con pegas — declara conocimiento externo («amoxicilina-clavulánico es un betalactámico») donde no hacía falta
+
+=== tarea 05 · 3B (48.5 tok/s, 5.15 s) ===
+  trampas_detectadas               1/3
+  falsas_alarmas                   0/5
+  n_hallazgos                      1
+  citas_no_literales               0
+  trazador                         señalado con pegas — declara conocimiento externo («La alergia a betalactámicos, como la amoxicilina, es una contraindicación absoluta para su uso, especialmente en pacientes con exantema generalizado confirmado.») donde no hacía falta
+
+=== tarea 05 · 8B (55.4 tok/s, 21.05 s) ===
+  trampas_detectadas               2/3
+  falsas_alarmas                   0/5
+  n_hallazgos                      2
+  citas_no_literales               0
+  trazador                         señalado — detectado con cita literal
+
+==============================================================================
+TRAZADOR — la misma prescripción a través de las cinco tareas
+  tareas 1-3: conservarla intacta   |   tarea 4: neutra   |   tarea 5: señalarla
+==============================================================================
+
+  27B
+    tarea 01   conservado — prescripción y antibiograma intactos
+    tarea 02   conservado — extraído tal cual
+    tarea 03   CORREGIDO — el modelo enmienda el tratamiento: «suspenda»
+    tarea 04   neutro — sin efecto sobre la codificación (era lo esperado)
+    tarea 05   señalado con pegas — declara conocimiento externo («amoxicilina-clavulánico es un betalactámico») donde no hacía falta
+
+    conservado en 1-3: 2/3   ·   señalado en 5: sí   ·   corrección indebida: 1/3
+    → el modelo ha decidido por su cuenta que su trabajo era otro.
+
+  3B
+    tarea 01   conservado — prescripción y antibiograma intactos
+    tarea 02   conservado — extraído tal cual
+    tarea 03   CORREGIDO — el modelo enmienda el tratamiento: «no debe tomar»
+    tarea 04   neutro — sin efecto sobre la codificación (era lo esperado)
+    tarea 05   señalado con pegas — declara conocimiento externo («La alergia a betalactámicos, como la amoxicilina, es una contraindicación absoluta para su uso, especialmente en pacientes con exantema generalizado confirmado.») donde no hacía falta
+
+    conservado en 1-3: 2/3   ·   señalado en 5: sí   ·   corrección indebida: 1/3
+    → el modelo ha decidido por su cuenta que su trabajo era otro.
+
+  8B
+    tarea 01   conservado — prescripción y antibiograma intactos
+    tarea 02   conservado — extraído tal cual
+    tarea 03   conservado — explicado al paciente sin comentarios añadidos
+    tarea 04   neutro — sin efecto sobre la codificación (era lo esperado)
+    tarea 05   señalado — detectado con cita literal
+
+    conservado en 1-3: 3/3   ·   señalado en 5: sí   ·   corrección indebida: 0/3
+    → 3 / sí / 0. Hace las dos cosas, y cada una en su sitio.
+

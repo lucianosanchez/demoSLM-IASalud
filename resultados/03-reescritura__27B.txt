@@ -1,0 +1,73 @@
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene diabetes tipo 2 (azúcar alta en sangre).
+Tiene fibrilación auricular (ritmo cardíaco irregular).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+En el día +4 (cuarto día de ingreso) empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+## Sus medicinas
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina) 100 U/mL (unidades por mililitro), 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg (microgramos), 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+## Lo que tiene que hacer en casa
+Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Coma menos de 2 gramos de sal al día.
+Beba hasta 1,5 litros diarios.
+Incluya sopas, infusiones y el agua de los medicamentos.
+No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+Hágase una analítica de control en 7-10 días.
+Debe incluir función renal e iones (sales en la sangre).
+Hágala en su centro de salud, antes de la revisión en consultas.
+Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo).
+
+## Cuándo tiene que pedir ayuda
+Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+
+## Sus próximas citas
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h

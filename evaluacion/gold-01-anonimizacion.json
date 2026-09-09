@@ -1,0 +1,349 @@
+{
+  "informe": "informe-alta-001",
+  "tarea": "01-anonimizacion",
+  "nota": "El informe es SINTÉTICO. Ninguno de estos datos corresponde a una persona real.",
+  "identificadores_a_eliminar": [
+    {
+      "id": "P01",
+      "categoria": "NOMBRE_PACIENTE",
+      "literal": "Manuel Fernández Argüelles",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P02",
+      "categoria": "ID_SANITARIO",
+      "literal": "1024577",
+      "campo": "NHC",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P03",
+      "categoria": "ID_OFICIAL",
+      "literal": "10876543-R",
+      "campo": "DNI",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P04",
+      "categoria": "ID_OFICIAL",
+      "literal": "33/10023456/78",
+      "campo": "NASS",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P05",
+      "categoria": "FECHA_NACIMIENTO",
+      "literal": "14/03/1957",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P06",
+      "categoria": "DIRECCION",
+      "literal": "C/ Martínez Vigil 27, 2.º D, 33010 Oviedo (Asturias)",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P07",
+      "categoria": "TELEFONO",
+      "literal": "985 27 41 63",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P08",
+      "categoria": "TELEFONO",
+      "literal": "619 442 087",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P09",
+      "categoria": "TELEFONO",
+      "literal": "636 118 249",
+      "ocurrencias": 1,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P10",
+      "categoria": "NOMBRE_FAMILIAR",
+      "literal": "Covadonga Fernández Solís",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P11",
+      "categoria": "NOMBRE_PROFESIONAL",
+      "literal": "Dr. Ramón Piñera Cueto",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P12",
+      "categoria": "NOMBRE_PROFESIONAL",
+      "literal": "Dra. Begoña Álvarez Roza",
+      "ocurrencias": 2,
+      "dificultad": "media",
+      "trampa": "Aparece dos veces, en la cabecera y en la firma. Mide consistencia."
+    },
+    {
+      "id": "P13",
+      "categoria": "NOMBRE_PROFESIONAL",
+      "literal": "Dr. Antón Muñiz Lavandera",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P14",
+      "categoria": "ID_PROFESIONAL",
+      "literal": "33/4409721",
+      "campo": "n.º colegiado",
+      "ocurrencias": 1,
+      "dificultad": "dificil"
+    },
+    {
+      "id": "P15",
+      "categoria": "CENTRO",
+      "literal": "Hospital Universitario Central de Asturias (HUCA)",
+      "alias": ["HUCA"],
+      "ocurrencias": 4,
+      "dificultad": "media",
+      "trampa": "El acrónimo HUCA aparece suelto tres veces más. Casi ningún modelo pequeño lo elimina en todas. Las 4 ocurrencias son las de «HUCA», una de ellas dentro del nombre completo: por eso lleva 'alias', que es lo que cuenta scripts/evaluar.py."
+    },
+    {
+      "id": "P16",
+      "categoria": "CENTRO",
+      "literal": "CS Pumarín",
+      "ocurrencias": 2,
+      "dificultad": "dificil"
+    },
+    {
+      "id": "P17",
+      "categoria": "CENTRO",
+      "literal": "Hospital de Cabueñes",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P18",
+      "categoria": "CENTRO",
+      "literal": "Hospital Vital Álvarez Buylla",
+      "ocurrencias": 1,
+      "dificultad": "dificil",
+      "trampa": "Nombre de hospital que contiene un antropónimo."
+    },
+    {
+      "id": "P19",
+      "categoria": "TOPONIMO",
+      "literal": "Oviedo",
+      "ocurrencias": 4,
+      "dificultad": "media"
+    },
+    {
+      "id": "P20",
+      "categoria": "TOPONIMO",
+      "literal": "Gijón",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P21",
+      "categoria": "TOPONIMO",
+      "literal": "Mieres",
+      "ocurrencias": 1,
+      "dificultad": "dificil"
+    },
+    {
+      "id": "P22",
+      "categoria": "TOPONIMO",
+      "literal": "Asturias",
+      "ocurrencias": 3,
+      "dificultad": "media"
+    },
+    {
+      "id": "P23",
+      "categoria": "DIRECCION",
+      "literal": "Avda. de Roma s/n, 33011 Oviedo",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P24",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "12/02/2025",
+      "campo": "ingreso",
+      "ocurrencias": 3,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P25",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "21/02/2025",
+      "campo": "alta",
+      "ocurrencias": 2,
+      "dificultad": "facil"
+    },
+    {
+      "id": "P26",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "14/02/2025",
+      "campo": "urocultivo",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P27",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "17/02/2025",
+      "campo": "ecocardiograma",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P28",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "12/03/2025",
+      "campo": "cita MI",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P29",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "26/02/2025",
+      "campo": "cita enfermería",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P30",
+      "categoria": "FECHA_ASISTENCIAL",
+      "literal": "04/04/2025",
+      "campo": "cita nefrología",
+      "ocurrencias": 1,
+      "dificultad": "media"
+    },
+    {
+      "id": "P31",
+      "categoria": "FECHA_TEXTUAL",
+      "literal": "21 de febrero de 2025",
+      "campo": "firma",
+      "ocurrencias": 1,
+      "dificultad": "dificil",
+      "trampa": "Fecha escrita en letra. Los modelos pequeños solo detectan el patrón dd/mm/aaaa."
+    },
+    {
+      "id": "P32",
+      "categoria": "FECHA_TEXTUAL",
+      "literal": "09/2024",
+      "campo": "ecocardiograma previo",
+      "ocurrencias": 1,
+      "dificultad": "dificil"
+    },
+    {
+      "id": "P33",
+      "categoria": "FECHA_TEXTUAL",
+      "literal": "enero de 2024",
+      "campo": "inicio oxigenoterapia",
+      "ocurrencias": 1,
+      "dificultad": "dificil"
+    }
+  ],
+  "anos_sueltos_discutibles": {
+    "nota": "Años aislados (2003, 2011, 2016, 2018, 2019, 2021). Bajo el criterio de mínimo riesgo pueden conservarse como intervalos relativos ('hace 22 años'). NO se puntúan como fallo, pero sí se anota la política que aplica cada modelo, porque delata si sigue la instrucción o improvisa.",
+    "literales": [
+      "2003",
+      "2011",
+      "2016",
+      "2018",
+      "2019",
+      "2021",
+      "2024"
+    ]
+  },
+  "terminos_clinicos_que_deben_sobrevivir": [
+    {
+      "id": "C01",
+      "literal": "Enfermedad de Crohn",
+      "por_que": "Epónimo. Parece un apellido."
+    },
+    {
+      "id": "C02",
+      "literal": "Índice de Charlson",
+      "por_que": "Epónimo. Parece un apellido."
+    },
+    {
+      "id": "C03",
+      "literal": "Signo de Homans",
+      "por_que": "Epónimo. Parece un apellido."
+    },
+    {
+      "id": "C04",
+      "literal": "Killip",
+      "por_que": "Epónimo en clasificación de gravedad."
+    },
+    {
+      "id": "C05",
+      "literal": "líneas B de Kerley",
+      "por_que": "Epónimo radiológico."
+    },
+    {
+      "id": "C06",
+      "literal": "Escherichia coli",
+      "por_que": "Nombre binomial. Parece un nombre propio de persona."
+    },
+    {
+      "id": "C07",
+      "literal": "Índice de Barthel",
+      "por_que": "Epónimo en escala funcional."
+    },
+    {
+      "id": "C08",
+      "literal": "CKD-EPI",
+      "por_que": "Acrónimo de fórmula. Puede confundirse con un identificador."
+    },
+    {
+      "id": "C09",
+      "literal": "CHA2DS2-VASc",
+      "por_que": "Acrónimo alfanumérico. Se confunde con un código identificador."
+    },
+    {
+      "id": "C10",
+      "literal": "HAS-BLED",
+      "por_que": "Acrónimo alfanumérico."
+    },
+    {
+      "id": "C11",
+      "literal": "NYHA III",
+      "por_que": "Clasificación funcional."
+    },
+    {
+      "id": "C12",
+      "literal": "GOLD 3",
+      "por_que": "Clasificación de gravedad."
+    },
+    {
+      "id": "C13",
+      "literal": "BLEE",
+      "por_que": "Acrónimo microbiológico."
+    }
+  ],
+  "coherencia_requerida": {
+    "seudonimos_estables": "Si se seudonimiza en lugar de suprimir, cada entidad debe recibir SIEMPRE el mismo sustituto (Dra. Begoña Álvarez Roza aparece 2 veces; el paciente y su hija comparten el apellido Fernández y NO deben recibir el mismo seudónimo).",
+    "desplazamiento_de_fechas": "Si se opta por desplazar fechas en lugar de suprimirlas, el desplazamiento debe ser constante: la estancia debe seguir siendo de 9 días y el urocultivo debe seguir cayendo en el día +2.",
+    "estructura": "El informe de salida debe conservar todas las secciones y el mismo número de líneas de tratamiento (10 al alta, 8 previas)."
+  },
+  "metricas": {
+    "recall": "identificadores_detectados / 33",
+    "recall_ponderado": "cuenta cada ocurrencia, no cada literal (total de ocurrencias: 46)",
+    "falsos_positivos_clinicos": "términos de terminos_clinicos_que_deben_sobrevivir eliminados o alterados / 13",
+    "coherencia": "0-3 según los tres criterios de coherencia_requerida",
+    "umbral_de_uso_real": "recall de ocurrencias >= 100 % y falsos positivos clínicos = 0. Cualquier cosa por debajo exige revisión humana línea a línea, que es exactamente lo que exige el art. 3.h.",
+    "nota_solapamiento": "'Asturias' aparece 3 veces, dos de ellas dentro de 'Hospital Universitario Central de Asturias'. Se puntúa una sola vez por ocurrencia textual: no se penaliza dos veces el mismo fragmento."
+  }
+}

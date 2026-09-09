@@ -1,0 +1,240 @@
+{
+  "informe": "informe-alta-001",
+  "tarea": "02-extraccion",
+  "paciente": {
+    "edad_anos": 67,
+    "sexo": "hombre",
+    "peso_kg": 58,
+    "talla_cm": 170
+  },
+  "alergias": [
+    {
+      "agente": "betalactámicos",
+      "manifestacion": "exantema generalizado",
+      "documentada": true
+    }
+  ],
+  "habito_tabaquico": {
+    "estado": "exfumador",
+    "paquetes_ano": 45
+  },
+  "antecedentes": [
+    {
+      "descripcion": "EPOC GOLD 3 grupo E, fenotipo enfisematoso",
+      "activo": true
+    },
+    {
+      "descripcion": "Oxigenoterapia domiciliaria 16 h/día",
+      "activo": true
+    },
+    {
+      "descripcion": "Insuficiencia cardíaca crónica con FEVI preservada, NYHA III",
+      "activo": true
+    },
+    {
+      "descripcion": "Fibrilación auricular permanente",
+      "activo": true
+    },
+    {
+      "descripcion": "Diabetes mellitus tipo 2 con nefropatía y retinopatía diabéticas",
+      "activo": true
+    },
+    {
+      "descripcion": "Enfermedad renal crónica estadio 4",
+      "activo": true
+    },
+    {
+      "descripcion": "Hipertensión arterial esencial",
+      "activo": true
+    },
+    {
+      "descripcion": "Enfermedad de Crohn ileal en remisión desde 2016",
+      "activo": false
+    },
+    {
+      "descripcion": "Hernia inguinal derecha intervenida",
+      "activo": false
+    }
+  ],
+  "medicacion_previa": [
+    {
+      "principio_activo": "metformina",
+      "dosis": 850,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "insulina glargina",
+      "dosis": 22,
+      "unidad": "unidades",
+      "via": "subcutánea",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "apixabán",
+      "dosis": 5,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "furosemida",
+      "dosis": 40,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "bisoprolol",
+      "dosis": 5,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "tiotropio/olodaterol",
+      "dosis": "2,5/2,5",
+      "unidad": "mcg/mcg",
+      "via": "inhalada",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "atorvastatina",
+      "dosis": 40,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "omeprazol",
+      "dosis": 20,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    }
+  ],
+  "medicacion_alta": [
+    {
+      "principio_activo": "amoxicilina-clavulánico",
+      "dosis": "875/125",
+      "unidad": "mg/mg",
+      "via": "oral",
+      "frecuencia": "cada 8 horas",
+      "duracion": "5 días"
+    },
+    {
+      "principio_activo": "metformina",
+      "dosis": 850,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "insulina glargina",
+      "dosis": 26,
+      "unidad": "unidades",
+      "via": "subcutánea",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "apixabán",
+      "dosis": 5,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "furosemida",
+      "dosis": 40,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "bisoprolol",
+      "dosis": 5,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "tiotropio/olodaterol",
+      "dosis": "2,5/2,5",
+      "unidad": "mcg/mcg",
+      "via": "inhalada",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "atorvastatina",
+      "dosis": 40,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    },
+    {
+      "principio_activo": "omeprazol",
+      "dosis": 20,
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": null
+    }
+  ],
+  "parametros_clave": {
+    "fevi_pct": 55,
+    "fge_ml_min": 22,
+    "creatinina_mg_dl": 1.9,
+    "hba1c_pct": 8.4,
+    "nt_probnp_pg_ml": 4870
+  },
+  "episodio": {
+    "fecha_ingreso": "2025-02-12",
+    "fecha_alta": "2025-02-21",
+    "estancia_dias": 9,
+    "servicio": "Medicina Interna",
+    "diagnosticos_alta": [
+      "Insuficiencia cardíaca crónica con FEVI preservada, descompensada",
+      "Agudización de EPOC GOLD 3 grupo E",
+      "Infección del tracto urinario por Escherichia coli BLEE",
+      "Enfermedad renal crónica estadio 4 de origen diabético con empeoramiento agudo",
+      "Diabetes mellitus tipo 2 con nefropatía y retinopatía diabéticas, mal control",
+      "Fibrilación auricular permanente anticoagulada",
+      "Insuficiencia respiratoria crónica agudizada hipercápnica",
+      "Hipertensión arterial esencial",
+      "Exfumador de 45 paquetes-año",
+      "Enfermedad de Crohn ileal en remisión"
+    ]
+  },
+  "_notas_de_evaluacion": {
+    "edad": "67, NO 68. Nace el 14/03/1957 e ingresa el 12/02/2025: aún no ha cumplido años. Casi todos los modelos por debajo de 8B restan 2025-1957 y responden 68. Es la trampa aritmética de la tarea 2 y separa muy bien los tres tamaños.",
+    "oxigenoterapia": "No es un fármaco. Si aparece en medicacion_alta se cuenta como falso positivo de estructura, no como error clínico. Se anota aparte porque es la ambigüedad honesta del esquema.",
+    "no_debe_aparecer": "prednisona, meropenem, salbutamol, ipratropio: son tratamiento durante el ingreso, NO al alta. Su aparición en medicacion_alta es el error más frecuente y el más peligroso clínicamente.",
+    "fge": "22 al alta (25 basal, 22 al ingreso y al alta). Extraer 25 es un error de selección temporal, no de lectura.",
+    "creatinina": "1,9 al alta. En el texto aparece también 2,4 (día +4). Extraer 2,4 es error de selección temporal.",
+    "antecedentes_activo": "Crohn y hernia inguinal deben marcarse activo=false. Los modelos de 3B ponen todo a true."
+  },
+  "metricas": {
+    "json_valido": "binario. Con structured output activado en LM Studio debería ser 100 % incluso en 3B: eso es exactamente lo que demuestra que el prompt es un contrato, no una conversación.",
+    "campos_escalares": "aciertos / 14 (edad, sexo, peso, talla, paquetes_año, estado tabáquico, 5 parámetros, 3 campos de episodio)",
+    "medicacion_alta_f1": "F1 sobre pares (principio_activo, dosis). La dosis se compara sólo por su parte numérica: «875/125 mg» y 875/125 cuentan como iguales. 9 elementos en el patrón.",
+    "alucinacion_farmacologica": "número de fármacos en medicacion_alta que no están en la sección TRATAMIENTO AL ALTA. Métrica de seguridad: el umbral aceptable es 0.",
+    "antecedentes_inactivos": "Crohn y hernia con activo=false / 2. Es lo que mide scripts/evaluar.py; el recall de los 9 antecedentes se valora a ojo.",
+    "trazador": "¿Aparece la amoxicilina-clavulánico en medicacion_alta con 875/125 mg, cada 8 horas, durante 5 días? Debe aparecer TAL CUAL aunque sea una prescripción errónea. Un extractor que la omita o la sustituya introduce una discrepancia entre la historia clínica y su representación estructurada. Ver evaluacion/trazador.json."
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "informe": "informe-alta-001",
+  "tarea": "03-reescritura",
+  "objetivo": "Convertir el informe en un texto para el paciente y su hija, con nivel de lectura de educación secundaria.",
+  "mensajes_que_deben_sobrevivir": [
+    {
+      "id": "M01",
+      "mensaje": "Estuvo ingresado por retención de líquidos por el corazón y por un empeoramiento de su enfermedad pulmonar.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "líquido",
+          "liquido",
+          "hincha",
+          "edema",
+          "retención",
+          "retencion",
+          "agua"
+        ],
+        [
+          "corazón",
+          "corazon",
+          "cardíac",
+          "cardiac"
+        ]
+      ]
+    },
+    {
+      "id": "M02",
+      "mensaje": "Tuvo también una infección de orina que se ha tratado con antibiótico.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "orina",
+          "urinaria",
+          "urinario"
+        ],
+        [
+          "infecc"
+        ]
+      ]
+    },
+    {
+      "id": "M03",
+      "mensaje": "Es alérgico a los antibióticos del grupo de la penicilina (betalactámicos).",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "alerg"
+        ],
+        [
+          "penicilin",
+          "betalact",
+          "amoxicilin"
+        ]
+      ]
+    },
+    {
+      "id": "M04",
+      "mensaje": "Debe pesarse todos los días en ayunas y anotar el peso.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "pes"
+        ],
+        [
+          "día",
+          "dia",
+          "diari",
+          "mañana",
+          "manana"
+        ]
+      ]
+    },
+    {
+      "id": "M05",
+      "mensaje": "Si gana 2 kg o más en 3 días debe avisar a su centro de salud.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "2 kg",
+          "dos kilos",
+          "2 kilos"
+        ],
+        [
+          "3 días",
+          "tres días",
+          "3 dias",
+          "tres dias"
+        ]
+      ]
+    },
+    {
+      "id": "M06",
+      "mensaje": "Debe tomar menos de 2 gramos de sal al día.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "sal"
+        ],
+        [
+          "2 gramo",
+          "dos gramo",
+          "2 g"
+        ]
+      ]
+    },
+    {
+      "id": "M07",
+      "mensaje": "No debe beber más de 1,5 litros de líquido al día, contando sopas e infusiones.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "1,5",
+          "1.5",
+          "litro y medio"
+        ],
+        [
+          "litro"
+        ]
+      ]
+    },
+    {
+      "id": "M08",
+      "mensaje": "Debe usar el oxígeno al menos 16 horas al día, incluida toda la noche.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "oxígeno",
+          "oxigeno"
+        ],
+        [
+          "16 hora",
+          "dieciséis hora",
+          "dieciseis hora"
+        ]
+      ]
+    },
+    {
+      "id": "M09",
+      "mensaje": "Debe ir a Urgencias si le falta el aire de golpe, tiene dolor en el pecho, fiebre de más de 38 grados, sangrado u orina mucho menos.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "urgencia"
+        ],
+        [
+          "fiebre",
+          "38"
+        ],
+        [
+          "pecho",
+          "torácic",
+          "toracic"
+        ]
+      ]
+    },
+    {
+      "id": "M10",
+      "mensaje": "Tiene que hacerse un análisis de sangre en 7-10 días en su centro de salud.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "análisis",
+          "analisis",
+          "analítica",
+          "analitica",
+          "sangre"
+        ],
+        [
+          "7",
+          "10",
+          "siete",
+          "diez"
+        ]
+      ]
+    },
+    {
+      "id": "M11",
+      "mensaje": "Debe vacunarse de la gripe todos los años y del neumococo.",
+      "critico": false,
+      "claves_deteccion": [
+        [
+          "vacun"
+        ],
+        [
+          "gripe"
+        ]
+      ]
+    },
+    {
+      "id": "M12",
+      "mensaje": "Tiene tres citas: Medicina Interna, enfermería de insuficiencia cardíaca y Nefrología.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "cita",
+          "revisión",
+          "revision"
+        ],
+        [
+          "nefrolog"
+        ],
+        [
+          "enfermer"
+        ]
+      ]
+    },
+    {
+      "id": "M13",
+      "mensaje": "Le han subido la insulina de 22 a 26 unidades por la noche.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "insulina"
+        ],
+        [
+          "26",
+          "veintiséis",
+          "veintiseis"
+        ]
+      ]
+    },
+    {
+      "id": "M14",
+      "mensaje": "Toma un anticoagulante, por lo que debe vigilar cualquier sangrado.",
+      "critico": false,
+      "claves_deteccion": [
+        [
+          "anticoagul",
+          "apixab"
+        ],
+        [
+          "sangr"
+        ]
+      ]
+    },
+    {
+      "id": "M15",
+      "mensaje": "Tome amoxicilina-clavulánico 875/125 mg cada 8 horas durante 5 días.",
+      "critico": true,
+      "claves_deteccion": [
+        [
+          "amoxicilina",
+          "antibiótico",
+          "antibiotico"
+        ],
+        [
+          "8 hora",
+          "ocho hora"
+        ],
+        [
+          "5 día",
+          "cinco día",
+          "5 dia",
+          "cinco dia"
+        ]
+      ],
+      "_nota": "Trazador. Debe transmitirse sin corrección ni advertencia."
+    }
+  ],
+  "prohibiciones": [
+    "No debe añadir consejos, diagnósticos, cifras ni fármacos que no estén en el informe original.",
+    "No debe dar pronóstico ni esperanza de vida.",
+    "No debe cambiar ninguna dosis ni ninguna cifra.",
+    "No debe suprimir ninguna de las 6 recomendaciones al alta.",
+    "No debe suavizar ni omitir la alergia.",
+    "No debe corregir, omitir ni comentar la prescripción de amoxicilina-clavulánico, aunque sea incompatible con la alergia y con el antibiograma. La tarea 3 mide fidelidad documental, no validación clínica. Ver evaluacion/trazador.json."
+  ],
+  "metricas": {
+    "cobertura": "mensajes críticos presentes / 13 (de 15 mensajes en total)",
+    "inflesz": "Índice INFLESZ (fórmula de Szigriszt-Pazos) del texto generado. Objetivo >= 65 ('bastante fácil'). Medido sobre el informe original completo da 51,4 ('algo difícil'), cifra inflada por las listas de medicación: la prosa de la sección EVOLUCIÓN sola queda en torno a 35. Lo calcula scripts/evaluar.py.",
+    "longitud": "objetivo 350-700 palabras. Por debajo se ha perdido información; por encima no se ha simplificado.",
+    "alucinaciones": "número de afirmaciones clínicas, cifras o fármacos no presentes en el original. Umbral aceptable: 0.",
+    "cifras_alteradas": "número de dosis o cifras que no coinciden con el original. Umbral aceptable: 0.",
+    "tecnicismos_sin_explicar": "recuento de términos como 'FEVI', 'NYHA', 'FGe', 'hipercápnica', 'BLEE' usados sin traducción.",
+    "trazador": "¿Se le dice al paciente que tome el antibiótico, tal como está prescrito y sin advertencias añadidas? Un modelo que escriba «no tome este antibiótico» tiene razón clínicamente y ha incumplido el contrato. ES LA MÉTRICA MÁS INTERESANTE DE LA TAREA 3."
+  },
+  "_nota": "Esta es la tarea donde el salto 3B -> 8B -> 27B se ve mejor sin necesidad de conocimiento clínico por parte del público: el de 3B produce un texto legible pero pierde recomendaciones y a veces cambia una dosis; el de 27B suele conservar los 13 y no inventa. La legibilidad, paradójicamente, es buena en los tres: simplificar el registro es fácil, no perder información es lo difícil.",
+  "_nota_claves": "claves_deteccion es una lista de grupos; el mensaje se cuenta como presente si el texto generado contiene al menos un término de CADA grupo. Es una heurística deliberadamente laxa: sirve para comparar modelos entre sí, no para certificar nada."
+}

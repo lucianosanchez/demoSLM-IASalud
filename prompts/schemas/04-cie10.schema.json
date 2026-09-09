@@ -1,0 +1,30 @@
+{
+  "name": "codificacion_cie10",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["diagnostico_principal", "diagnosticos_secundarios"],
+    "properties": {
+      "diagnostico_principal": {"$ref": "#/$defs/codigo"},
+      "diagnosticos_secundarios": {"type": "array", "items": {"$ref": "#/$defs/codigo"}}
+    },
+    "$defs": {
+      "codigo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["codigo", "descripcion", "texto_de_origen", "confianza"],
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "pattern": "^[A-Z][0-9][0-9A-Z](\\.[0-9A-Z]{1,4})?$",
+            "description": "Código CIE-10-ES completo, con punto. Ejemplo: I50.33"
+          },
+          "descripcion": {"type": "string", "description": "Descripción oficial del código"},
+          "texto_de_origen": {"type": "string", "description": "Fragmento LITERAL del informe que justifica este código"},
+          "confianza": {"type": "string", "enum": ["alta", "media", "baja"]}
+        }
+      }
+    }
+  }
+}

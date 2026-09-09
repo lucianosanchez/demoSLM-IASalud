@@ -1,0 +1,27 @@
+{
+  "tokens_razonamiento": 3951,
+  "segundos": 94.77,
+  "tokens_entrada": 4731,
+  "tokens_salida": 6023,
+  "tokens_por_segundo": 63.6,
+  "finish_reason": "stop",
+  "json_valido": true,
+  "tarea": "02-extraccion",
+  "modelo": "qwen3-8b",
+  "etiqueta": "8B",
+  "prompt": "prompts/02-extraccion.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0",
+    "top_p": "1",
+    "repeat_penalty": "1.0",
+    "max_tokens": "35840",
+    "context_length": "65536",
+    "structured_output": "prompts/schemas/02-extraccion.schema.json"
+  },
+  "maquina": "StudioM4.local",
+  "servidor": "http://localhost:1234/v1",
+  "contexto": 40960,
+  "sin_razonar": false,
+  "momento": "2026-09-09T21:08:13"
+}

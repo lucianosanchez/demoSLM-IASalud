@@ -1,0 +1,80 @@
+{
+  "informe": "informe-alta-001",
+  "tarea": "05-razonamiento-clinico",
+  "objetivo": "Detectar incoherencias entre el juicio clínico y el tratamiento al alta, sin inventar problemas que no existen.",
+  "diseno": "Las tres incoherencias están graduadas por DÓNDE vive la información necesaria para detectarlas. Esta gradación es el corazón del mensaje de la charla: la frontera no está entre tareas, está entre 'la respuesta está en el texto' y 'la respuesta está en los pesos'.",
+  "incoherencias_plantadas": [
+    {
+      "id": "T1",
+      "gravedad": "grave",
+      "hallazgo": "Se prescribe amoxicilina-clavulánico al alta en un paciente con alergia documentada a betalactámicos.",
+      "agravante": "Además, el urocultivo informa E. coli BLEE RESISTENTE a amoxicilina-clavulánico. Y el paciente ya completó 7 días de meropenem: el antibiótico al alta no solo es peligroso e inútil, es innecesario.",
+      "donde_vive_la_informacion": "EN EL TEXTO",
+      "conocimiento_externo_necesario": "Sólo saber que amoxicilina-clavulánico es un betalactámico.",
+      "quien_deberia_detectarlo": "Un modelo de 3B bien dirigido puede detectarlo. Un 8B debería detectarlo casi siempre.",
+      "valor_didactico": "Demuestra que la tarea 5 no falla en bloque. La parte de la tarea 5 que es comparación textual funciona.",
+      "trazador": "TRZ-01. Este mismo dato es el que las tareas 1, 2 y 3 tienen la obligación de CONSERVAR intacto. Es el instrumento que hace visible la diferencia entre transformar un texto y validarlo. Ver evaluacion/trazador.json y ejecutar `scripts/evaluar.py --trazador`."
+    },
+    {
+      "id": "T2",
+      "gravedad": "grave",
+      "hallazgo": "Se reanuda metformina al alta con FGe 22 mL/min/1,73 m².",
+      "agravante": "El propio informe dice que se suspendió durante el ingreso por deterioro de función renal, y la creatinina al alta sigue siendo 1,9 mg/dL con FGe 22. Reanudarla contradice la evolución escrita tres párrafos antes.",
+      "donde_vive_la_informacion": "MITAD TEXTO, MITAD PESOS",
+      "conocimiento_externo_necesario": "El umbral de contraindicación de metformina (FGe < 30 mL/min) no está en el informe.",
+      "quien_deberia_detectarlo": "Un 8B lo detecta a veces; un 27B, la mayoría de las veces. Un 3B casi nunca, y cuando lo hace suele dar el umbral equivocado (45 en lugar de 30).",
+      "valor_didactico": "El modelo puede señalar la contradicción interna sin saber el umbral, y entonces acierta por el motivo equivocado. Merece la pena leer la justificación, no solo el veredicto."
+    },
+    {
+      "id": "T3",
+      "gravedad": "moderada",
+      "hallazgo": "Apixabán 5 mg/12 h cuando el paciente cumple 2 de los 3 criterios de reducción de dosis: peso 58 kg (<= 60 kg) y creatinina 1,9 mg/dL (>= 1,5 mg/dL). La dosis correcta sería 2,5 mg/12 h.",
+      "agravante": "No cumple el tercer criterio (edad >= 80 años: tiene 67). Un modelo que 'sabe' que hay criterios pero no cuáles, tiende a decir que la dosis está bien porque el paciente no es mayor de 80.",
+      "donde_vive_la_informacion": "EN LOS PESOS",
+      "conocimiento_externo_necesario": "Los tres criterios de reducción de apixabán y la regla de 'dos de tres'. Nada de esto está en el informe: hay que tener memorizado el criterio y aplicar dos comparaciones numéricas.",
+      "quien_deberia_detectarlo": "Ningún modelo pequeño de forma fiable. Un 27B lo acierta ocasionalmente. Es la incoherencia que justifica el mensaje de la charla.",
+      "valor_didactico": "Es el ejemplo limpio de conocimiento que tiene que estar dentro de los pesos: los datos necesarios (58 kg, 1,9 mg/dL, 67 años) están todos en el texto, y aun así el modelo no puede resolverlo si no sabe la regla."
+    }
+  ],
+  "distractores_que_NO_son_errores": [
+    {
+      "elemento": "Bisoprolol en paciente con EPOC",
+      "por_que_parece_error": "Betabloqueante en broncópata.",
+      "por_que_es_correcto": "Es cardioselectivo y está indicado para control de frecuencia en FA con insuficiencia cardíaca. Está recomendado, no contraindicado."
+    },
+    {
+      "elemento": "Oxígeno a 2 lpm en paciente hipercápnico",
+      "por_que_parece_error": "El oxígeno puede agravar la hipercapnia.",
+      "por_que_es_correcto": "El objetivo de SatO2 88-92 % es exactamente la pauta correcta en el retenedor crónico, y está escrito en el informe."
+    },
+    {
+      "elemento": "Furosemida mantenida tras el empeoramiento renal",
+      "por_que_parece_error": "Diurético tras un deterioro de función renal.",
+      "por_que_es_correcto": "Se redujo, se corrigió el deterioro y se reanudó la dosis previa. La evolución lo explica."
+    },
+    {
+      "elemento": "Insulina subida de 22 a 26 unidades",
+      "por_que_parece_error": "Aumento de dosis al alta.",
+      "por_que_es_correcto": "Coherente con la retirada prevista de antidiabéticos orales y con HbA1c 8,4 %."
+    },
+    {
+      "elemento": "Atorvastatina 40 mg con ERC estadio 4",
+      "por_que_parece_error": "Ajuste de estatina en insuficiencia renal.",
+      "por_que_es_correcto": "La atorvastatina no requiere ajuste por función renal. Es la respuesta que separa a un modelo que sabe de uno que generaliza 'insuficiencia renal implica bajar dosis'."
+    }
+  ],
+  "hallazgos_avanzados_que_suman_pero_no_puntuan": [
+    "Ausencia de iSGLT2 en un paciente con DM2 e insuficiencia cardíaca (aunque con FGe 22 la indicación es discutible).",
+    "Ausencia de vacunación registrada durante el ingreso pese a recomendarla al alta.",
+    "Omeprazol crónico sin indicación explícita, candidato a desprescripción.",
+    "El diagnóstico 7 (insuficiencia respiratoria crónica agudizada) no tiene reflejo en el tratamiento al alta más allá del oxígeno."
+  ],
+  "metricas": {
+    "deteccion": "incoherencias detectadas / 3, anotando cuál",
+    "justificacion_correcta": "de las detectadas, cuántas se justifican por el motivo correcto (0-3). Métrica esencial: acertar por casualidad es frecuente y no vale.",
+    "falsas_alarmas": "distractores señalados como error / 5. Es la métrica que mata a los modelos pequeños: no fallan por callarse, fallan por hablar de más.",
+    "alucinacion_de_datos": "número de datos clínicos citados en la respuesta que no están en el informe (dosis inventadas, valores analíticos inexistentes, guías citadas con año falso).",
+    "umbral_de_retirada": "Un sistema que produce falsas alarmas por encima de 1/5 en un informe genera más trabajo del que ahorra. En términos del Decreto 98/2025 es exactamente el supuesto del art. 29: rendimiento insuficiente en explotación real."
+  },
+  "_advertencia_para_el_ponente": "En la charla conviene decir en voz alta que las tres incoherencias están plantadas a propósito y que el informe es sintético. Si no, alguien del público las tomará por un caso real y la conversación se irá a otro sitio."
+}

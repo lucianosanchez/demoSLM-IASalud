@@ -1,0 +1,1143 @@
+We need answer in Spanish. User asks rewrite discharge report for patient and daughter following strict rules. Need produce final only with specified sections and no more. Need ensure 350-700 words. Need second person singular usted, short sentences <20 words, no chained subordinates, no passive voice? "sin voz pasiva" strict. Need explain each technical term first time in parentheses common words. Do not remove technical terms. Prohibited add info not in report: no advice, diagnosis, numbers, meds, prognosis, life expectancy. But must preserve six recommendations and three appointments. Must mention allergy explicitly. Structure exactly sections:
+## Por qué ha estado ingresado
+## Qué le hemos hecho
+## Sus medicinas
+## Lo que tiene que hacer en casa
+## Cuándo tiene que pedir ayuda
+## Sus próximas citas
+
+Need translate report. Need be careful with numbers exact. Dates, doses, etc copied exactly. Need no passive voice? Spanish passive often "ha estado ingresado" is state not passive? "ha estado" okay. Avoid "fue", "se inicia"? Impersonal se can be passive-like? Better use active: "Le pusimos...", "Le hicimos...". But we are software rewriting, not staff? Rule says no conversas and no te diriges al personal sanitario. We can say "Le hemos hecho" as section. Use "usted". Need explain technical terms first time in parentheses. Need include all diagnoses? Maybe not all, but enough. Must not add info. Need preserve six recommendations exactly? Can rephrase but keep content. Need three citas exact dates/times. Need mention allergy: alergia a betalactámicos (antibióticos de la familia de la penicilina) maybe explain. But report says documented allergy to beta-lactams after amoxicillin 2019. Need mention explicitly. However treatment at discharge includes Amoxicilina-clavulánico, which is beta-lactam and patient allergic. Rule 10: do not correct or comment treatment. If prescription seems wrong, explain as written without warnings, notes, omitting. So in Sus medicinas include Amoxicilina-clavulánico exactly. But also mention allergy? Could say "Tiene alergia a betalactámicos (antibióticos de la familia de la penicilina)." Then list medicine includes amoxicilina-clavulánico. No warning. Need maybe explain amoxicilina-clavulánico? It's a medicine, not technical term? Could explain first time: "Amoxicilina-clavulánico (antibiótico)". But if allergy to beta-lactams, explaining as antibiotic family penicillin might be okay. Need no advice. But recommendations include contact center etc. That's in report.
+
+Need word count 350-700. Let's draft and count. Need short sentences <20 words. Avoid passive voice. Need no chained subordinates. Use simple sentences.
+
+Potential issue: "Por qué ha estado ingresado" section: explain reason: disnea progresiva (dificultad para respirar que fue aumentando) de tres días, aumento de edemas (hinchazón con fosa al presionar) en piernas, sensación distérmica (sensación de frío o calor anormal). Refiere disuria (ardor al orinar) y polaquiuria (ir mucho al baño) semana previa. Need maybe mention diagnoses? Could say "Le ingresamos por dificultad para respirar..." But rule no add diagnosis? It's in report. Need explain technical terms first time.
+
+Need preserve all six recommendations and three citas. Recommendations:
+1. Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso. Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+2. Dieta con menos de 2 gramos de sal al día. Restricción de líquidos a 1,5 litros diarios, incluyendo sopas, infusiones y el agua de los medicamentos.
+3. No suspenda la oxigenoterapia. Debe usarla al menos 16 horas al día, incluyendo toda la noche.
+4. Acuda a Urgencias si presenta aumento brusco de la dificultad respiratoria, dolor torácico, fiebre superior a 38 °C, sangrado o disminución importante de la cantidad de orina.
+5. Analítica de control con función renal e iones en 7-10 días en su centro de salud, antes de la revisión en consultas.
+6. Se recomienda vacunación antigripal anual y vacunación antineumocócica.
+
+Need maybe rephrase in second person: "Pésese" is formal imperative? okay. But rule second person cortesía. Could use "Pésese" (usted). Short sentences. Need no passive? "Se recomienda" is impersonal passive-like? Better "Le recomendamos..." but that's adding? It's in report. Use "Tiene que ponerse la vacuna..."? But recommendation says recommended. We can say "Le recomendamos la vacunación antigripal anual y la antineumocócica." That's active. But no advice? It's from report.
+
+Need "Cuándo tiene que pedir ayuda" likely recommendation 4 and maybe 1? Section structure: Lo que tiene que hacer en casa should include recommendations 1-3,5,6? Cuándo pedir ayuda includes rec 4 and maybe weight gain contact? The six recommendations must be preserved, can distribute. Need ensure all six appear. Maybe in "Lo que tiene que hacer en casa" include 1,2,3,5,6. In "Cuándo tiene que pedir ayuda" include 4 and also weight gain? But rec 1 includes contact if gains 2kg. Could put rec1 in home, but it has help condition. Need preserve exact? We can split? Rule says conservar las SEIS recomendaciones al alta y las TRES citas. Ninguna puede desaparecer. It doesn't require each as one sentence, but content must be there. Better include all six clearly. Maybe number them? But structure only sections, no extra headings. Could use bullets? It says estructura con estos apartados y ninguno más. Bullets okay? Probably. Need no extra headings. Could use numbered list under sections. That's fine.
+
+Need "Sus próximas citas" include three exact:
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h
+Need explain technical terms? "Consultas Externas" maybe not. "insuficiencia cardíaca" already explained? Need first time. If appears in citas, need explain if not earlier. We can explain in Por qué or Qué. "Insuficiencia cardíaca (el corazón no bombea bien)" etc. But report says fracción de eyección preservada. Need maybe include diagnosis: insuficiencia cardíaca crónica con fracción de eyección preservada (el corazón bombea con fuerza normal, pero se llena mal). Hmm technical term "fracción de eyección" needs explanation. Could say "Tiene insuficiencia cardíaca crónica (el corazón no funciona bien) con fracción de eyección preservada (la fuerza de bombeo está conservada)." But is that adding? It's in report. Need explain technical terms first time. "EPOC (enfermedad pulmonar obstructiva crónica)"? Report uses EPOC. Need explain: "EPOC (enfermedad pulmonar crónica)". But exact term? Could say "agudización de EPOC (enfermedad pulmonar crónica)". Need not add GOLD? Maybe include? It's in report but not necessary? Rule no add info, but can omit nonessential? Must preserve recommendations and citas. It doesn't require all diagnoses. But patient has right to know what he has? Rule 3 says explain each technical term first time, don't eliminate: patient has right to know how it is called. Does that mean if we mention a technical term, explain; not necessarily include all. But maybe should include main diagnoses. Need avoid too many terms causing word count.
+
+Need "Qué le hemos hecho": oxygen therapy with nasal cannula 2 lpm target SatO2 88-92%, furosemida intravenosa 40 mg cada 8 horas, prednisona 40 mg cada 24 horas durante 5 días, nebulized salbutamol e ipratropio. Urocultivo, meropenem 500 mg cada 8 horas adjusted renal function, maintained 7 days after E. coli BLEE. Afebril 48h, PCR 18 mg/L at discharge. Negative water balance 4200 mL and weight loss 4 kg. Day +4 renal worsening creatinine 2.4 mg/dL due volume depletion, corrected by reducing furosemida to 40 mg cada 12 horas IV then oral. Creatinine discharge 1.9, FGe 22. Control heart rate with bisoprolol reaching 78 lpm. Anticoagulation maintained no bleeding. Metformin suspended due renal deterioration, rapid insulin corrective, glycemia 140-210. Discharge stable etc. Need maybe not all numbers? Rule 5: prohibited change any number; if include, exact. Can omit some numbers? It says no cifras added. Omitting is okay? But maybe need preserve relevant. We can include key. Need short sentences.
+
+Need "Sus medicinas": list discharge treatment exactly. Include doses and times. Need explain technical terms? "subcutáneas (bajo la piel)" first time. "vía oral" maybe not. "unidades" okay. Need include all meds:
+- Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días
+- Metformina 850 mg, 1 comprimido cada 12 horas
+- Insulina glargina 100 U/mL, 26 unidades subcutáneas a las 22:00 h
+- Apixabán 5 mg, 1 comprimido cada 12 horas
+- Furosemida 40 mg, 1 comprimido por la mañana
+- Bisoprolol 5 mg, 1 comprimido al día
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día
+- Atorvastatina 40 mg, 1 comprimido en la cena
+- Omeprazol 20 mg, 1 comprimido en ayunas
+- Oxigenoterapia domiciliaria 16 h/día a 2 lpm
+
+Need mention allergy explicitly. Could in "Por qué" or "Sus medicinas"? Better before meds: "Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina)." But then list amoxicilina-clavulánico. No warning. Need maybe explain amoxicilina-clavulánico as antibiotic? If we say "Amoxicilina-clavulánico (antibiótico)" and earlier allergy to beta-lactams (antibiotics family penicillin), it's clear. But no warning.
+
+Need avoid passive voice. Check phrases:
+"ha estado ingresado" is copular, okay.
+"Le ingresamos por..." active.
+"Tiene alergia documentada" okay.
+"Le pusimos oxígeno..." active.
+"Le hicimos análisis..." active.
+"Le dimos antibiótico..." active.
+"Se suspende metformina" passive-like. Use "Suspendimos la metformina".
+"se corrige" use "corregimos".
+"se mantiene" use "mantenemos"? But at discharge? "Mantuvimos la anticoagulación".
+Need no "fue". Avoid "está descompensada"? okay.
+
+Need second person: "usted". Use "su", "sus". Section titles fixed. In text: "Le ingresamos" is we to you, okay. "Tiene" etc.
+
+Need short sentences <20 words. Let's draft with bullets maybe each bullet one sentence? Need count words. Aim ~500.
+
+Draft:
+
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía hinchazón con fosa al presionar en las piernas.
+Tenía sensación de frío o calor anormal.
+En la semana previa orinaba con ardor y con más frecuencia.
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+Need "edemas" technical? We used hinchazón with fosa, but maybe need term edemas? Rule: explain each technical term first time, don't eliminate. If we don't use edemas, okay. But report motivo says edemas. Patient right to know? Maybe include: "edemas (hinchazón con fosa al presionar)". Sentence: "También tenía edemas (hinchazón con fosa al presionar) en las piernas." Word count okay. "sensación distérmica" maybe include: "Tenía sensación distérmica (sensación de frío o calor anormal)." "disuria" and "polaquiuria": "En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño)." Good.
+
+Need mention diagnoses? Maybe in Por qué: "Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien) y agudización de EPOC (enfermedad pulmonar crónica)." But that's diagnosis from report. Need explain terms. Could be too long. Sentence: "Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien)." 12 words? Le(1) ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien)12. Good. "También tenía una agudización de EPOC (enfermedad pulmonar crónica)." 9? También1 tenía2 una3 agudización4 de5 EPOC6 (enfermedad7 pulmonar8 crónica)9. But report says agudización EPOC. Need maybe include infection: "Tenía infección del tracto urinario (infección en la orina)." But technical? Could say "Tenía infección del tracto urinario (infección en la orina) por Escherichia coli BLEE." Need explain BLEE? "BLEE (bacterias que resisten muchos antibióticos)"? Report: productora de betalactamasas de espectro extendido. Need if mention BLEE, explain. Maybe avoid BLEE? But diagnosis includes. Could say "Tenía infección del tracto urinario (infección en la orina)." Enough. But patient right to know bacteria? Maybe not necessary. However report has E. coli BLEE. If we mention, need explain. Word count.
+
+Need "Qué le hemos hecho":
+Le pusimos oxígeno por la nariz a 2 lpm.
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (diurético) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Mantenemos el antibiótico durante 7 días. Wait "mantenemos" present? In report maintained. Use "Le mantuvimos meropenem durante 7 días." But if we already said gave, okay.
+Dejó de tener fiebre a las 48 horas.
+Su PCR (marcador de inflamación) bajó a 18 mg/L al alta.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Su FGe (filtrado glomerular estimado) era 22 mL/min/1,73 m².
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantenemos la anticoagulación (medicina para evitar coágulos) sin sangrados. Use "Mantuvimos".
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora.
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+Need no passive: "Lo relacionamos" active. "Alcanzó" okay. "estuvieron" okay.
+
+But "Le mantuvimos meropenem durante 7 días" maybe redundant. Need exact: meropenem 500 mg cada 8 horas adjusted renal function, maintained 7 days after confirmed E. coli BLEE. Could include E. coli BLEE? If not, okay? But diagnosis? Maybe in Por qué or Qué: "El urocultivo mostró Escherichia coli BLEE (bacteria que resiste muchos antibióticos)." Need explain. Sentence: "El urocultivo mostró Escherichia coli BLEE (bacteria que resiste muchos antibióticos)." 10? El1 urocultivo2 mostró3 Escherichia4 coli5 BLEE6 (bacteria7 que8 resiste9 muchos10 antibióticos)11. Good. But "mostró" active. Need maybe "más de 100.000 UFC/mL"? Could omit? Rule no change if include. Omit okay. But patient right? Maybe not.
+
+Need "Sus medicinas":
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina). Already in Por qué. Need mention explicitly maybe once enough. But rule says must mention explicitly. Could repeat? Maybe in Sus medicinas: "Tiene alergia a betalactámicos." But if already, okay. To be safe, include in Sus medicinas before list: "Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina)." Then list includes amoxicilina-clavulánico. No warning.
+List:
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina de acción larga) 100 U/mL, 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (medicina para evitar coágulos) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (diurético) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg, 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+Need check if explanations add info not in report? They are common words for technical terms, allowed. "insulina de acción larga" is not in report but explains glargina? Is that adding info? Rule 3 says explain technical term with common words. It may require some medical knowledge. But prohibited add information not in report: no diagnosis, cifras, medicamento, pronóstico. Explaining a medicine as "insulina de acción larga" might be adding info not in report? It is a property of glargina, not in report. Better use generic: "Insulina glargina (insulina)"? But glargina is type. Could say "Insulina glargina (insulina que se pone bajo la piel)" but subcutánea already. Maybe avoid extra. For each technical term, explain with words corrientes that are in report or obvious. "Metformina (medicina para la diabetes)" diabetes in report. "Apixabán (anticoagulante)" anticoagulación in report. "Furosemida (diurético)" furosemida used to remove water, report balance hídrico. "Bisoprolol (medicina para el corazón)" maybe not explicit but control frecuencia cardíaca. "Tiotropio/olodaterol (broncodilatadores)" report broncodilatación. "Atorvastatina (medicina para el colesterol)" not in report? It's statin, but not mentioned. Could be adding info. Maybe just list without explanations for medicines? Rule 3: explain each technical term first time. Are medicine names technical terms? Probably yes? But maybe not if they are proper names. To be safe, explain only when necessary? The rule says cada tecnicismo. Medicine names could be considered technical. But explaining all may add info. We can use minimal common words from report: "Amoxicilina-clavulánico (antibiótico)" because antibiotic therapy in report. "Metformina (medicina para la diabetes)" diabetes in report. "Insulina glargina (insulina)" okay. "Apixabán (anticoagulante)" anticoagulación in report. "Furosemida (diurético)" maybe from furosemida and balance hídrico; but "diurético" is technical? Could say "furosemida (medicina que hace orinar)" common. Is that adding? It's function, likely okay as explanation. "Bisoprolol (medicina para el corazón)" maybe. "Tiotropio/olodaterol (medicinas para abrir las vías respiratorias)" from broncodilatación. "Atorvastatina (medicina para el colesterol)" not in report; but atorvastatina is statin, could be considered common explanation. But rule 4 prohibits adding info not in report. Is explaining a drug's class adding? It might be necessary to explain technical term. I think allowed as explanation, not new clinical info. But to minimize, maybe don't explain atorvastatina? But then technical term unexplained. Could say "Atorvastatina (medicina habitual)"? Not helpful. Maybe "Atorvastatina (medicina para el colesterol)" is standard. I think okay.
+
+Need no passive voice in list? Bullets are fragments, not sentences? Fine.
+
+Need "Lo que tiene que hacer en casa": include recommendations 1,2,3,5,6 maybe.
+- Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+- Coma menos de 2 gramos de sal al día.
+Beba 1,5 litros diarios como máximo.
+Eso incluye sopas, infusiones y el agua de los medicamentos.
+- No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+- Hágase una analítica de control con función renal e iones en 7-10 días.
+Hágala en su centro de salud, antes de la revisión en consultas.
+- Le recomendamos la vacunación antigripal anual y la antineumocócica.
+
+Need check "Restricción de líquidos a 1,5 litros diarios" exact? We can say "Beba 1,5 litros diarios como máximo." Is that changing? It's same. But rule no change cifras; 1,5 exact. "incluyendo sopas..." include. Good.
+"analítica de control con función renal e iones" technical terms? Need explain first time? "función renal (trabajo de los riñones)" already explained in Qué. "iones (sales en la sangre)" maybe if not. Could add: "iones (sales en la sangre)". Sentence: "Hágase una analítica de control con función renal (trabajo de los riñones) e iones (sales en la sangre) en 7-10 días." Word count? Hágase1 una2 analítica3 de4 control5 con6 función7 renal8 (trabajo9 de10 los11 riñones)12 e13 iones14 (sales15 en16 la17 sangre)18 en19 7-10? Count numbers as words? 20? Need <20. Maybe split: "Hágase una analítica de control en 7-10 días." "Debe incluir función renal (trabajo de los riñones) e iones (sales en la sangre)." Good.
+"vacunación antineumocócica" technical? Explain? "antineumocócica (contra el neumococo)" maybe. Sentence: "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra el neumococo)." Word count okay. But "neumococo" technical? Could explain "bacteria"? Maybe "contra una bacteria llamada neumococo". But adding? It's common explanation. Use "contra el neumococo" maybe enough? Rule explain technical term first time. "antineumocócica" explained by "contra el neumococo", but neumococo is technical. Could say "contra la bacteria del neumococo". Hmm.
+
+Need "Cuándo tiene que pedir ayuda": recommendation 4 and maybe weight gain? Rec1 already in home. But section asks when to ask help. Include:
+- Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+- Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+But rec1 already in home; can repeat? It says preserve six recommendations, not necessarily only once. Repetition okay but word count. Maybe put weight gain here and not in home? But rec1 includes weighing daily. Need home: "Pésese... anote peso." Help: "Si gana 2 kg..." That splits recommendation but content preserved. Is that allowed? It says conservar las seis recomendaciones; likely yes if all elements present. To be safe, keep rec1 as one bullet in home including contact. Then help section only rec4. But then "Cuándo tiene que pedir ayuda" has only one recommendation. Fine.
+
+Need ensure six recommendations: 1 weight, 2 diet/liquids, 3 oxygen, 4 emergencies, 5 analítica, 6 vaccines. We can number them across sections? Maybe under home list 1-3,5,6; under help 4. But no extra headings. Could use bullets with numbers? It might be okay. But if we number, ensure six. Example:
+## Lo que tiene que hacer en casa
+1. Pésese... Si gana...
+2. Coma... Beba...
+3. No suspenda...
+5. Hágase...
+6. Le recomendamos...
+## Cuándo tiene que pedir ayuda
+4. Vaya a Urgencias...
+But numbering out of order maybe weird. Could not number. But to show six, maybe use bullets. The rule doesn't require numbering.
+
+Need "Sus próximas citas": three bullets exact. Need explain "Consultas Externas"? Maybe not. "insuficiencia cardíaca" already explained? If not, in citas: "Consulta de enfermería de insuficiencia cardíaca (el corazón no bombea bien), CS Pumarín: 26/02/2025". But if we already explained in Por qué, no need. Need ensure first time explanation. If we use "insuficiencia cardíaca" in Por qué with explanation, then citas okay.
+
+Need word count. Let's draft full and count approximate. Need 350-700. We can use a word counter mentally? Need be safe around 500. Let's write final candidate and count roughly.
+
+Candidate:
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm.
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli BLEE (bacteria que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Le mantuvimos meropenem durante 7 días.
+Dejó de tener fiebre a las 48 horas.
+Su PCR (marcador de inflamación) bajó a 18 mg/L al alta.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Su FGe (filtrado glomerular estimado) era 22 mL/min/1,73 m².
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos) sin sangrados.
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora.
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+## Sus medicinas
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina) 100 U/mL, 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg, 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+## Lo que tiene que hacer en casa
+Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Coma menos de 2 gramos de sal al día.
+Beba 1,5 litros diarios como máximo.
+Eso incluye sopas, infusiones y el agua de los medicamentos.
+No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+Hágase una analítica de control en 7-10 días.
+Debe incluir función renal (trabajo de los riñones) e iones (sales en la sangre).
+Hágala en su centro de salud, antes de la revisión en consultas.
+Le recomendamos la vacunación antigripal anual y la antineumocócica (contra el neumococo).
+
+## Cuándo tiene que pedir ayuda
+Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+
+## Sus próximas citas
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca (el corazón no bombea bien), CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h
+
+Need check word count. Let's count roughly by section. Use manual? Need ensure 350-700. This draft maybe ~600? Let's count more accurately. I'll count words (tokens separated by spaces, punctuation attached). Numbers with symbols count as one? Usually word count by spaces. Need target. Let's count line by line.
+
+Section headings count? Probably yes. But target likely body. We'll count all.
+"## Por qué ha estado ingresado" = 5? ##1 Por2 qué3 ha4 estado5 ingresado6? Actually ## is token. Maybe ignore. Let's count words ignoring markdown symbols? Hard. Need approximate.
+
+I can use mental counting. Let's list lines and count words (excluding ## maybe). 
+Por qué:
+1 Le ingresamos por dificultad para respirar que fue aumentando durante tres días. -> Le1 ingresamos2 por3 dificultad4 para5 respirar6 que7 fue8 aumentando9 durante10 tres11 días12.
+2 También tenía edemas (hinchazón con fosa al presionar) en las piernas. -> También1 tenía2 edemas3 (hinchazón4 con5 fosa6 al7 presionar)8 en9 las10 piernas11.
+3 Tenía sensación distérmica (sensación de frío o calor anormal). -> Tenía1 sensación2 distérmica3 (sensación4 de5 frío6 o7 calor8 anormal)9.
+4 En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño). -> En1 la2 semana3 previa4 tenía5 disuria6 (ardor7 al8 orinar)9 y10 polaquiuria11 (ir12 mucho13 al14 baño)15.
+5 Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien). -> Le1 ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien)12.
+6 También tenía una agudización de EPOC (enfermedad pulmonar crónica). -> También1 tenía2 una3 agudización4 de5 EPOC6 (enfermedad7 pulmonar8 crónica)9.
+7 Tenía infección del tracto urinario (infección en la orina). -> Tenía1 infección2 del3 tracto4 urinario5 (infección6 en7 la8 orina)9.
+8 Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina). -> Tiene1 alergia2 documentada3 a4 betalactámicos5 (antibióticos6 de7 la8 familia9 de10 la11 penicilina)12.
+Section total 12+11+9+15+12+9+9+12=89.
+
+Qué:
+1 Le pusimos oxígeno por la nariz a 2 lpm. -> Le1 pusimos2 oxígeno3 por4 la5 nariz6 a7 2(8) lpm9.
+2 Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %. -> Buscamos1 una2 saturación3 de4 oxígeno5 (oxígeno6 en7 sangre)8 del9 88(10) %(11?) al12 92(13) %(14). If % separate? Maybe count as word. Let's approximate 13-14.
+3 Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas. -> Le1 dimos2 furosemida3 (medicina4 que5 hace6 orinar)7 intravenosa8 (por9 vena)10 de11 40(12) mg13 cada14 8(15) horas16.
+4 Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días. -> Le1 dimos2 prednisona3 (antiinflamatorio)4 de5 40(6) mg7 cada8 24(9) horas10 durante11 5(12) días13.
+5 Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla. -> Le1 pusimos2 salbutamol3 e4 ipratropio5 (medicinas6 para7 abrir8 las9 vías10 respiratorias)11 en12 niebla13.
+6 Le hicimos un urocultivo (prueba de orina para buscar bacterias). -> Le1 hicimos2 un3 urocultivo4 (prueba5 de6 orina7 para8 buscar9 bacterias)10.
+7 El urocultivo mostró Escherichia coli BLEE (bacteria que resiste muchos antibióticos). -> El1 urocultivo2 mostró3 Escherichia4 coli5 BLEE6 (bacteria7 que8 resiste9 muchos10 antibióticos)11.
+8 Le dimos meropenem (antibiótico) de 500 mg cada 8 horas. -> Le1 dimos2 meropenem3 (antibiótico)4 de5 500(6) mg7 cada8 8(9) horas10.
+9 Ajustamos la dosis a su función renal (trabajo de los riñones). -> Ajustamos1 la2 dosis3 a4 su5 función6 renal7 (trabajo8 de9 los10 riñones)11.
+10 Le mantuvimos meropenem durante 7 días. -> Le1 mantuvimos2 meropenem3 durante4 7(5) días6.
+11 Dejó de tener fiebre a las 48 horas. -> Dejó1 de2 tener3 fiebre4 a5 las6 48(7) horas8.
+12 Su PCR (marcador de inflamación) bajó a 18 mg/L al alta. -> Su1 PCR2 (marcador3 de4 inflamación)5 bajó6 a7 18(8) mg/L9 al10 alta11.
+13 Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL. -> Perdió1 4(2) kg3 y4 tuvo5 un6 balance7 hídrico8 (líquidos9 que10 entraron11 y12 salieron)13 negativo14 de15 4.200(16) mL17.
+14 En el día +4 empeoró su función renal. -> En1 el2 día3 +4(4) empeoró5 su6 función7 renal8.
+15 Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL. -> Su1 creatinina2 (residuo3 que4 eliminan5 los6 riñones)7 subió8 a9 2,4(10) mg/dL11.
+16 Lo relacionamos con falta de líquidos. -> Lo1 relacionamos2 con3 falta4 de5 líquidos6.
+17 Reducimos la furosemida a 40 mg cada 12 horas por vena. -> Reducimos1 la2 furosemida3 a4 40(5) mg6 cada7 12(8) horas9 por10 vena11.
+18 Después la pasamos a vía oral (por la boca). -> Después1 la2 pasamos3 a4 vía5 oral6 (por7 la8 boca)9.
+19 Al alta su creatinina era 1,9 mg/dL. -> Al1 alta2 su3 creatinina4 era5 1,9(6) mg/dL7.
+20 Su FGe (filtrado glomerular estimado) era 22 mL/min/1,73 m². -> Su1 FGe2 (filtrado3 glomerular4 estimado)5 era6 22(7) mL/min/1,73(8) m²9.
+21 Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol. -> Controlamos1 su2 frecuencia3 cardíaca4 (latidos5 por6 minuto)7 con8 bisoprolol9.
+22 Alcanzó 78 lpm en reposo. -> Alcanzó1 78(2) lpm3 en4 reposo5.
+23 Mantuvimos la anticoagulación (medicina para evitar coágulos) sin sangrados. -> Mantuvimos1 la2 anticoagulación3 (medicina4 para5 evitar6 coágulos)7 sin8 sangrados9.
+24 Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal. -> Suspendimos1 la2 metformina3 (medicina4 para5 la6 diabetes)7 por8 el9 empeoramiento10 renal11.
+25 Le pusimos insulina rápida según pauta correctora. -> Le1 pusimos2 insulina3 rápida4 según5 pauta6 correctora7.
+26 Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL. -> Sus1 glucemias2 (azúcar3 en4 sangre)5 estuvieron6 entre7 140(8) y9 210(10) mg/dL11.
+Qué total approx: 9+13+16+13+13+10+11+10+11+6+8+11+17+8+11+6+11+9+7+9+9+5+9+11+7+11 = let's sum: 9+13=22, +16=38, +13=51, +13=64, +10=74, +11=85, +10=95, +11=106, +6=112, +8=120, +11=131, +17=148, +8=156, +11=167, +6=173, +11=184, +9=193, +7=200, +9=209, +9=218, +5=223, +9=232, +11=243, +7=250, +11=261. Qué ~261.
+
+Medicinas:
+1 Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina). 12 as above.
+Bullets:
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días. Count: Amoxicilina-clavulánico1 (antibiótico)2 875/125(3) mg4 1(5) comprimido6 cada7 8(8) horas9 durante10 5(11) días12.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas. -> Metformina1 (medicina2 para3 la4 diabetes)5 850(6) mg7 1(8) comprimido9 cada10 12(11) horas12.
+- Insulina glargina (insulina) 100 U/mL, 26 unidades subcutáneas (bajo la piel) a las 22:00 h. -> Insulina1 glargina2 (insulina)3 100(4) U/mL5 26(6) unidades7 subcutáneas8 (bajo9 la10 piel)11 a12 las13 22:00(14) h15.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas. -> Apixabán1 (anticoagulante)2 5(3) mg4 1(5) comprimido6 cada7 12(8) horas9.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana. -> Furosemida1 (medicina2 que3 hace4 orinar)5 40(6) mg7 1(8) comprimido9 por10 la11 mañana12.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día. -> Bisoprolol1 (medicina2 para3 el4 corazón)5 5(6) mg7 1(8) comprimido9 al10 día11.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg, 2 inhalaciones al día. -> Tiotropio/olodaterol1 (medicinas2 para3 abrir4 las5 vías6 respiratorias)7 2,5/2,5(8) mcg9 2(10) inhalaciones11 al12 día13.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena. -> Atorvastatina1 (medicina2 para3 el4 colesterol)5 40(6) mg7 1(8) comprimido9 en10 la11 cena12.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas. -> Omeprazol1 (medicina2 para3 el4 estómago)5 20(6) mg7 1(8) comprimido9 en10 ayunas11.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm. -> Oxigenoterapia1 domiciliaria2 (oxígeno3 en4 casa)5 16(6) h/día7 a8 2(9) lpm10.
+Total medicinas: 12+12+12+15+9+12+11+13+12+11+10 = 129? Sum: 12+12=24, +12=36, +15=51, +9=60, +12=72, +11=83, +13=96, +12=108, +11=119, +10=129.
+
+Home:
+1 Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso. -> Pésese1 todas2 las3 mañanas4 en5 ayunas6 y7 después8 de9 orinar10 y11 anote12 el13 peso14.
+2 Si gana 2 kg o más en 3 días, contacte con su centro de salud. -> Si1 gana2 2(3) kg4 o5 más6 en7 3(8) días9 contacte10 con11 su12 centro13 de14 salud15.
+3 Coma menos de 2 gramos de sal al día. -> Coma1 menos2 de3 2(4) gramos5 de6 sal7 al8 día9.
+4 Beba 1,5 litros diarios como máximo. -> Beba1 1,5(2) litros3 diarios4 como5 máximo6.
+5 Eso incluye sopas, infusiones y el agua de los medicamentos. -> Eso1 incluye2 sopas3 infusiones4 y5 el6 agua7 de8 los9 medicamentos10.
+6 No suspenda la oxigenoterapia (oxígeno en casa). -> No1 suspenda2 la3 oxigenoterapia4 (oxígeno5 en6 casa)7.
+7 Debe usarla al menos 16 horas al día. -> Debe1 usarla2 al3 menos4 16(5) horas6 al7 día8.
+8 Incluya toda la noche. -> Incluya1 toda2 la3 noche4.
+9 Hágase una analítica de control en 7-10 días. -> Hágase1 una2 analítica3 de4 control5 en6 7-10(7) días8.
+10 Debe incluir función renal (trabajo de los riñones) e iones (sales en la sangre). -> Debe1 incluir2 función3 renal4 (trabajo5 de6 los7 riñones)8 e9 iones10 (sales11 en12 la13 sangre)14.
+11 Hágala en su centro de salud, antes de la revisión en consultas. -> Hágala1 en2 su3 centro4 de5 salud6 antes7 de8 la9 revisión10 en11 consultas12.
+12 Le recomendamos la vacunación antigripal anual y la antineumocócica (contra el neumococo). -> Le1 recomendamos2 la3 vacunación4 antigripal5 anual6 y7 la8 antineumocócica9 (contra10 el11 neumococo)12.
+Home total: 14+15+9+6+10+7+8+4+8+14+12+12 = 119? Sum 14+15=29, +9=38, +6=44, +10=54, +7=61, +8=69, +4=73, +8=81, +14=95, +12=107, +12=119.
+
+Help:
+1 Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar). -> Vaya1 a2 Urgencias3 si4 tiene5 aumento6 brusco7 de8 dificultad9 respiratoria10 (dificultad11 para12 respirar)13.
+2 Vaya a Urgencias si tiene dolor torácico (dolor en el pecho). -> Vaya1 a2 Urgencias3 si4 tiene5 dolor6 torácico7 (dolor8 en9 el10 pecho)11.
+3 Vaya a Urgencias si tiene fiebre superior a 38 °C. -> Vaya1 a2 Urgencias3 si4 tiene5 fiebre6 superior7 a8 38(9) °C10.
+4 Vaya a Urgencias si tiene sangrado. -> Vaya1 a2 Urgencias3 si4 tiene5 sangrado6.
+5 Vaya a Urgencias si orina mucho menos de lo normal. -> Vaya1 a2 Urgencias3 si4 orina5 mucho6 menos7 de8 lo9 normal10.
+Help total 13+11+10+6+10=50.
+
+Citas:
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h -> Consultas1 Externas2 de3 Medicina4 Interna5 HUCA6 12/03/2025(7) a8 las9 10:30(10) h11.
+- Consulta de enfermería de insuficiencia cardíaca (el corazón no bombea bien), CS Pumarín: 26/02/2025 -> Consulta1 de2 enfermería3 de4 insuficiencia5 cardíaca6 (el7 corazón8 no9 bombea10 bien)11 CS12 Pumarín13 26/02/2025(14).
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h -> Consultas1 Externas2 de3 Nefrología4 HUCA5 04/04/2025(6) a7 las8 09:00(9) h10.
+Citas total 11+14+10=35.
+
+Headings: 6 headings maybe 2+? "## Por qué ha estado ingresado" 5 words? Let's count: Por1 qué2 ha3 estado4 ingresado5. "## Qué le hemos hecho": Qué1 le2 hemos3 hecho4. "## Sus medicinas": Sus1 medicinas2. "## Lo que tiene que hacer en casa": Lo1 que2 tiene3 que4 hacer5 en6 casa7. "## Cuándo tiene que pedir ayuda": Cuándo1 tiene2 que3 pedir4 ayuda5. "## Sus próximas citas": Sus1 próximas2 citas3. Total headings 5+4+2+7+5+3=26.
+
+Total body without headings: 89+261+129+119+50+35 = 683. Add headings 26 = 709. Slightly over 700 if counted all. Need reduce to under 700. Target 350-700. Need cut ~10-30 words. Also check sentence length <20: all seem <20? Some maybe line 13 in Qué 17, okay. Line 10 home 14. Good.
+
+Need reduce word count. Could remove some explanations or lines. But must preserve recommendations and citas. Need mention allergy. Could remove duplicate allergy in Sus medicinas? It is repeated. Rule must mention explicitly; once enough. Remove line in Sus medicinas "Tiene alergia..." saves 12 words. But then in list amoxicilina-clavulánico without warning, okay. Allergy already in Por qué. That reduces to 697 (if total 709-12=697). Good. But maybe need mention allergy near medicines? Not required. Keep only once. Need ensure explicit: "Tiene alergia documentada a betalactámicos..." yes.
+
+Could also shorten some explanations. But 697 okay if count accurate. However word count may vary with punctuation, markdown. Need safer under 700. Remove duplicate allergy and maybe shorten a few lines. Let's adjust.
+
+Remove "Tiene alergia documentada..." from Sus medicinas. Total ~697. Need maybe headings not counted? If counted, 697. Good. But if my count off by +10, could exceed. Let's cut more.
+
+Potential cuts:
+- In Por qué, line 5 and 6 maybe redundant with line 1? But diagnoses important. Could combine? "Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien) y agudización de EPOC (enfermedad pulmonar crónica)." This sentence word count: Le1 ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien)12 y13 agudización14 de15 EPOC16 (enfermedad17 pulmonar18 crónica)19. 19 words, okay. It replaces lines 5 and 6 (12+9=21) with 19, saves 2. But line 1 already says difficulty breathing. Could remove line 5/6? Need mention diagnoses? Maybe keep combined. Also line 7 infection. Could combine infection with urocultivo? But Por qué should include reason. Keep.
+- In Qué, "Le mantuvimos meropenem durante 7 días." maybe redundant after "Le dimos meropenem...". But report says maintained 7 days. Need keep duration. Could modify line 8: "Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días." Count: Le1 dimos2 meropenem3 (antibiótico)4 de5 500(6) mg7 cada8 8(9) horas10 durante11 7(12) días13. Then remove line 10 (6 words) and maybe adjust? Original line 8 10 + line10 6 =16, new 13 saves 3. But need "ajustado a función renal" separate. Good.
+- "Ajustamos la dosis a su función renal (trabajo de los riñones)." Could shorten: "Ajustamos la dosis a su función renal." But function renal already explained? First time in line? In Por qué not. In Qué line 9 first time. Need explain first time. Could explain earlier? Maybe in home? No. Keep explanation. Could use "riñones" common? "función renal (trabajo de los riñones)" necessary. 
+- "Su FGe (filtrado glomerular estimado) era 22 mL/min/1,73 m²." FGe technical, explain. Could omit FGe? But report has creatinine and FGe. Not required? Maybe keep creatinine only? Rule no change if include. Omit FGe saves 9 words. But patient right? Not necessary. However "empeoramiento renal" and analítica function renal enough. Could remove FGe line to save. But maybe important. Word count okay.
+- "Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL." 17 words. Could split? Not needed. Maybe shorten: "Perdió 4 kg. Tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL." First 3, second 14? Total 17 same. 
+- "Mantuvimos la anticoagulación (medicina para evitar coágulos) sin sangrados." Could shorten: "Mantuvimos la anticoagulación (medicina para evitar coágulos)." But "sin sangrados" is info in report, not necessary? It says no bleeding incidents. Could omit to save 2. But maybe relevant. 
+- "Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal." Could shorten: "Suspendimos la metformina por el empeoramiento renal." Metformina explained in meds? First time in Qué, need explain? If not, technical term unexplained. But in Sus medicinas we explain. Rule first time that appears. It appears in Qué before meds. Need explain there or avoid using metformina? Could say "Suspendimos la medicina para la diabetes por el empeoramiento renal." But then not name? Report says metformina. Patient right to know? Maybe use "Suspendimos la metformina (medicina para la diabetes)..." keep.
+- In home, "Debe incluir función renal (trabajo de los riñones) e iones (sales en la sangre)." Could shorten if function renal already explained in Qué. Since first time was in Qué, no need explain again. Use "Debe incluir función renal e iones." But iones technical? First time here. Need explain iones. Could say "iones (sales en la sangre)". Function renal no explanation needed if already. Sentence: "Debe incluir función renal e iones (sales en la sangre)." Count: Debe1 incluir2 función3 renal4 e5 iones6 (sales7 en8 la9 sangre)10. Saves 4. Good.
+- "Hágala en su centro de salud, antes de la revisión en consultas." Could shorten: "Hágala en su centro de salud." But recommendation says before revision in consultas. Need preserve? It says analítica ... antes de la revisión en consultas. Must keep. Keep.
+- "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra el neumococo)." Could shorten: "Le recomendamos la vacuna antigripal anual y la antineumocócica." But technical antineumocócica unexplained? Maybe "antineumocócica" is clear? Need explain. Keep.
+- In help, repeated "Vaya a Urgencias si tiene" 5 times. Could combine: "Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar), dolor torácico (dolor en el pecho), fiebre superior a 38 °C, sangrado o orina mucho menos." But sentence may exceed 20 words and chained? Need short sentences. Keep separate.
+- Citas: explanation in second cita maybe redundant if insuficiencia cardíaca explained in Por qué. Remove "(el corazón no bombea bien)" saves 5 words. Since first time was in Por qué, okay. But if we remove line 5/6? We'll keep diagnosis explanation. So citas can be exact without explanation. Good save 5.
+
+Let's revise to reduce ~20-30 words.
+
+New draft:
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien) y agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm.
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli BLEE (bacteria que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+Su PCR (marcador de inflamación) bajó a 18 mg/L al alta.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Su FGe (filtrado glomerular estimado) era 22 mL/min/1,73 m².
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora.
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+## Sus medicinas
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina) 100 U/mL, 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg, 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+## Lo que tiene que hacer en casa
+Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Coma menos de 2 gramos de sal al día.
+Beba 1,5 litros diarios como máximo.
+Eso incluye sopas, infusiones y el agua de los medicamentos.
+No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+Hágase una analítica de control en 7-10 días.
+Debe incluir función renal e iones (sales en la sangre).
+Hágala en su centro de salud, antes de la revisión en consultas.
+Le recomendamos la vacunación antigripal anual y la antineumocócica (contra el neumococo).
+
+## Cuándo tiene que pedir ayuda
+Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+
+## Sus próximas citas
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h
+
+Now count changes. Por qué combined line 5: 19 instead of 21, save 2. Qué: meropenem line now 13 instead of 10+6=16, save 3; anticoag line removed "sin sangrados" save 2. Home: function renal line save 4. Citas: remove explanation save 5. Total save 16 from 709? Original 709 - duplicate allergy 12 =697, then additional saves? Wait original included duplicate allergy and old lines. Let's recalc new total from previous 709:
+- remove duplicate allergy in meds: -12 => 697.
+- combine Por qué lines 5+6: old 21, new 19 => -2 => 695.
+- meropenem combine: old line8 10 + line10 6 =16, new 13 => -3 => 692.
+- anticoag remove sin sangrados: old 9, new 7? "Mantuvimos la anticoagulación (medicina para evitar coágulos)." Count Mantuvimos1 la2 anticoagulación3 (medicina4 para5 evitar6 coágulos)7. Old 9, save2 => 690.
+- home function renal line: old 14, new 10 => -4 => 686.
+- citas remove explanation: old 14, new? "Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025" Count Consulta1 de2 enfermería3 de4 insuficiencia5 cardíaca6 CS7 Pumarín8 26/02/2025(9). Save 5 => 681.
+So ~681. Good under 700. Need ensure >350 yes.
+
+Check strict rules:
+1 Spanish Spain, second person cortesía, short phrases. We use "usted" implied in imperatives: Pésese, contacte, Coma, Beba, No suspenda, Debe, Hágase, Vaya. Good. Some sentences are third person about patient: "Le ingresamos", "También tenía". That's okay? It addresses patient with usted but uses third person? In Spanish, "usted" is third person grammatically. Fine.
+2 Reading level secondary: phrases <20 words, no chained subordinates, no passive voice. Need check for passive voice. "ha estado ingresado" in heading? It's state. "Le ingresamos" active. "Tenía" okay. "fue aumentando" progressive, not passive. "mostró" active. "Ajustamos" active. "Dejó" active. "bajó" active. "Perdió" active. "empeoró" active. "subió" active. "Lo relacionamos" active. "Reducimos" active. "pasamos" active. "era" state. "Controlamos" active. "Alcanzó" active. "Mantuvimos" active. "Suspendimos" active. "pusimos" active. "estuvieron" state. Imperatives okay. No "se" passive? "Pésese" is reflexive imperative, not passive. "Hágase" reflexive. Good.
+3 Explain each technical term first time in parentheses common words. Need audit terms:
+- edemas explained.
+- sensación distérmica explained.
+- disuria, polaquiuria explained.
+- insuficiencia cardíaca crónica descompensada explained? "insuficiencia cardíaca" explained as corazón no bombea bien; "crónica" not explained? Technical? Could be common? Maybe need explain crónica (larga)? But maybe not a technical term? To be safe, could add "(larga)"? But sentence length. "insuficiencia cardíaca crónica descompensada (el corazón no bombea bien)" explains whole phrase? It doesn't explain crónica/descompensada. Maybe acceptable? Rule each tecnicismo. "crónica" is common enough? "descompensada" maybe not. Could say "(el corazón no bombea bien y está peor)". But adds? It's in report descompensada. Need short. Sentence: "Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien y está peor)." Count Le1 ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien12 y13 está14 peor)15. Still <20. Better. But "está peor" common. Use that.
+- EPOC explained as enfermedad pulmonar crónica. Good.
+- infección del tracto urinario explained.
+- alergia documentada? "documentada" maybe not technical. betalactámicos explained.
+- oxígeno, lpm? "lpm" technical? Not explained. It appears in report and meds. Need explain first time? "2 lpm" likely liters per minute. Rule says cifras exact, but technical term lpm? Could explain: "litros por minuto". First time in Qué: "Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto)." Count Le1 pusimos2 oxígeno3 por4 la5 nariz6 a7 2(8) lpm9 (litros10 por11 minuto)12. Good. Need also in meds? Already explained. Add to save? It adds 3 words. Still okay.
+- saturación de oxígeno explained.
+- furosemida explained, intravenosa explained.
+- prednisona antiinflamatorio explained.
+- salbutamol e ipratropio explained as medicines to open airways. "en niebla" maybe nebulizada? common.
+- urocultivo explained.
+- Escherichia coli BLEE: Escherichia coli is technical, not explained? We say bacteria that resists many antibiotics. It explains BLEE but not E. coli name. Maybe okay? Could say "Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos)"? Sentence: "El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos)." Count El1 urocultivo2 mostró3 Escherichia4 coli5 (bacteria)6 BLEE7 (que8 resiste9 muchos10 antibióticos)11. Good. But "BLEE" explained? yes. Need maybe "productora de betalactamasas de espectro extendido"? We don't use full term, only BLEE. Report uses BLEE. Explain as bacteria that resists many antibiotics. Good.
+- meropenem antibiotic explained.
+- función renal explained.
+- PCR explained.
+- balance hídrico explained.
+- día +4? technical? Could explain? "En el día +4" means fourth day of admission. Maybe not common. Could say "En el cuarto día de ingreso". But rule no change cifras? +4 is a number? It's a date marker. If we change to cuarto, maybe okay? Rule 5: dates? It says fechas se copian exactamente como están. "+4" is not date? It is day +4. To be safe, keep "día +4". But technical? Could explain: "En el día +4 (cuarto día de ingreso)". Count En1 el2 día3 +4(4) (cuarto5 día6 de7 ingreso)8 empeoró9 su10 función11 renal12. Good. Add explanation.
+- creatinina explained.
+- FGe explained.
+- frecuencia cardíaca explained.
+- anticoagulación explained.
+- metformina explained.
+- insulina rápida? "rápida" common? Maybe not. Could explain? "insulina rápida (insulina de acción corta)" but adds info not in report? It's explanation. But maybe not necessary. "pauta correctora" technical? Could explain: "pauta correctora (dosis extra según el azúcar)". But adds? It's in report. Need explain first time. Sentence: "Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar)." Count Le1 pusimos2 insulina3 rápida4 según5 pauta6 correctora7 (dosis8 extra9 según10 el11 azúcar)12. Good. But "insulina rápida" maybe technical; could explain as "insulina de acción corta". Maybe combine: "Le pusimos insulina rápida (insulina de acción corta) según pauta correctora." Count 11? Le1 pusimos2 insulina3 rápida4 (insulina5 de6 acción7 corta)8 según9 pauta10 correctora11. But "pauta correctora" unexplained. Could add another sentence: "La pauta correctora (dosis extra según el azúcar) se usó." Passive? "se usó" passive. Use "Usamos la pauta correctora (dosis extra según el azúcar)." But then two sentences. Maybe too much. Is "pauta correctora" a technical term? Yes. Need explain. Could say: "Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar)." This explains pauta correctora, not insulina rápida. Insulina rápida is common enough? Maybe. Good.
+- glucemias explained.
+- Medicinas: Amoxicilina-clavulánico antibiotic explained. Metformina explained. Insulina glargina (insulina) maybe enough? "glargina" technical, but parentheses says insulina. Could be okay. "subcutáneas" explained. Apixabán anticoagulante explained. Furosemida explained. Bisoprolol medicina para el corazón explained. Tiotropio/olodaterol explained. Atorvastatina medicina para colesterol explained. Omeprazol medicina para estómago explained. Oxigenoterapia domiciliaria explained.
+- Home: oxigenoterapia already explained? First time in Qué? We used "oxígeno" not oxigenoterapia? In meds and home. Actually "oxigenoterapia" first appears in home recommendation. Need explain there: we have (oxígeno en casa). Good. But in report treatment habitual and discharge, but our text first in home. okay.
+- analítica de control? common. función renal already explained. iones explained.
+- vacunación antigripal anual? common. antineumocócica explained as contra el neumococo, but neumococo technical? Could explain "contra la bacteria del neumococo". Sentence: "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo)." Count Le1 recomendamos2 la3 vacunación4 antigripal5 anual6 y7 la8 antineumocócica9 (contra10 la11 bacteria12 del13 neumococo)14. Good. Adds 2. Still okay.
+- Help: dificultad respiratoria explained, dolor torácico explained. "Urgencias" common.
+- Citas: insuficiencia cardíaca already explained in Por qué. Nefrología? technical? It's a specialty. Could explain? "Nefrología (especialidad de los riñones)"? First time in citas. Rule each technical term. Maybe add: "Consultas Externas de Nefrología (especialidad de los riñones), HUCA: 04/04/2025 a las 09:00 h". Count adds 4? Consultas1 Externas2 de3 Nefrología4 (especialidad5 de6 los7 riñones)8 HUCA9 04/04/2025(10) a11 las12 09:00(13) h14. Old 10, +4. Still okay. "Consultas Externas" maybe technical? Could explain? It means outpatient clinic. But common? Maybe not. First time in citas. Could explain once: "Consultas Externas (consulta sin ingreso)"? But then each cita? Need first time only. Could modify first cita: "- Consultas Externas (consulta sin ingreso) de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h". Count adds 3? Consultas1 Externas2 (consulta3 sin4 ingreso)5 de6 Medicina7 Interna8 HUCA9 12/03/2025(10) a11 las12 10:30(13) h14. Old 11, +3. Is "sin ingreso" adding? It's explanation. okay. But maybe too much. Need word count still under 700. Current ~681 + lpm 3 + descompensada 2? + E coli bacteria 1? + día +4 4 + pauta correctora 5? + neumococo bacteria 2 + Nefrología 4 + Consultas Externas 3 = 704. Need be careful. Maybe not all needed. Rule strict but we can balance. Need under 700. We can cut elsewhere.
+
+Maybe word count target less strict? It says objetivo entre 350 y 700. Slight over maybe bad. Need final under 700. Let's aim ~650. We can remove some nonessential lines: FGe line (9), maybe PCR line? But numbers? Not required. Could remove "Su FGe..." to save 9. Could remove "Su PCR..." save 11. But report includes, not mandatory. Need preserve recommendations and citas only. We can omit many test results. But "Qué le hemos hecho" should summarize. We can keep essential. To be safe under 700, cut FGe and maybe PCR? But if we mention PCR, need explain. Could remove PCR line entirely. It's not necessary for patient? But report says normalización reactantes. Maybe not required. Remove saves 11. Also remove FGe saves 9. Total -20. Then can add explanations.
+
+Need ensure no missing required: six recommendations, three citas, allergy. Yes.
+
+Let's design final with ~640 words. Keep key treatments and numbers? Rule 5 says if include numbers exact. Omit okay. But maybe patient needs know what done. We can keep enough.
+
+Revised shorter Qué:
+Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 (cuarto día de ingreso) empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+Removed PCR and FGe. Good. Count Qué now? Previous Qué 261, remove PCR 11, FGe 9 =>241. Add lpm explanation +3 =>244. E coli line old 11, new? "El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos)." Count El1 urocultivo2 mostró3 Escherichia4 coli5 (bacteria)6 BLEE7 (que8 resiste9 muchos10 antibióticos)11. same 11. día +4 line old 8, new 12? En1 el2 día3 +4(4) (cuarto5 día6 de7 ingreso)8 empeoró9 su10 función11 renal12. +4 =>248. pauta correctora line old 7, new 12? Le1 pusimos2 insulina3 rápida4 según5 pauta6 correctora7 (dosis8 extra9 según10 el11 azúcar)12. +5 =>253. So Qué ~253.
+
+Por qué with descompensada explanation: line 5 new count? "Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien y está peor) y agudización de EPOC (enfermedad pulmonar crónica)." Count Le1 ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien12 y13 está14 peor)15 y16 agudización17 de18 EPOC19 (enfermedad20 pulmonar21 crónica)22. Oops 22 >20. Need split or shorten. Could keep old two sentences: line 5 12, line6 9 total 21 but each <20. That's okay. We don't need explain descompensada? Maybe not. But if strict, maybe add in separate sentence: "La descompensación (empeoramiento) era aguda." But adds. Maybe acceptable to not explain every adjective. Keep old two sentences to satisfy <20. Por qué total 89.
+
+Medicinas without allergy line: 117? Previous meds with allergy 129, remove 12 =>117.
+Home with function renal shortened and antineumocócica bacteria? Let's count home new:
+1 14
+2 15
+3 9
+4 6
+5 10
+6 7
+7 8
+8 4
+9 8
+10 "Debe incluir función renal e iones (sales en la sangre)." 10
+11 12
+12 "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo)." Count Le1 recomendamos2 la3 vacunación4 antigripal5 anual6 y7 la8 antineumocócica9 (contra10 la11 bacteria12 del13 neumococo)14. Old 12, +2. Total home: 14+15=29, +9=38, +6=44, +10=54, +7=61, +8=69, +4=73, +8=81, +10=91, +12=103, +14=117. (Previous 119? now 117 due function -4 and vaccine +2 = -2). Good.
+Help 50.
+Citas with maybe explanations? Let's decide. Need explain Nefrología? Maybe not necessary? It's a specialty name, common? To be safe, add short explanation in third cita: "Nefrología (especialidad de los riñones)". Adds 4. First cita maybe no explanation. Second no explanation because insuficiencia explained. Citas total old 35 +4 =39. If add Consultas Externas explanation +3 =>42. Maybe skip Consultas Externas; it's common enough? "Consultas Externas" is a hospital term, but patient likely knows. Rule technical? Could be. But to save words skip. Nefrología maybe also common. Could skip all explanations in citas. Since terms not central? But rule says each technical term. Hmm. "Nefrología" is a technical specialty. I'd add explanation. "Consultas Externas" maybe less technical. Keep citas 39.
+
+Total new: Por qué 89 + Qué 253 + Meds 117 + Home 117 + Help 50 + Citas 39 = 665. Headings 26 => 691. Under 700. Good. If word count method differs, still likely under 700. Need ensure >350 yes.
+
+Check sentence lengths:
+Por qué line 4 15, line5 12, line6 9, line8 12. Good.
+Qué lines:
+1 "Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto)." Count 12? good.
+2 "Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %." Count maybe 14, good.
+3 16, good.
+4 13.
+5 13.
+6 10.
+7 11.
+8 "Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días." Count Le1 dimos2 meropenem3 (antibiótico)4 de5 500(6) mg7 cada8 8(9) horas10 durante11 7(12) días13.
+9 11.
+10 8.
+11 17? "Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL." Count Perdió1 4(2) kg3 y4 tuvo5 un6 balance7 hídrico8 (líquidos9 que10 entraron11 y12 salieron)13 negativo14 de15 4.200(16) mL17. good.
+12 "En el día +4 (cuarto día de ingreso) empeoró su función renal." Count En1 el2 día3 +4(4) (cuarto5 día6 de7 ingreso)8 empeoró9 su10 función11 renal12.
+13 11.
+14 6.
+15 11.
+16 9.
+17 7.
+18 9.
+19 5.
+20 9.
+21 "Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal." 11.
+22 "Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar)." Count Le1 pusimos2 insulina3 rápida4 según5 pauta6 correctora7 (dosis8 extra9 según10 el11 azúcar)12.
+23 11.
+All <20.
+
+Meds bullets: some maybe >20? Insulina line 15, Tiotropio 13. Good.
+Home lines all <20. Help lines <20. Citas lines: first 11, second 9? "Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025" Count Consulta1 de2 enfermería3 de4 insuficiencia5 cardíaca6 CS7 Pumarín8 26/02/2025(9). Good. Third with Nefrología explanation: "Consultas Externas de Nefrología (especialidad de los riñones), HUCA: 04/04/2025 a las 09:00 h" Count Consultas1 Externas2 de3 Nefrología4 (especialidad5 de6 los7 riñones)8 HUCA9 04/04/2025(10) a11 las12 09:00(13) h14. Good.
+
+Need no passive voice: "Le pusimos", "Buscamos", "Le dimos", "mostró", "Ajustamos", "Dejó", "Perdió", "empeoró", "subió", "Lo relacionamos", "Reducimos", "pasamos", "era", "Controlamos", "Alcanzó", "Mantuvimos", "Suspendimos", "pusimos", "estuvieron". Good. Headings: "ha estado ingresado" is not passive? It's copular with adjective. okay.
+
+Need no advice beyond report. We say "Le recomendamos" from report. Good. No prognosis.
+
+Need preserve six recommendations exactly? Let's verify content:
+1. Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso. Si gana 2 kg o más en 3 días, contacte con su centro de salud. Yes.
+2. Dieta con menos de 2 gramos de sal al día. Restricción líquidos a 1,5 litros diarios, incluyendo sopas, infusiones y agua medicamentos. We say "Coma menos de 2 gramos de sal al día. Beba 1,5 litros diarios como máximo. Eso incluye sopas, infusiones y el agua de los medicamentos." Good.
+3. No suspenda oxigenoterapia. Debe usarla al menos 16 horas al día, incluyendo toda la noche. We say No suspenda... Debe usarla al menos 16 horas al día. Incluya toda la noche. Good.
+4. Acuda a Urgencias si aumento brusco dificultad respiratoria, dolor torácico, fiebre >38, sangrado o disminución importante cantidad orina. We split: Vaya a Urgencias if... orina mucho menos de lo normal. "mucho menos de lo normal" corresponds to disminución importante. Good.
+5. Analítica control con función renal e iones en 7-10 días en centro salud, antes revisión consultas. We say Hágase analítica control en 7-10 días. Debe incluir función renal e iones. Hágala en su centro de salud, antes de la revisión en consultas. Good.
+6. Vacunación antigripal anual y antineumocócica. We say Le recomendamos... Good.
+
+Three citas exact: yes. Need maybe order? Report order: Medicina Interna 12/03, enfermería 26/02, Nefrología 04/04. We keep same. Good.
+
+Need mention allergy explicitly: Por qué line: "Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina)." Good. But then medicine list includes Amoxicilina-clavulánico. Rule 10 says explain as written without warnings. We do. No warning.
+
+Potential issue: "Amoxicilina-clavulánico" is a beta-lactam, and we explained allergy as antibiotics family penicillin. This juxtaposition may be seen as implicit warning? But no explicit warning. It's just facts. Rule 10 says if prescription seems wrong, explain as written, without warnings, notes, omitting. We are not commenting. Good.
+
+Potential issue: "Tiene alergia documentada a betalactámicos" and then "Amoxicilina-clavulánico (antibiótico)" might be contradictory but we don't comment. Fine.
+
+Need maybe include "No otras alergias medicamentosas conocidas"? Not required. Mention allergy explicitly enough.
+
+Need no extra sections. We have exactly six headings. No intro/outro. Good.
+
+Need Spanish de España: use "Urgencias", "centro de salud", "ayunas", "cena". Good. "litros" etc.
+
+Need second person: Some lines "Le ingresamos" is we to you, okay. "También tenía" third person but usted. Fine. Could make more direct: "Tenía dificultad..." But okay.
+
+Need no conversas: no "Hola", no questions. Good.
+
+Need maybe "hija"? User says for patient and daughter. We don't need address daughter. Use usted to patient. Fine.
+
+Double-check numbers exact:
+- 2 lpm, 88 %, 92 %, 40 mg cada 8 horas, prednisona 40 mg cada 24 horas durante 5 días, meropenem 500 mg cada 8 horas durante 7 días, 48 horas, 4 kg, 4.200 mL, día +4, creatinina 2,4 mg/dL, furosemida 40 mg cada 12 horas, creatinina 1,9 mg/dL, frecuencia 78 lpm, glucemias 140 y 210 mg/dL.
+- Meds: Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días; Metformina 850 mg, 1 comprimido cada 12 horas; Insulina glargina 100 U/mL, 26 unidades subcutáneas a las 22:00 h; Apixabán 5 mg, 1 comprimido cada 12 horas; Furosemida 40 mg, 1 comprimido por la mañana; Bisoprolol 5 mg, 1 comprimido al día; Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día; Atorvastatina 40 mg, 1 comprimido en la cena; Omeprazol 20 mg, 1 comprimido en ayunas; Oxigenoterapia domiciliaria 16 h/día a 2 lpm.
+- Recommendations numbers: 2 kg, 3 días, 2 gramos, 1,5 litros, 16 horas, 7-10 días, 38 °C. Good.
+- Citas dates/times exact.
+
+Potential issue: "Beba 1,5 litros diarios como máximo" vs report "Restricción de líquidos a 1,5 litros diarios". It's same but maybe "como máximo" adds? It's explanation. okay.
+
+Potential issue: "Eso incluye sopas, infusiones y el agua de los medicamentos." Report says including soups, infusions and water of medications. Good.
+
+Potential issue: "Vaya a Urgencias si orina mucho menos de lo normal." Report says disminución importante de la cantidad de orina. Good.
+
+Potential issue: "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo)." Report says se recomienda. Good.
+
+Need maybe explain "Urgencias"? common.
+
+Need maybe explain "analítica"? common.
+
+Need maybe explain "iones" we did.
+
+Need maybe explain "saturación de oxígeno" we did.
+
+Need maybe explain "lpm" we did first time in Qué. In meds, lpm appears again no explanation needed.
+
+Need maybe explain "U/mL"? Technical unit. First time in meds: "100 U/mL". Need explain? Units are technical. Rule says cifras exact, but units? Could explain "unidades por mililitro". Sentence: "Insulina glargina (insulina) 100 U/mL (unidades por mililitro), 26 unidades subcutáneas (bajo la piel) a las 22:00 h." Count Insulina1 glargina2 (insulina)3 100(4) U/mL5 (unidades6 por7 mililitro)8 26(9) unidades10 subcutáneas11 (bajo12 la13 piel)14 a15 las16 22:00(17) h18. <20. Adds 3 words. Need word count +3 => 694 headings? Still under 700 maybe. Good. Also "mcg" in Tiotropio line: "2,5/2,5 mcg". Need explain micrograms? First time. Could add "(microgramos)". Sentence: "Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg (microgramos), 2 inhalaciones al día." Count Tiotropio/olodaterol1 (medicinas2 para3 abrir4 las5 vías6 respiratorias)7 2,5/2,5(8) mcg9 (microgramos)10 2(11) inhalaciones12 al13 día14. Adds 1? Actually old 13, new 14. +1. "mg" common? Maybe not need. "U/mL" more technical. "lpm" explained. "mL/min/1,73 m²" removed. "pg/mL" removed. Good.
+
+Need explain "U" in "26 unidades"? We say unidades, common. U/mL explained.
+
+Need explain "mcg" maybe. Add. Word count +4 total => 695. Still okay.
+
+Need explain "h/día"? common? "16 h/día" hours per day. Could be technical? Maybe not. Could write "16 horas al día" but rule no change cifras? It's same, but report uses h/día. Rule says cifras exact, not units? It says dosis, horarios, pesos, litros, gramos, temperaturas y fechas se copian exactamente como están. "h/día" is a unit abbreviation. Better keep "16 h/día". Could explain? First time in meds: "Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día (horas al día) a 2 lpm." Count Oxigenoterapia1 domiciliaria2 (oxígeno3 en4 casa)5 16(6) h/día7 (horas8 al9 día)10 a11 2(12) lpm13. Adds 3. But lpm already explained? It appears again, no need. Word count +3 => 698. Close. Maybe skip h/día explanation; common enough. "h" is hour. In Spanish, h/día understood. But technical? Hmm.
+
+Need explain "U/mL" and "mcg" maybe enough.
+
+Word count with U/mL +3, mcg +1 = 699 if previous 695? Let's recalc final total more accurately to ensure under 700.
+
+Let's build final text exactly and count words carefully using a systematic method. I'll write final candidate with additions:
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 (cuarto día de ingreso) empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+## Sus medicinas
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina) 100 U/mL (unidades por mililitro), 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg (microgramos), 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+## Lo que tiene que hacer en casa
+Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Coma menos de 2 gramos de sal al día.
+Beba 1,5 litros diarios como máximo.
+Eso incluye sopas, infusiones y el agua de los medicamentos.
+No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+Hágase una analítica de control en 7-10 días.
+Debe incluir función renal e iones (sales en la sangre).
+Hágala en su centro de salud, antes de la revisión en consultas.
+Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo).
+
+## Cuándo tiene que pedir ayuda
+Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+
+## Sus próximas citas
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología (especialidad de los riñones), HUCA: 04/04/2025 a las 09:00 h
+
+Now count precisely. I'll count words by spaces, treating markdown ## as word? Usually word count may ignore markdown symbols? To be safe include? We can reduce if needed. Let's count all tokens separated by spaces, including ## and bullet -? Bullets "-" as token? Word counters often ignore punctuation-only tokens? But to be safe, maybe not count bullets? Hard. Need target likely natural words, not markdown. We'll count natural words ignoring ## and -? But headings words count. Let's count natural words (letters/numbers) excluding standalone ## and -.
+
+I'll create line counts. Use parentheses as attached to previous? In word count, "(hinchazón" is a word. We'll count each space-separated token that contains letters/numbers, ignoring pure punctuation like - or ##. For tokens with comma attached, count one.
+
+Headings:
+Por qué ha estado ingresado: Por1 qué2 ha3 estado4 ingresado5.
+Qué le hemos hecho: Qué1 le2 hemos3 hecho4.
+Sus medicinas: Sus1 medicinas2.
+Lo que tiene que hacer en casa: Lo1 que2 tiene3 que4 hacer5 en6 casa7.
+Cuándo tiene que pedir ayuda: Cuándo1 tiene2 que3 pedir4 ayuda5.
+Sus próximas citas: Sus1 próximas2 citas3.
+Headings total 26.
+
+Por qué lines:
+1 Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+Le1 ingresamos2 por3 dificultad4 para5 respirar6 que7 fue8 aumentando9 durante10 tres11 días12.
+2 También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+También1 tenía2 edemas3 (hinchazón4 con5 fosa6 al7 presionar)8 en9 las10 piernas11.
+3 Tenía sensación distérmica (sensación de frío o calor anormal).
+Tenía1 sensación2 distérmica3 (sensación4 de5 frío6 o7 calor8 anormal)9.
+4 En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+En1 la2 semana3 previa4 tenía5 disuria6 (ardor7 al8 orinar)9 y10 polaquiuria11 (ir12 mucho13 al14 baño)15.
+5 Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+Le1 ingresamos2 por3 insuficiencia4 cardíaca5 crónica6 descompensada7 (el8 corazón9 no10 bombea11 bien)12.
+6 También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+También1 tenía2 una3 agudización4 de5 EPOC6 (enfermedad7 pulmonar8 crónica)9.
+7 Tenía infección del tracto urinario (infección en la orina).
+Tenía1 infección2 del3 tracto4 urinario5 (infección6 en7 la8 orina)9.
+8 Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+Tiene1 alergia2 documentada3 a4 betalactámicos5 (antibióticos6 de7 la8 familia9 de10 la11 penicilina)12.
+Por qué total: 12+11=23, +9=32, +15=47, +12=59, +9=68, +9=77, +12=89.
+
+Qué lines:
+1 Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Le1 pusimos2 oxígeno3 por4 la5 nariz6 a7 2(8) lpm9 (litros10 por11 minuto)12.
+2 Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Buscamos1 una2 saturación3 de4 oxígeno5 (oxígeno6 en7 sangre)8 del9 88(10) %(11?) al12 92(13) %(14). If % as separate token? In text "88 %" has space, so % is token. But word count may count % as word? Usually not? To be conservative count it. So 14. If not, 12. We'll count 14.
+3 Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le1 dimos2 furosemida3 (medicina4 que5 hace6 orinar)7 intravenosa8 (por9 vena)10 de11 40(12) mg13 cada14 8(15) horas16.
+4 Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le1 dimos2 prednisona3 (antiinflamatorio)4 de5 40(6) mg7 cada8 24(9) horas10 durante11 5(12) días13.
+5 Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le1 pusimos2 salbutamol3 e4 ipratropio5 (medicinas6 para7 abrir8 las9 vías10 respiratorias)11 en12 niebla13.
+6 Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+Le1 hicimos2 un3 urocultivo4 (prueba5 de6 orina7 para8 buscar9 bacterias)10.
+7 El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+El1 urocultivo2 mostró3 Escherichia4 coli5 (bacteria)6 BLEE7 (que8 resiste9 muchos10 antibióticos)11.
+8 Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Le1 dimos2 meropenem3 (antibiótico)4 de5 500(6) mg7 cada8 8(9) horas10 durante11 7(12) días13.
+9 Ajustamos la dosis a su función renal (trabajo de los riñones).
+Ajustamos1 la2 dosis3 a4 su5 función6 renal7 (trabajo8 de9 los10 riñones)11.
+10 Dejó de tener fiebre a las 48 horas.
+Dejó1 de2 tener3 fiebre4 a5 las6 48(7) horas8.
+11 Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+Perdió1 4(2) kg3 y4 tuvo5 un6 balance7 hídrico8 (líquidos9 que10 entraron11 y12 salieron)13 negativo14 de15 4.200(16) mL17.
+12 En el día +4 (cuarto día de ingreso) empeoró su función renal.
+En1 el2 día3 +4(4) (cuarto5 día6 de7 ingreso)8 empeoró9 su10 función11 renal12.
+13 Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Su1 creatinina2 (residuo3 que4 eliminan5 los6 riñones)7 subió8 a9 2,4(10) mg/dL11.
+14 Lo relacionamos con falta de líquidos.
+Lo1 relacionamos2 con3 falta4 de5 líquidos6.
+15 Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Reducimos1 la2 furosemida3 a4 40(5) mg6 cada7 12(8) horas9 por10 vena11.
+16 Después la pasamos a vía oral (por la boca).
+Después1 la2 pasamos3 a4 vía5 oral6 (por7 la8 boca)9.
+17 Al alta su creatinina era 1,9 mg/dL.
+Al1 alta2 su3 creatinina4 era5 1,9(6) mg/dL7.
+18 Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Controlamos1 su2 frecuencia3 cardíaca4 (latidos5 por6 minuto)7 con8 bisoprolol9.
+19 Alcanzó 78 lpm en reposo.
+Alcanzó1 78(2) lpm3 en4 reposo5.
+20 Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Mantuvimos1 la2 anticoagulación3 (medicina4 para5 evitar6 coágulos)7.
+21 Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Suspendimos1 la2 metformina3 (medicina4 para5 la6 diabetes)7 por8 el9 empeoramiento10 renal11.
+22 Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Le1 pusimos2 insulina3 rápida4 según5 pauta6 correctora7 (dosis8 extra9 según10 el11 azúcar)12.
+23 Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+Sus1 glucemias2 (azúcar3 en4 sangre)5 estuvieron6 entre7 140(8) y9 210(10) mg/dL11.
+Qué total: sum carefully:
+1 12 ->12
+2 14 ->26
+3 16 ->42
+4 13 ->55
+5 13 ->68
+6 10 ->78
+7 11 ->89
+8 13 ->102
+9 11 ->113
+10 8 ->121
+11 17 ->138
+12 12 ->150
+13 11 ->161
+14 6 ->167
+15 11 ->178
+16 9 ->187
+17 7 ->194
+18 9 ->203
+19 5 ->208
+20 7 ->215
+21 11 ->226
+22 12 ->238
+23 11 ->249.
+Qué total 249 (if % counted). Good.
+
+Medicinas lines (ignore bullet -):
+1 Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+Amoxicilina-clavulánico1 (antibiótico)2 875/125(3) mg4 1(5) comprimido6 cada7 8(8) horas9 durante10 5(11) días12.
+2 Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+Metformina1 (medicina2 para3 la4 diabetes)5 850(6) mg7 1(8) comprimido9 cada10 12(11) horas12.
+3 Insulina glargina (insulina) 100 U/mL (unidades por mililitro), 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+Insulina1 glargina2 (insulina)3 100(4) U/mL5 (unidades6 por7 mililitro)8 26(9) unidades10 subcutáneas11 (bajo12 la13 piel)14 a15 las16 22:00(17) h18.
+4 Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+Apixabán1 (anticoagulante)2 5(3) mg4 1(5) comprimido6 cada7 12(8) horas9.
+5 Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+Furosemida1 (medicina2 que3 hace4 orinar)5 40(6) mg7 1(8) comprimido9 por10 la11 mañana12.
+6 Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+Bisoprolol1 (medicina2 para3 el4 corazón)5 5(6) mg7 1(8) comprimido9 al10 día11.
+7 Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg (microgramos), 2 inhalaciones al día.
+Tiotropio/olodaterol1 (medicinas2 para3 abrir4 las5 vías6 respiratorias)7 2,5/2,5(8) mcg9 (microgramos)10 2(11) inhalaciones12 al13 día14.
+8 Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+Atorvastatina1 (medicina2 para3 el4 colesterol)5 40(6) mg7 1(8) comprimido9 en10 la11 cena12.
+9 Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+Omeprazol1 (medicina2 para3 el4 estómago)5 20(6) mg7 1(8) comprimido9 en10 ayunas11.
+10 Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+Oxigenoterapia1 domiciliaria2 (oxígeno3 en4 casa)5 16(6) h/día7 a8 2(9) lpm10.
+Meds total: 12+12=24, +18=42, +9=51, +12=63, +11=74, +14=88, +12=100, +11=111, +10=121.
+
+Home lines:
+1 Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Pésese1 todas2 las3 mañanas4 en5 ayunas6 y7 después8 de9 orinar10 y11 anote12 el13 peso14.
+2 Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Si1 gana2 2(3) kg4 o5 más6 en7 3(8) días9 contacte10 con11 su12 centro13 de14 salud15.
+3 Coma menos de 2 gramos de sal al día.
+Coma1 menos2 de3 2(4) gramos5 de6 sal7 al8 día9.
+4 Beba 1,5 litros diarios como máximo.
+Beba1 1,5(2) litros3 diarios4 como5 máximo6.
+5 Eso incluye sopas, infusiones y el agua de los medicamentos.
+Eso1 incluye2 sopas3 infusiones4 y5 el6 agua7 de8 los9 medicamentos10.
+6 No suspenda la oxigenoterapia (oxígeno en casa).
+No1 suspenda2 la3 oxigenoterapia4 (oxígeno5 en6 casa)7.
+7 Debe usarla al menos 16 horas al día.
+Debe1 usarla2 al3 menos4 16(5) horas6 al7 día8.
+8 Incluya toda la noche.
+Incluya1 toda2 la3 noche4.
+9 Hágase una analítica de control en 7-10 días.
+Hágase1 una2 analítica3 de4 control5 en6 7-10(7) días8.
+10 Debe incluir función renal e iones (sales en la sangre).
+Debe1 incluir2 función3 renal4 e5 iones6 (sales7 en8 la9 sangre)10.
+11 Hágala en su centro de salud, antes de la revisión en consultas.
+Hágala1 en2 su3 centro4 de5 salud6 antes7 de8 la9 revisión10 en11 consultas12.
+12 Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo).
+Le1 recomendamos2 la3 vacunación4 antigripal5 anual6 y7 la8 antineumocócica9 (contra10 la11 bacteria12 del13 neumococo)14.
+Home total: 14+15=29, +9=38, +6=44, +10=54, +7=61, +8=69, +4=73, +8=81, +10=91, +12=103, +14=117.
+
+Help lines:
+1 Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya1 a2 Urgencias3 si4 tiene5 aumento6 brusco7 de8 dificultad9 respiratoria10 (dificultad11 para12 respirar)13.
+2 Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya1 a2 Urgencias3 si4 tiene5 dolor6 torácico7 (dolor8 en9 el10 pecho)11.
+3 Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya1 a2 Urgencias3 si4 tiene5 fiebre6 superior7 a8 38(9) °C10.
+4 Vaya a Urgencias si tiene sangrado.
+Vaya1 a2 Urgencias3 si4 tiene5 sangrado6.
+5 Vaya a Urgencias si orina mucho menos de lo normal.
+Vaya1 a2 Urgencias3 si4 orina5 mucho6 menos7 de8 lo9 normal10.
+Help total 13+11=24, +10=34, +6=40, +10=50.
+
+Citas lines (ignore bullet -):
+1 Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+Consultas1 Externas2 de3 Medicina4 Interna5 HUCA6 12/03/2025(7) a8 las9 10:30(10) h11.
+2 Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+Consulta1 de2 enfermería3 de4 insuficiencia5 cardíaca6 CS7 Pumarín8 26/02/2025(9).
+3 Consultas Externas de Nefrología (especialidad de los riñones), HUCA: 04/04/2025 a las 09:00 h
+Consultas1 Externas2 de3 Nefrología4 (especialidad5 de6 los7 riñones)8 HUCA9 04/04/2025(10) a11 las12 09:00(13) h14.
+Citas total 11+9=20, +14=34.
+
+Total natural words: headings 26 + Por 89 =115; +Qué 249=364; +Meds 121=485; +Home 117=602; +Help 50=652; +Citas 34=686. Under 700. If % not counted, less. If bullets counted as words, +? There are 10 meds bullets +3 citas bullets =13, total 699. Still under 700 if headings ## not counted? If ## counted 6 more =705. But word counters usually ignore markdown symbols? To be safe, we can reduce a few words to allow bullets/##. Need final under 700 even with markdown tokens? Let's see: If count ## as word (6) and bullet - as word (13), total 686+19=705. Slight over. We can cut 5-10 words. Remove Nefrología explanation saves 4? Actually line 3 old without explanation 10, with 14, save 4. Then total 701. Need cut 2 more. Remove U/mL explanation? saves 3 (line from 18 to 15) => 698. But then U/mL unexplained. Maybe okay? Units are technical but maybe not. Or remove mcg explanation saves 1. Need balance. Could remove Nefrología explanation and U/mL explanation, total 686-4-3=679 natural, with markdown 698. Good. But rule explain technical terms? U/mL maybe less critical. Nefrología common. Let's remove both to be safe word count. But we already added U/mL for technical. Which is more important? "U/mL" is a unit, likely not a tecnicismo requiring explanation? It's a measurement. Rule says cifras exact, not units. Could leave unexplained. "Nefrología" is a specialty, common enough. Remove both. Then final natural 679, markdown 698. Good.
+
+But if we remove U/mL, line: "- Insulina glargina (insulina) 100 U/mL, 26 unidades subcutáneas (bajo la piel) a las 22:00 h." Count 15? Insulina1 glargina2 (insulina)3 100(4) U/mL5 26(6) unidades7 subcutáneas8 (bajo9 la10 piel)11 a12 las13 22:00(14) h15. Good.
+Remove Nefrología explanation: "- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h" count 10. Good.
+
+Now natural total: previous 686 -3 (U/mL) -4 (Nefro) =679. With markdown tokens 6+13=698. Under 700. Good. If word counter counts ## and bullets, okay. If counts % as words, already included. If counts commas? no.
+
+Need check if removing U/mL explanation violates rule? Maybe not. "U/mL" is a unit, not a medical technical term? It might be considered technical. But we can explain "unidades por mililitro" elsewhere? No. Could keep and cut other words. Let's see if we can keep U/mL and remove something else with less impact. Remove mcg explanation (1) and Nefro (4) => natural 682, markdown 701. Need cut 2 more. Could remove "como máximo" in home line 4? "Beba 1,5 litros diarios." Count from 6 to 4, save 2. But recommendation says restriction to 1.5 liters; "Beba 1,5 litros diarios" might imply exactly, not max. Better "No beba más de 1,5 litros diarios." Count No1 beba2 más3 de4 1,5(5) litros6 diarios7. Old 6? "Beba 1,5 litros diarios como máximo" 6. New 7, worse. "Beba hasta 1,5 litros diarios." Count Beba1 hasta2 1,5(3) litros4 diarios5. Save 1. But "hasta" means max. Good. Use "Beba hasta 1,5 litros diarios." Save 1. Need save 2. Could remove "diarios"? Report says diarios. Keep. Could remove "Eso incluye..."? Must include. Could shorten "Eso incluye sopas, infusiones y el agua de los medicamentos." to "Incluya sopas, infusiones y el agua de los medicamentos." Count Incluya1 sopas2 infusiones3 y4 el5 agua6 de7 los8 medicamentos9. Old 10, save 1. Good. Then total save 2. Keep U/mL and remove Nefro? Let's calculate: original with U/mL and Nefro natural 686. Remove Nefro -4 =>682. Change line4 save1 =>681. Change line5 save1 =>680. Markdown +19 =699. Good. Keep U/mL, remove mcg? We can keep mcg too. Natural 680, markdown 699. Under 700. Great. Let's adopt: keep U/mL explanation, keep mcg explanation, remove Nefrología explanation, change home liquid line to "Beba hasta 1,5 litros diarios." and include line to "Incluya sopas, infusiones y el agua de los medicamentos." Need ensure recommendation 2 preserved: "Restricción de líquidos a 1,5 litros diarios, incluyendo..." "Beba hasta 1,5 litros diarios. Incluya sopas..." Good.
+
+Check sentence lengths: "Beba hasta 1,5 litros diarios." 5 words. "Incluya sopas, infusiones y el agua de los medicamentos." 9? Incluya1 sopas2 infusiones3 y4 el5 agua6 de7 los8 medicamentos9. Good.
+
+Now final natural count: Let's recalc affected lines:
+Home line4 old 6 -> new Beba1 hasta2 1,5(3) litros4 diarios5 =5 (save1).
+Line5 old 10 -> new Incluya1 sopas2 infusiones3 y4 el5 agua6 de7 los8 medicamentos9 =9 (save1).
+Citas line3 old with Nefro explanation 14 -> new Consultas1 Externas2 de3 Nefrología4 HUCA5 04/04/2025(6) a7 las8 09:00(9) h10 =10 (save4).
+Natural total 686 -1-1-4 =680. Markdown tokens: headings ## 6, bullets meds 10 + citas 3 =13, total 699. Good. If word counter counts "##" as part of heading? It might count "##" as token. We included. If it counts bullet "-" as token, included. Under 700 by 1. Very close. Could cut one more word to be safer. Remove "diarios" in line4? "Beba hasta 1,5 litros." But report says diarios. Rule no change cifras? It's not a cifra? But recommendation says 1,5 litros diarios. Need preserve daily. Keep.
+Could remove "hasta"? "Beba 1,5 litros diarios." But max nuance. Could be okay? Recommendation is restriction to 1.5 liters, so "Beba 1,5 litros diarios" might be interpreted as exactly, but acceptable? To save 1, use "Beba 1,5 litros diarios." Count Beba1 1,5(2) litros3 diarios4. Save 1 from 5. Then natural 679, markdown 698. But does it preserve restriction? It says drink 1.5 liters daily, not max. The original says restriction to 1.5 liters. Better keep "hasta". We have 699, okay. But if any other token counted (e.g., commas separate?) could exceed. Word counters don't count punctuation separately except spaces. We have spaces around % and +4? "+4" attached? In text "día +4" has space before +4, so +4 token. Good. "88 %" has space, % token. We counted. "°C" attached to 38? "38 °C" has space, °C token. Counted. "10:30 h" two tokens. Good.
+Could there be extra spaces after bullets? We count bullet as token. Good.
+Maybe markdown heading "##" and words: "## Por" is two tokens? Yes. 6 headings => 6 ## tokens. Good.
+Total 699. Safe enough. But if word counter counts hyphenated "Amoxicilina-clavulánico" as one, we did. If counts slash "2,5/2,5" one, did. If counts "U/mL" one, did. If counts "h/día" one, did. Good.
+
+Need ensure no line >20 after changes. Home line4 5, line5 9. Citas line3 10. Good.
+
+Now final text with these changes:
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL.
+En el día +4 (cuarto día de ingreso) empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+## Sus medicinas
+- Amoxicilina-clavulánico (antibiótico) 875/125 mg, 1 comprimido cada 8 horas durante 5 días.
+- Metformina (medicina para la diabetes) 850 mg, 1 comprimido cada 12 horas.
+- Insulina glargina (insulina) 100 U/mL (unidades por mililitro), 26 unidades subcutáneas (bajo la piel) a las 22:00 h.
+- Apixabán (anticoagulante) 5 mg, 1 comprimido cada 12 horas.
+- Furosemida (medicina que hace orinar) 40 mg, 1 comprimido por la mañana.
+- Bisoprolol (medicina para el corazón) 5 mg, 1 comprimido al día.
+- Tiotropio/olodaterol (medicinas para abrir las vías respiratorias) 2,5/2,5 mcg (microgramos), 2 inhalaciones al día.
+- Atorvastatina (medicina para el colesterol) 40 mg, 1 comprimido en la cena.
+- Omeprazol (medicina para el estómago) 20 mg, 1 comprimido en ayunas.
+- Oxigenoterapia domiciliaria (oxígeno en casa) 16 h/día a 2 lpm.
+
+## Lo que tiene que hacer en casa
+Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+Coma menos de 2 gramos de sal al día.
+Beba hasta 1,5 litros diarios.
+Incluya sopas, infusiones y el agua de los medicamentos.
+No suspenda la oxigenoterapia (oxígeno en casa).
+Debe usarla al menos 16 horas al día.
+Incluya toda la noche.
+Hágase una analítica de control en 7-10 días.
+Debe incluir función renal e iones (sales en la sangre).
+Hágala en su centro de salud, antes de la revisión en consultas.
+Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo).
+
+## Cuándo tiene que pedir ayuda
+Vaya a Urgencias si tiene aumento brusco de dificultad respiratoria (dificultad para respirar).
+Vaya a Urgencias si tiene dolor torácico (dolor en el pecho).
+Vaya a Urgencias si tiene fiebre superior a 38 °C.
+Vaya a Urgencias si tiene sangrado.
+Vaya a Urgencias si orina mucho menos de lo normal.
+
+## Sus próximas citas
+- Consultas Externas de Medicina Interna, HUCA: 12/03/2025 a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: 26/02/2025
+- Consultas Externas de Nefrología, HUCA: 04/04/2025 a las 09:00 h
+
+Need check "Beba hasta 1,5 litros diarios." Is "hasta" with "diarios" okay? Yes. It means up to 1.5 liters per day. Good.
+
+Potential issue: "Incluya sopas..." subject is patient, but "incluya" could mean include in the 1.5 liters. Good.
+
+Potential issue: "Debe incluir función renal e iones" maybe "Debe incluir" refers analítica. Good.
+
+Potential issue: "Le recomendamos la vacunación antigripal anual y la antineumocócica (contra la bacteria del neumococo)." Is "bacteria del neumococo" redundant? Neumococo is a bacterium. Common explanation. okay.
+
+Potential issue: "Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos)." The parentheses after BLEE explain BLEE, but "que resiste" refers bacteria, not BLEE? It's okay. Could be read as BLEE resists. Good.
+
+Potential issue: "BLEE" is an acronym for beta-lactamase extended spectrum. We explain as bacteria that resists many antibiotics. Actually BLEE is a type of enzyme, but in report "Escherichia coli productora de BLEE". Our phrase "Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos)" slightly inaccurate: the bacteria produces BLEE and resists many antibiotics. But common explanation. Rule no add? It's explanation. Could say "BLEE (resistencia a muchos antibióticos)". Sentence: "El urocultivo mostró Escherichia coli (bacteria) con BLEE (resistencia a muchos antibióticos)." Count El1 urocultivo2 mostró3 Escherichia4 coli5 (bacteria)6 con7 BLEE8 (resistencia9 a10 muchos11 antibióticos)12. Adds 1 vs previous 11? Previous 11. New 12. Word count +1, markdown total 700? We had 699, +1 =700. Still okay if exactly 700 allowed (entre 350 y 700). But to be safe keep previous. It's understandable.
+
+Potential issue: "pauta correctora (dosis extra según el azúcar)" adds info not in report? It explains. "dosis extra" maybe not explicit but corrective insulin is extra. okay.
+
+Potential issue: "insulina rápida" not explained. Could be technical. But common. If strict, maybe add "(insulina de acción corta)" but word count. We can leave.
+
+Potential issue: "U/mL (unidades por mililitro)" good.
+
+Potential issue: "mcg (microgramos)" good.
+
+Potential issue: "h/día" not explained. Could be okay. If strict, add "(horas al día)" but word count +3 => 702 with markdown. Could cut elsewhere. Maybe not needed. "h/día" is common abbreviation. But rule technical terms? It's a unit. We explained lpm, U/mL, mcg. h/día maybe less. Could leave.
+
+Potential issue: "lpm" in meds line appears after explanation in Qué. Good.
+
+Potential issue: "mg" not explained. Common. "kg" common. "mL" common? Maybe. "mg/dL" technical unit. We use creatinina mg/dL and glucemias mg/dL. Need explain? First time in Qué line 13: "2,4 mg/dL". Could explain "miligramos por decilitro"? But word count. Is it a technical term? Units maybe. Rule says cifras exact, not units. But patient may not know mg/dL. However secondary education likely knows? Maybe not. We can avoid explaining all units due word count. The rule specifically says explain each tecnicismo, not every unit. Medical terms are more important.
+
+Potential issue: "FGe" removed, good.
+
+Potential issue: "Killip II", "NYHA III" not included. Not necessary. But patient right to know? We mention insuficiencia cardíaca and EPOC. Fine.
+
+Potential issue: "diabetes mellitus tipo 2" not explicitly in Por qué, but metformina explanation says diabetes. Could be okay. Maybe patient knows. If we mention "diabetes" technical? common.
+
+Potential issue: "fibrilación auricular" not mentioned. But apixabán anticoagulante and control frecuencia cardíaca. Patient right to know? Maybe should include diagnosis? Rule 3 says patient has right to know how it is called if technical term appears. We don't mention fibrilación auricular. Is that omitting important? The report diagnoses include. But not required by rules except preserve recommendations/citas. However "Qué le hemos hecho" says controlamos frecuencia cardíaca with bisoprolol, anticoagulación. A patient might wonder why. Maybe should mention "Tiene fibrilación auricular (ritmo cardíaco irregular)." But word count and technical explanation. Could add in Por qué? It is a diagnosis. But not required? The instruction: "Explica cada tecnicismo la primera vez que aparezca... No lo elimines: el paciente tiene derecho a saber cómo se llama lo que tiene." This could imply if the report has diagnoses, we should not eliminate them? It says no lo elimines referring to technical term? Maybe we should include main diagnoses. But word count. We already include insuficiencia cardíaca, EPOC, infection, allergy. We don't include diabetes, fibrilación auricular, renal crónica, hypertension, Crohn. But maybe not all needed for discharge summary? The patient has right to know what he has. However rule 4 prohibits adding diagnosis not in report; but these are in report. Could include some. But word count tight. Need decide.
+
+The strict rules: "Explica cada tecnicismo la primera vez que aparezca, entre paréntesis y con palabras corrientes. No lo elimines: el paciente tiene derecho a saber cómo se llama lo que tiene." This likely means when you mention a technical term, don't remove it; explain it. It doesn't necessarily require listing all diagnoses. But "lo que tiene" suggests include conditions. Yet structure limited and word count 350-700. We can include key diagnoses in Por qué: insuficiencia cardíaca, EPOC, infection. Maybe also diabetes? Since medicines include metformina/insulina. Could add "Tiene diabetes (azúcar alta en sangre)." But word count +6? "Tiene diabetes (azúcar alta en sangre)." 6? Tiene1 diabetes2 (azúcar3 alta4 en5 sangre)6. Markdown +6 => 705 if current 699. Need cut. Maybe not.
+
+Fibrilación auricular: "Tiene fibrilación auricular (ritmo cardíaco irregular)." Count Tiene1 fibrilación2 auricular3 (ritmo4 cardíaco5 irregular)6. Also +6. Could be important because anticoagulant. But we explain apixabán as anticoagulante. Patient may not know why. But report says fibrilación auricular permanente. Maybe should mention. Word count issue.
+
+Could cut some less essential lines to add diagnoses. For example remove "Perdió 4 kg y tuvo balance hídrico..."? It's a number, not required. Save 17. Then can add diabetes and fibrilación (12) and still under. But "Qué le hemos hecho" should include treatment effects? Not mandatory. We can remove water balance line to save words. Also remove "Alcanzó 78 lpm en reposo"? Save 5. But control heart rate with bisoprolol enough. Could add diagnoses. Let's consider improving completeness while staying under 700.
+
+Current natural 680, markdown 699. We have only 1 word margin if counting markdown. To add any, need cut. Remove water balance line (17) gives natural 663, markdown 682. Then can add two diagnosis lines (12) => natural 675, markdown 694. Good. Also maybe add "Tiene diabetes tipo 2 (azúcar alta en sangre)." and "Tiene fibrilación auricular (ritmo cardíaco irregular)." But need explain "tipo 2"? Maybe common. Could say "Tiene diabetes (azúcar alta en sangre)." Report says tipo 2. If mention, should include tipo 2? "Tiene diabetes tipo 2 (azúcar alta en sangre)." Count Tiene1 diabetes2 tipo3 2(4) (azúcar5 alta6 en7 sangre)8. +8. Fibrilación line 6. Total +14. Natural 677, markdown 696. Good. But is "diabetes tipo 2" a diagnosis in report. Yes. Could add in Por qué after infection? Or before allergy. Need keep sentences <20.
+
+Also "Enfermedad renal crónica estadio 4" maybe important because metformin suspended and analítica. We mention función renal, creatinina. Could add "Tiene enfermedad renal crónica (riñones dañados)." Count Tiene1 enfermedad2 renal3 crónica4 (riñones5 dañados)6. +6. But word count maybe still okay if remove water balance. Natural 683, markdown 702 too high. Need cut more. Maybe not.
+
+Which diagnoses are most important? Fibrilación auricular explains anticoagulant and heart rate. Diabetes explains insulin/metformin. Renal crónica explains metformin suspension and analítica. We already mention renal function worsening. Could be enough.
+
+Maybe add only fibrilación auricular because apixabán. But diabetes also. Current meds include metformina and insulina, patient likely knows. Fibrilación maybe less known. But report says permanent since 2021. I'd add both if possible.
+
+Need remove water balance line? It includes numbers 4 kg and 4.200 mL. Rule no change if include, but omit okay. It is part of evolution. Not required. Remove to save. Also maybe remove "Alcanzó 78 lpm en reposo" to save 5, but it's a result. Could keep. If add two lines +14 and remove water balance -17, net -3 natural, markdown 696. Good. Let's do that. Remove line "Perdió 4 kg y tuvo un balance hídrico (líquidos que entraron y salieron) negativo de 4.200 mL." Add in Por qué after infection:
+"Tiene diabetes tipo 2 (azúcar alta en sangre)."
+"Tiene fibrilación auricular (ritmo cardíaco irregular)."
+Need check first time technical terms: diabetes explained, fibrilación auricular explained. Good.
+
+But "diabetes tipo 2" maybe "tipo 2" not explained. It's a type. Common? Could say "diabetes tipo 2 (azúcar alta en sangre)" explains diabetes, not type. okay.
+
+Word count new:
+Por qué add two lines: line diabetes count? Tiene1 diabetes2 tipo3 2(4) (azúcar5 alta6 en7 sangre)8. Fibrilación: Tiene1 fibrilación2 auricular3 (ritmo4 cardíaco5 irregular)6. Total +14. Por qué becomes 103.
+Qué remove water balance line -17 => 232.
+Natural total previous 680 +14 -17 =677. Markdown +19 =696. Good.
+
+Check sentence lengths: diabetes 8, fibrilación 6. Good.
+
+Now final text with these changes. Need ensure no passive. "Tiene" okay.
+
+Let's update final:
+## Por qué ha estado ingresado
+Le ingresamos por dificultad para respirar que fue aumentando durante tres días.
+También tenía edemas (hinchazón con fosa al presionar) en las piernas.
+Tenía sensación distérmica (sensación de frío o calor anormal).
+En la semana previa tenía disuria (ardor al orinar) y polaquiuria (ir mucho al baño).
+Le ingresamos por insuficiencia cardíaca crónica descompensada (el corazón no bombea bien).
+También tenía una agudización de EPOC (enfermedad pulmonar crónica).
+Tenía infección del tracto urinario (infección en la orina).
+Tiene diabetes tipo 2 (azúcar alta en sangre).
+Tiene fibrilación auricular (ritmo cardíaco irregular).
+Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina).
+
+## Qué le hemos hecho
+Le pusimos oxígeno por la nariz a 2 lpm (litros por minuto).
+Buscamos una saturación de oxígeno (oxígeno en sangre) del 88 % al 92 %.
+Le dimos furosemida (medicina que hace orinar) intravenosa (por vena) de 40 mg cada 8 horas.
+Le dimos prednisona (antiinflamatorio) de 40 mg cada 24 horas durante 5 días.
+Le pusimos salbutamol e ipratropio (medicinas para abrir las vías respiratorias) en niebla.
+Le hicimos un urocultivo (prueba de orina para buscar bacterias).
+El urocultivo mostró Escherichia coli (bacteria) BLEE (que resiste muchos antibióticos).
+Le dimos meropenem (antibiótico) de 500 mg cada 8 horas durante 7 días.
+Ajustamos la dosis a su función renal (trabajo de los riñones).
+Dejó de tener fiebre a las 48 horas.
+En el día +4 (cuarto día de ingreso) empeoró su función renal.
+Su creatinina (residuo que eliminan los riñones) subió a 2,4 mg/dL.
+Lo relacionamos con falta de líquidos.
+Reducimos la furosemida a 40 mg cada 12 horas por vena.
+Después la pasamos a vía oral (por la boca).
+Al alta su creatinina era 1,9 mg/dL.
+Controlamos su frecuencia cardíaca (latidos por minuto) con bisoprolol.
+Alcanzó 78 lpm en reposo.
+Mantuvimos la anticoagulación (medicina para evitar coágulos).
+Suspendimos la metformina (medicina para la diabetes) por el empeoramiento renal.
+Le pusimos insulina rápida según pauta correctora (dosis extra según el azúcar).
+Sus glucemias (azúcar en sangre) estuvieron entre 140 y 210 mg/dL.
+
+... rest same.
+
+Need check if "diabetes" first time in Por qué, then in Qué "metformina (medicina para la diabetes)" no need explain again? It's okay. "glucemias (azúcar en sangre)" explains. Good.
+
+Potential issue: "fibrilación auricular" and "anticoagulación" later. Good.
+
+Potential issue: We removed water balance, but report says descenso ponderal 4 kg. Not required. Fine.
+
+Need ensure six recommendations still all there. Yes.
+
+Need maybe mention "oxigenoterapia domiciliaria 16 h/día a 2 lpm" in meds and home. Good.
+
+Now final word count with markdown: natural 677 + 19 =696. Good.
+
+Double-check no line >20 after adding: Por qué lines all short. Qué lines: longest maybe line 3 16, line 8 13, line 11? removed. line 12 12, line 22 12. Good.
+
+Need check "sin voz pasiva" in new lines: "Tiene" okay. No passive.
+
+Need check "frases de menos de 20 palabras". All lines <20. Headings? "Lo que tiene que hacer en casa" 7. Good.
+
+Need check "sin subordinadas encadenadas". We have some relative clauses in parentheses: "(hinchazón con fosa al presionar)" not subordinate? It's a noun phrase. "(antibióticos de la familia de la penicilina)" no. "(que resiste muchos antibióticos)" is a relative clause, but only one, not chained. "(dosis extra según el azúcar)" no. Good.
+
+Need check "segunda persona de cortesía (usted)". We use imperatives and "su". Some statements "Tiene" are usted. Good. "Le ingresamos" is we to you. Fine.
+
+Need check "No conversas y no te diriges al personal sanitario." We don't.
+
+Need final only sections. No extra explanation. Ensure markdown headings exactly as required. Use ##. Good.
+
+One more thought: Rule 10 says if prescription seems wrong, explain as written without warnings. We list Amoxicilina-clavulánico after allergy. Could a reader infer warning? It's just list. No note. Good.
+
+Potential issue: "Tiene alergia documentada a betalactámicos (antibióticos de la familia de la penicilina)." Then "Amoxicilina-clavulánico (antibiótico)" might be seen as not explaining that amoxicilina is beta-lactam? But no warning. It's okay.
+
+Potential issue: "No suspenda la oxigenoterapia" is a recommendation, not advice beyond report. Good.
+
+Potential issue: "Le recomendamos" maybe we are software, but report says se recomienda. Active voice. Good.
+
+Potential issue: "Urgencias" maybe should be "acuda a Urgencias" but we use "Vaya". Good.
+
+Potential issue: Dates in citas: second has no time, exact. Good.
+
+Potential issue: "CS Pumarín" abbreviation not explained. It's center name. Could be technical? "CS" = centro de salud. In report, CS Pumarín. We earlier use "centro de salud". In citas, "CS Pumarín" appears. Need explain first time? It appears in citas after we used "centro de salud" in home. But "CS" abbreviation maybe technical. Could write "CS (centro de salud) Pumarín"? Word count +2. Current markdown 696, +2 =698. Still okay. Should we add? Rule technical terms. "CS" is an abbreviation. First time in citas. Add: "- Consulta de enfermería de insuficiencia cardíaca, CS (centro de salud) Pumarín: 26/02/2025". Count Consulta1 de2 enfermería3 de4 insuficiencia5 cardíaca6 CS7 (centro8 de9 salud)10 Pumarín11 26/02/2025(12). Old 9, +3. Markdown total 699. Still under 700. Good. But line length? 12 words. Add. Also "HUCA" abbreviation? It appears in citas. HUCA is hospital name, maybe not technical? Could explain? "HUCA (hospital)"? Word count. Maybe not. Patient likely knows. But rule? HUCA is proper name. Skip.
+
+Add CS explanation to be safe. New natural 680? Wait previous natural 677 +3 =680. Markdown +19 =699. Good. Under 700. If word counter counts differently, close. Could skip to have margin. But "CS" is abbreviation for centro de salud, and we already used full phrase. Maybe not necessary. To keep margin, skip. The patient knows centro de salud from recommendations. "CS Pumarín" is a proper name. I'll skip to maintain 696.
+
+Potential issue: "HUCA" in citas not explained. Proper name. okay.
+
+Potential issue: "NHC", DNI etc omitted. Not needed.
+
+Potential issue: "Fecha de ingreso/alta" not mentioned? Not required. But maybe patient wants know? Could add? Word count. Not required. The report is discharge, dates maybe not necessary. But rule 5 if include exact. We don't include admission/discharge dates. Fine.
+
+Potential issue: "Servicio de Medicina Interna" not mentioned except citas. okay.
+
+Potential issue: "Médico responsable" not mentioned. Not required.
+
+Potential issue: "Persona de contacto hija" not mentioned. User says for patient and daughter, but no need.
+
+Need final answer only. Ensure no analysis in final. Use Spanish. final oververbosity 9 but constrained. Good.
+
+Let's produce final with exact sections.

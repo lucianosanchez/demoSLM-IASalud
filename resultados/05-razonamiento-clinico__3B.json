@@ -1,0 +1,13 @@
+{
+  "incoherencias": [
+    {
+      "elemento": "amoxicilina-clavulánico",
+      "tipo": "contraindicacion_por_alergia",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras amoxicilina en 2019, confirmada por el Servicio de Alergología del HUCA). No otras alergias medicamentosas conocidas.",
+      "conocimiento_aplicado": "La alergia a betalactámicos, como la amoxicilina, es una contraindicación absoluta para su uso, especialmente en pacientes con exantema generalizado confirmado.",
+      "correccion_propuesta": "Remover el amoxicilina-clavulánico del tratamiento al alta y sustituirlo por un antibiótico seguro, como fosfomicina o nitrofurantoína, según el antibiograma."
+    }
+  ],
+  "sin_incoherencias_adicionales": true
+}

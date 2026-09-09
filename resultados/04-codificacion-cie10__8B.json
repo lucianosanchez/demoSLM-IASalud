@@ -1,0 +1,64 @@
+{
+  "diagnostico_principal": {
+    "codigo": "I50.21",
+    "descripcion": "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada",
+    "texto_de_origen": "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso.",
+    "confianza": "alta"
+  },
+  "diagnosticos_secundarios": [
+    {
+      "codigo": "J44.0",
+      "descripcion": "Agudización de enfisema pulmonar",
+      "texto_de_origen": "Agudización de EPOC (GOLD 3, grupo E).",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "N39.0",
+      "descripcion": "Infección del tracto urinario, no especificada",
+      "texto_de_origen": "Infección del tracto urinario por Escherichia coli productora de BLEE.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "N18.5",
+      "descripcion": "Enfermedad renal crónica estadio 4, de origen diabético",
+      "texto_de_origen": "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "E11.22",
+      "descripcion": "Diabetes mellitus tipo 2 con complicaciones renales",
+      "texto_de_origen": "Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética no proliferativa. Mal control metabólico (HbA1c 8,4 %).",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "I48.0",
+      "descripcion": "Fibrilación auricular, permanente",
+      "texto_de_origen": "Fibrilación auricular permanente, anticoagulada.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "J96.0",
+      "descripcion": "Insuficiencia respiratoria crónica agudizada, hipercápnica",
+      "texto_de_origen": "Insuficiencia respiratoria crónica agudizada, hipercápnica.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "I10",
+      "descripcion": "Hipertensión arterial esencial",
+      "texto_de_origen": "Hipertensión arterial esencial.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "Z87.890",
+      "descripcion": "Exposición al tabaco, exfumador",
+      "texto_de_origen": "Exfumador de 45 paquetes-año.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "K50.2",
+      "descripcion": "Enfermedad de Crohn, ileal",
+      "texto_de_origen": "Enfermedad de Crohn ileal en remisión.",
+      "confianza": "alta"
+    }
+  ]
+}

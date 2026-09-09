@@ -1,0 +1,123 @@
+Okay, let's tackle this. The user wants me to extract information from the discharge report and format it into a specific JSON structure. First, I need to make sure I understand all the rules and requirements.
+
+Starting with the patient data. The patient's name is Manuel Fernández Argüelles. His date of birth is 14/03/1957, and the admission date is 12/02/2025. To calculate his age at admission, I need to subtract the birth year from the admission year. But wait, the exact month and day matter. The birth month is March, and the admission is February. So he hasn't had his birthday yet in 2025. So 2025 minus 1957 is 68, but since his birthday is in March and he was admitted in February, he's still 67 years old. Wait, no, wait. Wait, 14/03/1957 is March 14, 1957. The admission is February 12, 2025. So he was born in 1957, and in 2025, he's 68 years old, but since his birthday hasn't occurred yet in February, he's still 67. Wait, no. Wait, 2025 minus 1957 is 68. But if the admission is in February, and his birthday is March, then he hasn't turned 68 yet. So his age at admission is 67. Let me confirm that. For example, if someone is born on March 1, 1957, and admitted on February 1, 2025, they are 67 years old. So yes, 67.
+
+Sex is "Varón" which translates to "hombre" in the JSON. So "hombre".
+
+Weight and height: In the physical exam, it says "Peso 58 kg. Talla 170 cm." So those are 58 and 170. So "peso_kg": 58, "talla_cm": 170.
+
+Alergias: The report mentions an allergy to beta-lactam antibiotics (betalactámicos) with a rash after amoxicillin in 2019, confirmed by the allergy service. So the agent is "betalactámicos", manifestacion is "exantema generalizado", and documentada is true. Are there any other allergies? The report says "No otras alergias medicamentosas conocidas." So only one allergy.
+
+Habito tabaquico: Exfumador since 2018, 45 paquetes-año. So "estado": "exfumador", "paquetes_ano": 45.
+
+Antecedentes: The list includes several. Let's go through each:
+
+- EPOC GOLD 3, group E. Two exacerbations in the last 12 months. Oxygen therapy 16h/day since January 2024. But the antecedente is "EPOC de fenotipo enfisematoso, GOLD 3, grupo E. Dos agudizaciones con ingreso en los últimos 12 meses. Oxigenoterapia domiciliaria 16 h/día a 2 lpm desde enero de 2024." The description is that, and "activo" is true because it's not mentioned as resolved or in remission. Wait, but the report says "Oxigenoterapia domiciliaria 16 h/día a 2 lpm desde enero de 2024." So the oxygen therapy is ongoing. So the antecedente is active. Wait, but the antecedente is EPOC, which is a chronic condition. The report says "Dos agudizaciones con ingreso en los últimos 12 meses." So the EPOC is active. So "activo": true.
+
+- Insuficiencia cardíaca crónica con fracción de eyección preservada (FEVI 55 % en ecocardiograma de 09/2024). Clase funcional NYHA III basal. The report says "Insuficiencia cardíaca crónica con fracción de eyección preservada... Clase funcional NYHA III basal." The antecedente is active because it's not mentioned as resolved. So "activo": true.
+
+- Fibrilación auricular permanente desde 2021. CHA2DS2-VASc 5. HAS-BLED 3. This is a chronic condition, so "activo": true.
+
+- Diabetes mellitus tipo 2 de 18 años de evolución, con nefropatía diabética establecida y retinopatía diabética no proliferativa. "activo": true.
+
+- Enfermedad renal crónica estadio 4 (FGe basal 22 mL/min/1,73 m², CKD-EPI). "activo": true.
+
+- Hipertensión arterial esencial de larga evolución. "activo": true.
+
+- Enfermedad de Crohn de localización ileal diagnosticada en 2003, en remisión clínica sin tratamiento desde 2016. Seguimiento en consultas... hasta 2019. So the antecedente is "Enfermedad de Crohn ileal... en remisión clínica..." So "activo": false.
+
+- Intervenido de hernia inguinal derecha en 2011. "activo": true (since it's a past intervention, but the antecedente is "intervenido", which is a past event, but the antecedente is still present as a history. Wait, the rule says "activo" is false if the antecedente is in remisión, resuelto, curado, or intervenido. Wait, the rule says: "activo" es false cuando el documento describe el antecedente como en remisión, resuelto, curado o intervenido. So if the antecedente is "intervenido", then "activo": false. So for the hernia, since it's "intervenido", "activo": false.
+
+- Índice de Charlson ajustado por edad: 7. But this is a score, not an antecedente. So not included.
+
+So the antecedentes list includes:
+
+1. EPOC... (activo: true)
+2. Insuficiencia cardíaca... (activo: true)
+3. Fibrilación auricular... (activo: true)
+4. Diabetes... (activo: true)
+5. Enfermedad renal... (activo: true)
+6. Hipertensión... (activo: true)
+7. Enfermedad de Crohn... (activo: false)
+8. Intervenido de hernia... (activo: false)
+
+Wait, the report lists "Enfermedad de Crohn... en remisión clínica sin tratamiento desde 2016" and "intervenido de hernia inguinal derecha en 2011". So those two are separate antecedentes. So the antecedentes list should have these entries.
+
+Now, medicacion_previa: The section "TRATAMIENTO HABITUAL PREVIO AL INGRESO" includes:
+
+- Metformina 850 mg, 1 comprimido cada 12 horas, vía oral
+- Insulina glargina 100 U/mL, 22 unidades subcutáneas a las 22:00 h
+- Apixabán 5 mg, 1 comprimido cada 12 horas, vía oral
+- Furosemida 40 mg, 1 comprimido por la mañana, vía oral
+- Bisoprolol 5 mg, 1 comprimido al día, vía oral
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día
+- Atorvastatina 40 mg, 1 comprimido en la cena, vía oral
+- Omeprazol 20 mg, 1 comprimido en ayunas, vía oral
+
+So each of these is in medicacion_previa. Need to normalize the principio_activo to lowercase, remove brand names. For example, "Metformina" is already in lowercase. "Insulina glargina" becomes "insulina glargina" (but the brand name is "glargina", but the principle is "insulina glargina" as a generic? Wait, the instruction says to normalize to lowercase and without brand. So "Insulina glargina" would be "insulina glargina" (but "glargina" is a brand name? Wait, the principle active is "insulina glargina" but the brand is "glargina". Wait, the instruction says to remove brand names. So "Insulina glargina" would be "insulina" as the principle? Wait, no. Wait, the principle active is the active ingredient. For example, "Insulina glargina" is a specific type of insulin, but the principle active is "insulina". Wait, but the user's instruction says to normalize to lowercase and without brand. So "Insulina glargina" would be "insulina" (since "glargina" is a brand name). Wait, but maybe "glargina" is the active ingredient. Wait, no. Insulin glargina is a specific type of insulin, but the active ingredient is insulin. However, in some contexts, the brand name is considered part of the drug name. But the instruction says to remove brand names. So for example, "Insulina glargina" would be "insulina" as the principle active. Wait, but that's not correct. The principle active is the actual substance. For example, "Metformina" is the principle active. "Insulina glargina" is a specific type of insulin, but the principle active is "insulina". However, in some cases, the brand name is part of the drug name. But the instruction says to remove brand names. So "Insulina glargina" would be "insulina" as the principle active. Wait, but that's not accurate. Maybe the correct approach is to take the first part as the principle active. For example, "Insulina glargina" would be "insulina" as the principle active. But I'm not sure. Alternatively, maybe "glargina" is the active ingredient. Wait, no. Insulin glargina is a long-acting insulin analog. The active ingredient is insulin, but the specific type is glargina. However, the instruction says to remove brand names. So "Insulina glargina" would be "insulina" as the principle active. But I'm not certain. Alternatively, maybe "glargina" is considered part of the principle active. This is a bit ambiguous. Let me check the example in the user's instruction. For example, in the sample input, if there's a drug like "Apixabán 5 mg", the principle active is "apixabán". So the brand name is not included. So for "Insulina glargina", the principle active would be "insulina" (since "glargina" is a brand name). Wait, but "glargina" is the specific type. However, the instruction says to remove brand names. So "Insulina glargina" would be "insulina" as the principle active. But that's not correct. Alternatively, maybe "glargina" is the active ingredient. Wait, no. The active ingredient is insulin, and glargina is the specific type. So the principle active is "insulina". So for "Insulina glargina", the principle active is "insulina". Similarly, "Tiotropio/olodaterol" would be "tiotropio/olodaterol" as the principle active. So the principle active is the combination of the two. So for each medication in medicacion_previa, I need to extract the principle active, removing any brand names. For example:
+
+- Metformina: "metformina"
+- Insulina glargina: "insulina"
+- Apixabán: "apixabán"
+- Furosemida: "furosemida"
+- Bisoprolol: "bisoprolol"
+- Tiotropio/olodaterol: "tiotropio/olodaterol"
+- Atorvastatina: "atorvastatina"
+- Omeprazol: "omeprazol"
+
+So those are the principle actives.
+
+Now, medicacion_alta: The section "TRATAMIENTO AL ALTA" includes:
+
+- Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días
+- Metformina 850 mg, 1 comprimido cada 12 horas
+- Insulina glargina 100 U/mL, 26 unidades subcutáneas a las 22:00 h
+- Apixabán 5 mg, 1 comprimido cada 12 horas
+- Furosemida 40 mg, 1 comprimido por la mañana
+- Bisoprolol 5 mg, 1 comprimido al día
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día
+- Atorvastatina 40 mg, 1 comprimido en la cena
+- Omeprazol 20 mg, 1 comprimido en ayunas
+- Oxigenoterapia domiciliaria 16 h/día a 2 lpm
+
+But the instruction says to exclude oxygen therapy as a medication. So the last item is excluded. So the medicacion_alta includes all except the oxygen therapy.
+
+So the principle actives for medicacion_alta are:
+
+- Amoxicilina-clavulánico: "amoxicilina/clavulanato" (since "clavulánico" is the active ingredient, but the brand is "clavulánico" or "clavulanato"? Wait, the principle active is "amoxicilina" and "clavulanato" (clavulanate). So the principle active is "amoxicilina/clavulanato".
+
+- Metformina: "metformina"
+- Insulina glargina: "insulina"
+- Apixabán: "apixabán"
+- Furosemida: "furosemida"
+- Bisoprolol: "bisoprolol"
+- Tiotropio/olodaterol: "tiotropio/olodaterol"
+- Atorvastatina: "atorvastatina"
+- Omeprazol: "omeprazol"
+
+Now, parameters clave: The report mentions FEVI 55% (from the ecocardiograma de 09/2024), FGe 22 mL/min/1,73 m² (creatinina al alta 1,9 mg/dL), HbA1c 8,4%, NT-proBNP 4.870 pg/mL. Wait, the parameters clave are:
+
+- fevi_pct: 55% (from the ecocardiograma)
+- fge_ml_min: 22 mL/min/1,73 m² (from the FGe al alta)
+- creatinina_mg_dl: 1.9 mg/dL (creatinina al alta)
+- hba1c_pct: 8.4%
+- nt_probnp_pg_ml: 4870 pg/mL (from the NT-proBNP 4.870 pg/mL)
+
+Wait, the NT-proBNP is 4.870 pg/mL, which is 4870 pg/mL. So that's correct.
+
+Episodio: Fecha de ingreso is 12/02/2025, fecha de alta 21/02/2025. Estancia is 9 days (from 12 to 21, inclusive? Wait, 21-12=9 days, but the actual days would be 9 days. So estancia_dias: 9. Servicio: Medicina Interna. Diagnosticos_alta: the list includes the 10 diagnoses listed in the "DIAGNÓSTICOS AL ALTA" section. Let me check:
+
+1. Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso.
+2. Agudización de EPOC (GOLD 3, grupo E).
+3. Infección del tracto urinario por Escherichia coli productora de BLEE.
+4. Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso.
+5. Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética no proliferativa. Mal control metabólico (HbA1c 8,4 %).
+6. Fibrilación auricular permanente, anticoagulada.
+7. Insuficiencia respiratoria crónica agudizada, hipercápnica.
+8. Hipertensión arterial esencial.
+9. Exfumador de 45 paquetes-año.
+10. Enfermedad de Crohn ileal en remisión.
+
+So the diagnosticos_alta are these 10 points. But the user's schema says "diagnosticos_alta" is an array of strings. So each of these points is a string. So the array would have these 10 entries.
+
+Now, putting it all together into the JSON structure. Let me check each field again to ensure compliance with the rules.

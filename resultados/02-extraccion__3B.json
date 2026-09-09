@@ -1,0 +1,218 @@
+{
+  "paciente": {
+    "edad_anos": 68,
+    "sexo": "hombre",
+    "peso_kg": 58,
+    "talla_cm": 170
+  },
+  "alergias": [
+    {
+      "agente": "betalactámicos",
+      "manifestacion": "exantema generalizado",
+      "documentada": true
+    }
+  ],
+  "habito_tabaquico": {
+    "estado": "exfumador",
+    "paquetes_ano": 45
+  },
+  "antecedentes": [
+    {
+      "descripcion": "EPOC de fenotipo enfisematoso, GOLD 3, grupo E. Dos agudizaciones con ingreso en los últimos 12 meses. Oxigenoterapia domiciliaria 16 h/día a 2 lpm desde enero de 2024.",
+      "activo": true
+    },
+    {
+      "descripcion": "Insuficiencia cardíaca crónica con fracción de eyección preservada (FEVI 55 % en ecocardiograma de 09/2024). Clase funcional NYHA III basal.",
+      "activo": true
+    },
+    {
+      "descripcion": "Fibrilación auricular permanente desde 2021. CHA2DS2-VASc 5. HAS-BLED 3.",
+      "activo": true
+    },
+    {
+      "descripcion": "Diabetes mellitus tipo 2 de 18 años de evolución, con nefropatía diabética establecida y retinopatía diabética no proliferativa.",
+      "activo": true
+    },
+    {
+      "descripcion": "Enfermedad renal crónica estadio 4 (FGe basal 25 mL/min/1,73 m², CKD-EPI).",
+      "activo": true
+    },
+    {
+      "descripcion": "Hipertensión arterial esencial de larga evolución.",
+      "activo": true
+    },
+    {
+      "descripcion": "Enfermedad de Crohn de localización ileal diagnosticada en 2003, en remisión clínica sin tratamiento desde 2016.",
+      "activo": false
+    },
+    {
+      "descripcion": "Intervenido de hernia inguinal derecha en 2011 en el Hospital Vital Álvarez Buylla (Mieres).",
+      "activo": false
+    }
+  ],
+  "medicacion_previa": [
+    {
+      "principio_activo": "metformina",
+      "dosis": "850",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "insulina glargina",
+      "dosis": "100",
+      "unidad": "UI",
+      "via": "subcutánea",
+      "frecuencia": "cada 24 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "apixabán",
+      "dosis": "5",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "furosemida",
+      "dosis": "40",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 24 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "bisoprolol",
+      "dosis": "5",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "tiotropio/olodaterol",
+      "dosis": "2,5/2,5",
+      "unidad": "mcg",
+      "via": "inhalada",
+      "frecuencia": "2 veces al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "atorvastatina",
+      "dosis": "40",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "omeprazol",
+      "dosis": "20",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    }
+  ],
+  "medicacion_alta": [
+    {
+      "principio_activo": "amoxicilina-clavulánico",
+      "dosis": "875/125",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 8 horas",
+      "duracion": "duración 5 días"
+    },
+    {
+      "principio_activo": "metformina",
+      "dosis": "850",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "insulina glargina",
+      "dosis": "100",
+      "unidad": "UI",
+      "via": "subcutánea",
+      "frecuencia": "cada 24 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "apixabán",
+      "dosis": "5",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "cada 12 horas",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "furosemida",
+      "dosis": "40",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "bisoprolol",
+      "dosis": "5",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "tiotropio/olodaterol",
+      "dosis": "2,5/2,5",
+      "unidad": "mcg",
+      "via": "inhalada",
+      "frecuencia": "2 veces al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "atorvastatina",
+      "dosis": "40",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    },
+    {
+      "principio_activo": "omeprazol",
+      "dosis": "20",
+      "unidad": "mg",
+      "via": "oral",
+      "frecuencia": "1 vez al día",
+      "duracion": "no consta"
+    }
+  ],
+  "parametros_clave": {
+    "fevi_pct": 55,
+    "fge_ml_min": 22,
+    "creatinina_mg_dl": 1.9,
+    "hba1c_pct": 8.4,
+    "nt_probnp_pg_ml": 4870
+  },
+  "episodio": {
+    "fecha_ingreso": "2025-02-12",
+    "fecha_alta": "2025-02-21",
+    "estancia_dias": 9,
+    "servicio": "Medicina Interna",
+    "diagnosticos_alta": [
+      "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso.",
+      "Agudización de EPOC (GOLD 3, grupo E)",
+      "Infección del tracto urinario por Escherichia coli productora de BLEE",
+      "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso",
+      "Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética no proliferativa. Mal control metabólico (HbA1c 8,4 %)",
+      "Fibrilación auricular permanente, anticoagulada",
+      "Insuficiencia respiratoria crónica agudizada, hipercápnica",
+      "Hipertensión arterial esencial",
+      "Exfumador de 45 paquetes-año",
+      "Enfermedad de Crohn ileal en remisión"
+    ]
+  }
+}

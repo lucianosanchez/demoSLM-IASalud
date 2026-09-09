@@ -1,0 +1,27 @@
+{
+  "segundos": null,
+  "tokens_entrada": null,
+  "tokens_salida": null,
+  "tokens_por_segundo": null,
+  "tokens_razonamiento": null,
+  "finish_reason": "stop",
+  "json_valido": true,
+  "tarea": "05-razonamiento-clinico",
+  "modelo": "claude-opus-5",
+  "etiqueta": "Opus5",
+  "prompt": "prompts/05-razonamiento-clinico.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0",
+    "top_p": "1",
+    "max_tokens": "—",
+    "context_length": "—",
+    "structured_output": "prompts/schemas/…"
+  },
+  "maquina": "referencia en la nube",
+  "servidor": "API de Anthropic",
+  "contexto": null,
+  "sin_razonar": false,
+  "_nota": "REFERENCIA NO CIEGA. Estas salidas las produjo Claude Opus 5 dentro de la sesión de trabajo en la que se revisaron los patrones de oro de evaluacion/, así que el modelo los había visto. Marcan el techo de lo que la tarea admite, NO son una medición comparable con las de los modelos locales, que se ejecutaron a ciegas. Para una referencia válida hay que repetirla contra la API en una sesión limpia: protocolo en docs/REFERENCIA-NUBE.md. Tampoco son comparables en tok/s: se ejecutó en la nube, no en el banco local.",
+  "momento": "2026-09-09T23:32:05"
+}

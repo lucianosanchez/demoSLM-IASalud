@@ -1,0 +1,27 @@
+{
+  "tokens_razonamiento": 9536,
+  "segundos": 527.33,
+  "tokens_entrada": 4566,
+  "tokens_salida": 11580,
+  "tokens_por_segundo": 22.0,
+  "finish_reason": "stop",
+  "json_valido": true,
+  "tarea": "02-extraccion",
+  "modelo": "qwen3.8-27b",
+  "etiqueta": "27B",
+  "prompt": "prompts/02-extraccion.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0",
+    "top_p": "1",
+    "repeat_penalty": "1.0",
+    "max_tokens": "49152",
+    "context_length": "65536",
+    "structured_output": "prompts/schemas/02-extraccion.schema.json"
+  },
+  "maquina": "StudioM4.local",
+  "servidor": "http://localhost:1234/v1",
+  "contexto": 131072,
+  "sin_razonar": false,
+  "momento": "2026-09-09T21:36:56"
+}

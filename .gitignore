@@ -1,0 +1,16 @@
+# los resultados SÍ se publican: son la mitad del contenido
+__pycache__/
+*.pyc
+.DS_Store
+presentacion/*.aux
+presentacion/*.log
+presentacion/*.nav
+presentacion/*.out
+presentacion/*.snm
+presentacion/*.toc
+presentacion/*.vrb
+presentacion/*.fls
+presentacion/*.fdb_latexmk
+presentacion/*.synctex.gz
+presentacion/extractos/
+presentacion/tabla-resultados.tex

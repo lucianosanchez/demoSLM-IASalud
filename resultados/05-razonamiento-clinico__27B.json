@@ -1,0 +1,53 @@
+{
+  "incoherencias": [
+    {
+      "elemento": "Amoxicilina-clavulánico 875/125 mg cada 8 horas",
+      "tipo": "contraindicacion_por_alergia",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos",
+      "conocimiento_aplicado": "amoxicilina-clavulánico es un betalactámico",
+      "correccion_propuesta": "Suprimir amoxicilina-clavulánico y no prescribir betalactámicos."
+    },
+    {
+      "elemento": "Amoxicilina-clavulánico 875/125 mg cada 8 horas",
+      "tipo": "farmaco_ineficaz_segun_antibiograma",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "Resistente a amoxicilina-clavulánico",
+      "conocimiento_aplicado": "ninguno",
+      "correccion_propuesta": "Suprimir amoxicilina-clavulánico y, si se precisa tratamiento, elegir un antibiótico activo según antibiograma."
+    },
+    {
+      "elemento": "Amoxicilina-clavulánico 875/125 mg cada 8 horas",
+      "tipo": "dosis_incorrecta",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días",
+      "conocimiento_aplicado": "amoxicilina-clavulánico 875/125 mg se administra cada 12 horas",
+      "correccion_propuesta": "Suprimir amoxicilina-clavulánico; la dosis prescrita no es correcta."
+    },
+    {
+      "elemento": "Metformina 850 mg cada 12 horas",
+      "tipo": "contraindicacion_por_funcion_renal",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "Creatinina al alta 1,9 mg/dL, FGe 22 mL/min/1,73 m².",
+      "conocimiento_aplicado": "metformina está contraindicada con FGe <30 mL/min/1,73 m²",
+      "correccion_propuesta": "Suprimir metformina y mantener tratamiento con insulina."
+    },
+    {
+      "elemento": "Apixabán 5 mg cada 12 horas",
+      "tipo": "dosis_incorrecta",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "Apixabán 5 mg, 1 comprimido cada 12 horas\nPeso 58 kg.\nCreatinina al alta 1,9 mg/dL, FGe 22 mL/min/1,73 m².",
+      "conocimiento_aplicado": "criterio de reducción de dosis de apixabán: al menos 2 de edad ≥80 años, peso ≤60 kg, creatinina ≥1,5 mg/dL",
+      "correccion_propuesta": "Reducir apixabán a 2,5 mg cada 12 horas."
+    },
+    {
+      "elemento": "Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día",
+      "tipo": "dosis_incorrecta",
+      "gravedad": "leve",
+      "evidencia_en_el_informe": "Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día",
+      "conocimiento_aplicado": "tiotropio/olodaterol 2,5/2,5 mcg se administra 1 inhalación una vez al día",
+      "correccion_propuesta": "Cambiar a 1 inhalación una vez al día."
+    }
+  ],
+  "sin_incoherencias_adicionales": true
+}

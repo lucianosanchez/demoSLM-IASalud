@@ -1,0 +1,29 @@
+{
+  "incoherencias": [
+    {
+      "elemento": "Amoxicilina-clavulánico 875/125 mg cada 8 horas durante 5 días",
+      "tipo": "contraindicacion_por_alergia",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras",
+      "conocimiento_aplicado": "ninguno",
+      "correccion_propuesta": "Retirar la amoxicilina-clavulánico: es un betalactámico y el paciente tiene alergia documentada a ese grupo. Además, el urocultivo la informa resistente y el paciente ya ha completado 7 días de meropenem, por lo que no precisa antibiótico al alta."
+    },
+    {
+      "elemento": "Metformina 850 mg cada 12 horas",
+      "tipo": "contraindicacion_por_funcion_renal",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "Durante el ingreso se suspende la metformina por el deterioro de la función",
+      "conocimiento_aplicado": "La metformina está contraindicada con filtrado glomerular por debajo de 30 mL/min por riesgo de acidosis láctica.",
+      "correccion_propuesta": "No reanudar la metformina al alta: el FGe al alta es de 22 mL/min/1,73 m² y el propio informe documenta su suspensión durante el ingreso por deterioro renal."
+    },
+    {
+      "elemento": "Apixabán 5 mg cada 12 horas",
+      "tipo": "dosis_incorrecta",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "Peso 58 kg. Talla 170 cm.",
+      "conocimiento_aplicado": "El apixabán se reduce a 2,5 mg cada 12 horas si se cumplen dos de estos tres criterios: edad igual o mayor de 80 años, peso igual o menor de 60 kg, creatinina igual o mayor de 1,5 mg/dL.",
+      "correccion_propuesta": "Reducir el apixabán a 2,5 mg cada 12 horas: el paciente cumple dos de los tres criterios, peso 58 kg y creatinina 1,9 mg/dL."
+    }
+  ],
+  "sin_incoherencias_adicionales": true
+}

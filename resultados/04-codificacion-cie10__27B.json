@@ -1,0 +1,88 @@
+{
+  "diagnostico_principal": {
+    "codigo": "I50.23",
+    "descripcion": "Insuficiencia cardíaca congestiva con fracción de eyección preservada",
+    "texto_de_origen": "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso.",
+    "confianza": "media"
+  },
+  "diagnosticos_secundarios": [
+    {
+      "codigo": "J44.9",
+      "descripcion": "Enfermedad pulmonar obstructiva crónica (EPOC) no especificada sin mención de infección aguda de vías respiratorias y pulmonares",
+      "texto_de_origen": "Agudización de EPOC (GOLD 3, grupo E).",
+      "confianza": "media"
+    },
+    {
+      "codigo": "N39.0",
+      "descripcion": "Infección del tracto urinario, de sitio no especificado",
+      "texto_de_origen": "Infección del tracto urinario por Escherichia coli productora de BLEE.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "B96.2",
+      "descripcion": "Escherichia coli (E. coli) como causa de enfermedades clasificadas en otras partes",
+      "texto_de_origen": "Escherichia coli productora de BLEE",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "N18.4",
+      "descripcion": "Enfermedad renal crónica, estadio 4",
+      "texto_de_origen": "Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento agudo transitorio durante el ingreso.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "N17.9",
+      "descripcion": "Insuficiencia renal aguda, no especificada",
+      "texto_de_origen": "con empeoramiento agudo transitorio durante el ingreso",
+      "confianza": "baja"
+    },
+    {
+      "codigo": "E11.22",
+      "descripcion": "Diabetes mellitus tipo 2 con complicaciones renales",
+      "texto_de_origen": "Diabetes mellitus tipo 2 con nefropatía diabética",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "E11.31",
+      "descripcion": "Diabetes mellitus tipo 2 con complicaciones oftálmicas",
+      "texto_de_origen": "retinopatía diabética no proliferativa",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "H36.0",
+      "descripcion": "Retinopatía diabética",
+      "texto_de_origen": "retinopatía diabética no proliferativa",
+      "confianza": "media"
+    },
+    {
+      "codigo": "I48.2",
+      "descripcion": "Fibrilación auricular crónica",
+      "texto_de_origen": "Fibrilación auricular permanente, anticoagulada.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "J96.21",
+      "descripcion": "Insuficiencia respiratoria aguda sobre crónica, tipo II",
+      "texto_de_origen": "Insuficiencia respiratoria crónica agudizada, hipercápnica.",
+      "confianza": "media"
+    },
+    {
+      "codigo": "I10",
+      "descripcion": "Hipertensión esencial (primaria)",
+      "texto_de_origen": "Hipertensión arterial esencial.",
+      "confianza": "alta"
+    },
+    {
+      "codigo": "Z87.891",
+      "descripcion": "Antecedente personal de tabaquismo",
+      "texto_de_origen": "Exfumador de 45 paquetes-año.",
+      "confianza": "media"
+    },
+    {
+      "codigo": "K50.00",
+      "descripcion": "Enfermedad de Crohn, ileal, sin complicaciones",
+      "texto_de_origen": "Enfermedad de Crohn ileal en remisión.",
+      "confianza": "media"
+    }
+  ]
+}

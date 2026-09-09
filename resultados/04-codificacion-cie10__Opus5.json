@@ -1,0 +1,25 @@
+{
+  "diagnostico_principal": {
+    "codigo": "I13.0",
+    "descripcion": "Enfermedad cardíaca y renal crónica hipertensiva con insuficiencia cardíaca y enfermedad renal crónica estadio 1 a 4",
+    "texto_de_origen": "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada",
+    "confianza": "media"
+  },
+  "diagnosticos_secundarios": [
+    { "codigo": "I50.33", "descripcion": "Insuficiencia cardíaca diastólica (congestiva) crónica agudizada", "texto_de_origen": "Insuficiencia cardíaca crónica con fracción de eyección preservada, descompensada. Killip II al ingreso.", "confianza": "media" },
+    { "codigo": "N18.4", "descripcion": "Enfermedad renal crónica, estadio 4 (grave)", "texto_de_origen": "Enfermedad renal crónica estadio 4 de origen diabético", "confianza": "alta" },
+    { "codigo": "J44.1", "descripcion": "Enfermedad pulmonar obstructiva crónica con exacerbación (aguda)", "texto_de_origen": "Agudización de EPOC (GOLD 3, grupo E)", "confianza": "alta" },
+    { "codigo": "J96.22", "descripcion": "Insuficiencia respiratoria aguda y crónica con hipercapnia", "texto_de_origen": "Insuficiencia respiratoria crónica agudizada, hipercápnica", "confianza": "media" },
+    { "codigo": "N39.0", "descripcion": "Infección de vías urinarias, sitio no especificado", "texto_de_origen": "Infección del tracto urinario por Escherichia coli productora de BLEE", "confianza": "alta" },
+    { "codigo": "B96.20", "descripcion": "Escherichia coli no especificada como causa de enfermedades clasificadas bajo otro concepto", "texto_de_origen": "Escherichia coli productora de betalactamasas de espectro extendido (BLEE)", "confianza": "media" },
+    { "codigo": "Z16.12", "descripcion": "Resistencia a betalactámicos de espectro extendido (BLEE)", "texto_de_origen": "Escherichia coli productora de betalactamasas de espectro extendido (BLEE)", "confianza": "baja" },
+    { "codigo": "E11.22", "descripcion": "Diabetes mellitus tipo 2 con enfermedad renal crónica diabética", "texto_de_origen": "Diabetes mellitus tipo 2 con nefropatía diabética", "confianza": "alta" },
+    { "codigo": "E11.319", "descripcion": "Diabetes mellitus tipo 2 con retinopatía diabética no especificada sin edema macular", "texto_de_origen": "retinopatía diabética no proliferativa", "confianza": "media" },
+    { "codigo": "I48.21", "descripcion": "Fibrilación auricular permanente", "texto_de_origen": "Fibrilación auricular permanente, anticoagulada", "confianza": "media" },
+    { "codigo": "K50.00", "descripcion": "Enfermedad de Crohn de intestino delgado sin complicaciones", "texto_de_origen": "Enfermedad de Crohn ileal en remisión", "confianza": "media" },
+    { "codigo": "Z87.891", "descripcion": "Historia personal de dependencia de nicotina", "texto_de_origen": "Exfumador de 45 paquetes-año", "confianza": "media" },
+    { "codigo": "Z99.81", "descripcion": "Dependencia de oxígeno suplementario", "texto_de_origen": "Oxigenoterapia domiciliaria 16 h/día a 2 lpm", "confianza": "alta" },
+    { "codigo": "Z79.01", "descripcion": "Uso prolongado (actual) de anticoagulantes", "texto_de_origen": "Apixabán 5 mg, 1 comprimido cada 12 horas", "confianza": "alta" },
+    { "codigo": "Z79.4", "descripcion": "Uso prolongado (actual) de insulina", "texto_de_origen": "Insulina glargina 100 U/mL, 26 unidades subcutáneas", "confianza": "alta" }
+  ]
+}

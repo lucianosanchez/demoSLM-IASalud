@@ -1,0 +1,26 @@
+{
+  "tokens_razonamiento": 744,
+  "segundos": 27.02,
+  "tokens_entrada": 3980,
+  "tokens_salida": 1582,
+  "tokens_por_segundo": 58.5,
+  "finish_reason": "stop",
+  "tarea": "03-reescritura",
+  "modelo": "qwen3-8b",
+  "etiqueta": "8B",
+  "prompt": "prompts/03-reescritura.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0.2",
+    "top_p": "0.9",
+    "repeat_penalty": "1.05",
+    "max_tokens": "36352",
+    "context_length": "65536",
+    "structured_output": "no"
+  },
+  "maquina": "StudioM4.local",
+  "servidor": "http://localhost:1234/v1",
+  "contexto": 40960,
+  "sin_razonar": false,
+  "momento": "2026-09-09T21:08:40"
+}

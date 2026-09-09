@@ -1,0 +1,21 @@
+{
+  "incoherencias": [
+    {
+      "elemento": "Amoxicilina-clavulánico",
+      "tipo": "contraindicacion_por_alergia",
+      "gravedad": "grave",
+      "evidencia_en_el_informe": "ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras amoxicilina en 2019, confirmada por el Servicio de Alergología del HUCA).",
+      "conocimiento_aplicado": "ninguno",
+      "correccion_propuesta": "Sustituir por un antibiótico sensible al patógeno, como fosfomicina o nitrofurantoína."
+    },
+    {
+      "elemento": "Metformina",
+      "tipo": "farmaco_ineficaz_segun_antibiograma",
+      "gravedad": "moderada",
+      "evidencia_en_el_informe": "Enfermedad renal crónica estadio 4 (FGe basal 25 mL/min/1,73 m², CKD-EPI). Durante el ingreso se suspende la metformina por el deterioro de la función renal.",
+      "conocimiento_aplicado": "ninguno",
+      "correccion_propuesta": "Suspender metformina y vigilar la función renal en el seguimiento."
+    }
+  ],
+  "sin_incoherencias_adicionales": true
+}

@@ -1,0 +1,28 @@
+{
+  "name": "revision_coherencia_clinica",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["incoherencias", "sin_incoherencias_adicionales"],
+    "properties": {
+      "incoherencias": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["elemento", "tipo", "gravedad", "evidencia_en_el_informe", "conocimiento_aplicado", "correccion_propuesta"],
+          "properties": {
+            "elemento": {"type": "string", "description": "Fármaco, dosis o indicación implicada"},
+            "tipo": {"type": "string", "enum": ["contraindicacion_por_alergia", "contraindicacion_por_funcion_renal", "dosis_incorrecta", "farmaco_ineficaz_segun_antibiograma", "farmaco_innecesario", "contradiccion_con_la_evolucion", "omision_de_tratamiento_indicado", "otro"]},
+            "gravedad": {"type": "string", "enum": ["grave", "moderada", "leve"]},
+            "evidencia_en_el_informe": {"type": "string", "description": "Cita LITERAL del informe. Si no puedes citar el informe, no incluyas este hallazgo."},
+            "conocimiento_aplicado": {"type": "string", "description": "Qué regla o umbral clínico has aplicado que NO está en el informe. Escribe 'ninguno' si la incoherencia se deduce solo del texto."},
+            "correccion_propuesta": {"type": "string"}
+          }
+        }
+      },
+      "sin_incoherencias_adicionales": {"type": "boolean", "description": "true si has revisado el resto del tratamiento y no encuentras más problemas"}
+    }
+  }
+}

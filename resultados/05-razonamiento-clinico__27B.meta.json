@@ -1,0 +1,27 @@
+{
+  "tokens_razonamiento": 23593,
+  "segundos": 1230.44,
+  "tokens_entrada": 3919,
+  "tokens_salida": 24578,
+  "tokens_por_segundo": 20.0,
+  "finish_reason": "stop",
+  "json_valido": true,
+  "tarea": "05-razonamiento-clinico",
+  "modelo": "qwen3.8-27b",
+  "etiqueta": "27B",
+  "prompt": "prompts/05-razonamiento-clinico.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0",
+    "top_p": "1",
+    "repeat_penalty": "1.0",
+    "max_tokens": "49152",
+    "context_length": "65536",
+    "structured_output": "prompts/schemas/05-razonamiento.schema.json"
+  },
+  "maquina": "StudioM4.local",
+  "servidor": "http://localhost:1234/v1",
+  "contexto": 131072,
+  "sin_razonar": false,
+  "momento": "2026-09-09T22:51:17"
+}

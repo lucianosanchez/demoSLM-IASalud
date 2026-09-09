@@ -1,0 +1,26 @@
+{
+  "tokens_razonamiento": 1423,
+  "segundos": 72.74,
+  "tokens_entrada": 4128,
+  "tokens_salida": 4723,
+  "tokens_por_segundo": 64.9,
+  "finish_reason": "stop",
+  "tarea": "01-anonimizacion",
+  "modelo": "qwen3-8b",
+  "etiqueta": "8B",
+  "prompt": "prompts/01-anonimizacion.md",
+  "informe": "informes/informe-alta-001.txt",
+  "params": {
+    "temperature": "0",
+    "top_p": "1",
+    "repeat_penalty": "1.0",
+    "max_tokens": "36352",
+    "context_length": "65536",
+    "structured_output": "no"
+  },
+  "maquina": "StudioM4.local",
+  "servidor": "http://localhost:1234/v1",
+  "contexto": 40960,
+  "sin_razonar": false,
+  "momento": "2026-09-09T21:06:38"
+}

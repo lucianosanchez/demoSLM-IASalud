@@ -1,0 +1,203 @@
+INFORME DE ALTA HOSPITALARIA
+
+Hospital Universitario Central de Asturias (HUCA)
+Servicio de Medicina Interna — Planta 5.ª, Unidad C
+Avda. de Roma s/n, 33011 Oviedo (Asturias)
+
+===============================================================================
+DATOS DEL PACIENTE
+===============================================================================
+Paciente: [NOMBRE_PACIENTE]
+NHC: [NHC]
+DNI: [DNI]
+NASS: [NASS]
+Fecha de nacimiento: [FECHA_NACIMIENTO]
+Sexo: Varón
+Domicilio: [DIRECCION]
+Teléfono: [TELEFONO]
+Centro de salud: [CENTRO] (Oviedo). Médico de familia: [NOMBRE_PROFESIONAL_1]
+Persona de contacto: [NOMBRE_FAMILIAR_1] (hija), teléfono [TELEFONO]
+Fecha de ingreso: [FECHA]
+Fecha de alta: [FECHA]
+Servicio: Medicina Interna
+Médico responsable: [NOMBRE_PROFESIONAL_2] (n.º colegiado [N_COLEGIADO])
+Médico adjunto: [NOMBRE_PROFESIONAL_3]
+
+===============================================================================
+MOTIVO DE INGRESO
+===============================================================================
+Disnea progresiva de tres días de evolución, aumento de edemas en miembros
+inferiores y sensación distérmica. Refiere además disuria y polaquiuria en la
+semana previa.
+
+===============================================================================
+ANTECEDENTES PERSONALES
+===============================================================================
+- ALERGIAS: alergia documentada a betalactámicos (exantema generalizado tras
+  amoxicilina en 2019, confirmada por el Servicio de Alergología del HUCA).
+  No otras alergias medicamentosas conocidas.
+- Hábitos: exfumador desde 2018, dosis acumulada 45 paquetes-año. No consumo
+  de alcohol. Vive con su hija. Índice de Barthel 85.
+- EPOC de fenotipo enfisematoso, GOLD 3, grupo E. Dos agudizaciones con ingreso
+  en los últimos 12 meses. Oxigenoterapia domiciliaria 16 h/día a 2 lpm desde
+  enero de 2024.
+- Insuficiencia cardíaca crónica con fracción de eyección preservada (FEVI 55 %
+  en ecocardiograma de [FECHA])
+- Fibrilación auricular permanente desde 2021. CHA2DS2-VASc 5. HAS-BLED 3.
+- Diabetes mellitus tipo 2 de 18 años de evolución, con nefropatía diabética
+  establecida y retinopatía diabética no proliferativa.
+- Enfermedad renal crónica estadio 4 (FGe basal 25 mL/min/1,73 m², CKD-EPI).
+- Hipertensión arterial esencial de larga evolución.
+- Enfermedad de Crohn de localización ileal diagnosticada en 2003, en remisión
+  clínica sin tratamiento desde 2016. Seguimiento en consultas de Digestivo del
+  Hospital de Cabueñes (Gijón) hasta 2019.
+- Intervenido de hernia inguinal derecha en 2011 en el Hospital Vital Álvarez
+  Buylla (Mieres).
+- Índice de Charlson ajustado por edad: 7.
+
+===============================================================================
+TRATAMIENTO HABITUAL PREVIO AL INGRESO
+===============================================================================
+- Metformina 850 mg, 1 comprimido cada 12 horas, vía oral
+- Insulina glargina 100 U/mL, 22 unidades subcutáneas a las 22:00 h
+- Apixabán 5 mg, 1 comprimido cada 12 horas, vía oral
+- Furosemida 40 mg, 1 comprimido por la mañana, vía oral
+- Bisoprolol 5 mg, 1 comprimido al día, vía oral
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día
+- Atorvastatina 40 mg, 1 comprimido en la cena, vía oral
+- Omeprazol 20 mg, 1 comprimido en ayunas, vía oral
+
+===============================================================================
+EXPLORACIÓN FÍSICA AL INGRESO
+===============================================================================
+TA 158/92 mmHg. FC 118 lpm, arrítmica. SatO2 86 % con aire ambiente. T.ª 37,8 °C.
+FR 28 rpm. Peso 58 kg. Talla 170 cm. IMC 20,1 kg/m².
+Consciente y orientado. Taquipneico en reposo, sin trabajo respiratorio grave.
+Killip II. Ingurgitación yugular a 45 grados. Auscultación cardíaca: tonos
+arrítmicos, soplo sistólico II/VI en foco mitral. Auscultación pulmonar:
+crepitantes bibasales y sibilancias espiratorias difusas. Abdomen blando,
+hepatomegalia de 2 traveses. Edemas con fóvea hasta rodillas, simétricos.
+Signo de Homans negativo. No signos de trombosis venosa profunda.
+
+===============================================================================
+PRUEBAS COMPLEMENTARIAS
+===============================================================================
+Analítica al ingreso ([FECHA]): Hb 11,2 g/dL; VCM 88 fL; leucocitos
+14.300/µL (85 % neutrófilos); plaquetas 214.000/µL; creatinina 1,9 mg/dL;
+FGe 22 mL/min/1,73 m² (CKD-EPI); urea 98 mg/dL; sodio 136 mmol/L; potasio
+5,1 mmol/L; NT-proBNP 4.870 pg/mL; PCR 96 mg/L; procalcitonina 0,9 ng/mL;
+HbA1c 8,4 %; troponina T ultrasensible 24 ng/L sin curva enzimática.
+
+Gasometría arterial basal: pH 7,33; pCO2 56 mmHg; pO2 52 mmHg; HCO3 29 mmol/L.
+
+Sedimento de orina: leucocituria intensa, nitritos positivos.
+
+Urocultivo ([FECHA]): Escherichia coli productora de betalactamasas de
+espectro extendido (BLEE), más de 100.000 UFC/mL. Sensible a fosfomicina,
+nitrofurantoína, amikacina y meropenem. Resistente a amoxicilina-clavulánico,
+ciprofloxacino y cotrimoxazol.
+
+Hemocultivos ([FECHA]): negativos a los 5 días.
+
+Radiografía de tórax: cardiomegalia, redistribución vascular apical, líneas B
+de Kerley y derrame pleural bilateral de predominio derecho. Sin condensaciones
+parenquimatosas.
+
+ECG: fibrilación auricular con respuesta ventricular a 118 lpm. Sin alteraciones
+agudas de la repolarización.
+
+Ecocardiograma transtorácico ([FECHA]): ventrículo izquierdo no dilatado con
+hipertrofia concéntrica. FEVI 55 %. Disfunción diastólica grado II.
+Insuficiencia mitral ligera. Vena cava inferior dilatada sin colapso. PSAP
+estimada 48 mmHg.
+
+===============================================================================
+EVOLUCIÓN
+===============================================================================
+Ingresa en planta de Medicina Interna con juicio clínico de insuficiencia
+cardíaca crónica descompensada y agudización de EPOC. Se inicia oxigenoterapia
+con gafas nasales a 2 lpm con objetivo de SatO2 88-92 %, furosemida intravenosa
+40 mg cada 8 horas, prednisona 40 mg cada 24 horas durante 5 días y
+broncodilatación nebulizada con salbutamol e ipratropio.
+
+Ante la fiebre, la leucocitosis y el síndrome miccional, se recoge urocultivo y
+se inicia antibioterapia empírica con meropenem 500 mg cada 8 horas ajustado a
+función renal, que se mantiene durante 7 días tras confirmarse Escherichia coli
+BLEE en el urocultivo. Queda afebril a las 48 horas del inicio del tratamiento,
+con normalización progresiva de reactantes de fase aguda (PCR 18 mg/L al alta).
+
+Balance hídrico negativo acumulado de 4.200 mL y descenso ponderal de 4 kg, con
+mejoría progresiva de la disnea hasta su clase funcional basal. En el día +4 de
+ingreso presenta empeoramiento de la función renal (creatinina 2,4 mg/dL), en
+relación con depleción de volumen, que se corrige tras reducir la dosis de
+furosemida a 40 mg cada 12 horas por vía intravenosa y posteriormente pasar a
+vía oral. Creatinina al alta 1,9 mg/dL, FGe 22 mL/min/1,73 m².
+
+Control de la frecuencia cardíaca con bisoprolol, alcanzando 78 lpm en reposo.
+Se mantiene la anticoagulación oral durante todo el ingreso sin incidencias
+hemorrágicas.
+
+Durante el ingreso se suspende la metformina por el deterioro de la función
+renal y se pauta insulina rápida según pauta correctora, con glucemias entre
+140 y 210 mg/dL.
+
+El paciente es dado de alta el [FECHA], hemodinámicamente estable, afebril,
+con SatO2 92 % con oxígeno a 2 lpm y disnea de clase funcional NYHA III basal.
+
+===============================================================================
+DIAGNÓSTICOS AL ALTA
+===============================================================================
+1. Insuficiencia cardíaca crónica con fracción de eyección preservada,
+   descompensada. Killip II al ingreso.
+2. Agudización de EPOC (GOLD 3, grupo E).
+3. Infección del tracto urinario por Escherichia coli productora de BLEE.
+4. Enfermedad renal crónica estadio 4 de origen diabético, con empeoramiento
+   agudo transitorio durante el ingreso.
+5. Diabetes mellitus tipo 2 con nefropatía diabética y retinopatía diabética
+   no proliferativa. Mal control metabólico (HbA1c 8,4 %).
+6. Fibrilación auricular permanente, anticoagulada.
+7. Insuficiencia respiratoria crónica agudizada, hipercápnica.
+8. Hipertensión arterial esencial.
+9. Exfumador de 45 paquetes-año.
+10. Enfermedad de Crohn ileal en remisión.
+
+===============================================================================
+TRATAMIENTO AL ALTA
+===============================================================================
+- Amoxicilina-clavulánico 875/125 mg, 1 comprimido cada 8 horas durante 5 días
+- Metformina 850 mg, 1 comprimido cada 12 horas
+- Insulina glargina 100 U/mL, 26 unidades subcutáneas a las 22:00 h
+- Apixabán 5 mg, 1 comprimido cada 12 horas
+- Furosemida 40 mg, 1 comprimido por la mañana
+- Bisoprolol 5 mg, 1 comprimido al día
+- Tiotropio/olodaterol 2,5/2,5 mcg, 2 inhalaciones al día
+- Atorvastatina 40 mg, 1 comprimido en la cena
+- Omeprazol 20 mg, 1 comprimido en ayunas
+- Oxigenoterapia domiciliaria 16 h/día a 2 lpm
+
+===============================================================================
+RECOMENDACIONES AL ALTA
+===============================================================================
+1. Pésese todas las mañanas, en ayunas y después de orinar, y anote el peso.
+   Si gana 2 kg o más en 3 días, contacte con su centro de salud.
+2. Dieta con menos de 2 gramos de sal al día. Restricción de líquidos a 1,5
+   litros diarios, incluyendo sopas, infusiones y el agua de los medicamentos.
+3. No suspenda la oxigenoterapia. Debe usarla al menos 16 horas al día,
+   incluyendo toda la noche.
+4. Acuda a Urgencias si presenta aumento brusco de la dificultad respiratoria,
+   dolor torácico, fiebre superior a 38 °C, sangrado o disminución importante
+   de la cantidad de orina.
+5. Analítica de control con función renal e iones en 7-10 días en su centro de
+   salud, antes de la revisión en consultas.
+6. Se recomienda vacunación antigripal anual y vacunación antineumocócica.
+
+===============================================================================
+CITAS
+===============================================================================
+- Consultas Externas de Medicina Interna, HUCA: [FECHA] a las 10:30 h
+- Consulta de enfermería de insuficiencia cardíaca, CS Pumarín: [FECHA]
+- Consultas Externas de Nefrología, HUCA: [FECHA] a las 09:00 h
+
+Firmado electrónicamente:
+[NOMBRE_PROFESIONAL_2]. Servicio de Medicina Interna.
+Oviedo, [FECHA].

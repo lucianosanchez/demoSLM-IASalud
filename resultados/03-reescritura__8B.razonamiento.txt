@@ -1,0 +1,23 @@
+Okay, I need to rewrite this hospital discharge report for the patient and his daughter following the strict rules provided. Let me start by understanding each of the rules to make sure I don't miss anything.
+
+First, the language must be in Spanish (Spain), second person formal (usted), with short sentences. The reading level should be equivalent to secondary education, so sentences under 20 words, no complex structures, and no passive voice. Each technical term needs to be explained the first time it appears in parentheses using simple terms. I can't add any information not in the original report, like advice or prognosis. I must keep all six recommendations and three appointments exactly as they are. Also, mention the allergy explicitly. The structure has to be the six sections listed, no more. The word count should be between 350-700 words.
+
+Let me go through the original report step by step. 
+
+Starting with "Por qué ha estado ingresado": The patient was admitted due to progressive shortness of breath, swollen legs, and cold sensation. Also, he had difficulty urinating and frequent urination in the week before. I need to explain terms like disnea, edemas, distérmica, disuria, polaquiuria. Maybe "disnea" as difficulty breathing, "edemas" as swelling, "distérmica" as feeling cold, "disuria" as painful urination, "polaquiuria" as frequent urination.
+
+Next, "Qué le hemos hecho": They did a physical exam, blood tests, urine tests, X-ray, ECG, and echocardiogram. Need to explain these terms: analítica (blood test), sedimento de orina (urine sediment), radiografía de tórax (chest X-ray), ECG (heart rhythm test), ecocardiograma (heart ultrasound). Also mention the treatments given like oxygen therapy, antibiotics, diuretics, etc.
+
+"Sus medicinas": List all the medications with their explanations. For example, metformina is a diabetes pill, apixabán is an anticoagulant, furosemida is a diuretic. Make sure to note the allergy to beta-lactams (like amoxicilina) and explain that.
+
+"Lo que tiene que hacer en casa": The six recommendations. Each needs to be clear. For example, weigh yourself daily, limit salt, continue oxygen therapy, etc. Also mention the allergy again here.
+
+"Cuándo tiene que pedir ayuda": The four points from the recommendations. Make sure to list them clearly.
+
+"Sus próximas citas": The three appointments. Include dates and times.
+
+I need to check that all technical terms are explained first time they appear. For example, "EPOC" is chronic obstructive pulmonary disease, explain it as a lung condition. "NYHA III" is a classification of heart failure, explain it as a measure of how much the heart is affecting daily activities. "CKD-EPI" is a formula to estimate kidney function, explain it as a way to measure kidney health.
+
+Also, ensure that all numbers are copied exactly as in the original: dosages, dates, etc. Don't change any of them. For example, 2 lpm for oxygen, 40 mg of furosemida, etc.
+
+I need to structure each section with the headings provided and keep the language simple. Avoid any markdown, just plain text with the sections separated as specified. Make sure the total word count is within the limit. Let me start drafting each section step by step, checking the rules as I go.
