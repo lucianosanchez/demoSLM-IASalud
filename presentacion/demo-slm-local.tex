@@ -291,14 +291,19 @@
     \midrule
     1 & Anonimización & Reconocer entidades & \alert{27B} \\
     2 & Extracción estructurada & Leer y ordenar & 8B \\
-    3 & Reescritura para el paciente & Reformular sin perder & 8B \\
+    3 & Reescritura para el paciente & Reformular sin perder & 8B$^\dagger$ \\
     \midrule
     4 & Codificación CIE-10 & \alert{Recordar una tabla} & \alert{---} \\
     5 & Razonamiento clínico & \alert{Aplicar conocimiento} & 27B \\
     \bottomrule
   \end{tabular}
 
-  \vspace{1.2em}
+  \vspace{.8em}
+  {\footnotesize $^\dagger$ Con reservas: ninguno cumple los tres umbrales de la
+  tarea 3 a la vez. El 8B es el único que \textbf{no enmienda el tratamiento},
+  pero se deja un mensaje crítico; el 27B los conserva los trece y lo enmienda.\par}
+
+  \vspace{.5em}
   \small Mismo informe. Misma máquina. Mismos ajustes. Sin red.
 \end{frame}
 
@@ -324,8 +329,8 @@
   \end{center}
   \vspace{.8em}
   \begin{center}\small
-  Los tres modelos los conservaron: \bien{0 de 13 destruidos}. El riesgo existe
-  y aquí no se materializó.
+  Los cuatro modelos los conservaron: \bien{0 de 13 destruidos}. El riesgo
+  existe y aquí no se materializó.
   \end{center}
   \pause
   \vspace{.6em}
@@ -474,33 +479,42 @@
     \toprule
      & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Opus~5} \\
     \midrule
-    Categoría (3 caracteres) & 6/14 & 9/14 & 10/14 & \bien{14/14} \\
-    Código completo & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{16/16} \\
-    Diagnóstico principal & \mal{no} & \mal{no} & \mal{no} & \bien{sí} \\
+    Categoría (3 caracteres) & 6/14 & 9/14 & 10/14 & \bien{13/14} \\
+    Código completo & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{15/16} \\
+    Diagnóstico principal & \mal{no} & \mal{no} & \mal{no} & \mal{no} \\
     \midrule
-    Códigos fuera del patrón & 9 & 8 & 8 & 0 \\
-    Códigos que \textbf{no existen} & & & & \\
+    Códigos fuera del patrón & 9 & 8 & 8 & \bien{0} \\
+    \quad no facturables & 3 & 1 & 3 & \bien{0} \\
+    \quad \textbf{que no existen} & \mal{1} & \mal{1} & \mal{1} & \bien{0} \\
     \bottomrule
   \end{tabular}
 
   \vspace{.8em}
-  {\footnotesize La última fila se rellena a mano, comprobando cada código en
-  eCIE-Maps. Es el paso que no se puede automatizar y el más elocuente.\par}
+  {\footnotesize Las dos últimas filas se comprueban a mano, código a código.
+  \emph{No facturable} = existe como categoría pero le falta el último carácter:
+  en el CMBD es igual de inservible.\par}
 
   \vspace{.6em}
   \alert{Sabe de qué va. No sabe el código.}\\[.2em]
-  {\small Ninguno acierta el principal: la norma de combinación I13.0 exige
-  conocer la regla, no leer el texto.}
+  {\small \textbf{Ninguno acierta el principal}, tampoco el modelo de frontera:
+  la norma de combinación I13.0 exige conocer la regla de secuenciación, no leer
+  el texto. Eso no se arregla con parámetros.}
 \end{frame}
 
 \begin{frame}{El esquema le obliga a devolver algo con forma de código}
   \centering
-  \captura[0.62\linewidth]{11-ecie-sin-resultados.png}{eCIE-Maps buscando un
-  código inventado por el modelo de 27B: «sin resultados»}
+  \captura[0.62\linewidth]{11-ecie-sin-resultados.png}{eCIE-Maps buscando uno de
+  los códigos que emitieron los modelos: «sin resultados»}
 
-  \vspace{.8em}
-  \texttt{I50.34} tiene exactamente el mismo aspecto que \texttt{I50.33}.\\[.3em]
-  \mal{Y no existe.}
+  \vspace{.6em}
+  {\small Cada modelo se inventó \textbf{uno}, y ninguno coincide:\\
+  \mal{\texttt{J41.9}} el 3B \quad \mal{\texttt{K50.2}} el 8B \quad
+  \mal{\texttt{H36.0}} el 27B\par}
+
+  \vspace{.5em}
+  \texttt{J41.9} tiene exactamente el mismo aspecto que \texttt{J41.0}, que sí
+  existe.\\[.2em]
+  \mal{El esquema no distingue el que existe del que no.}
 \end{frame}
 
 \begin{frame}{Tarea 5 — Tres incoherencias plantadas}
@@ -613,9 +627,9 @@
   \end{tabular}}
 
   \vspace{.8em}
-  {\footnotesize La columna \textbf{Opus~5} es el techo de referencia y
-  \alert{no es una medición ciega}: se produjo con los patrones de evaluación a
-  la vista. Dice qué admite cada tarea, no cuánto separa a un modelo de otro.\par}
+  {\footnotesize La columna \textbf{Opus~5} es el techo de referencia: los
+  mismos prompts en un modelo de frontera, ejecutados a ciegas. Aparece cuando
+  se recoge con \texttt{make referencia-recoger}.\par}
 \end{frame}
 
 % =====================================================================
@@ -634,18 +648,17 @@
     2 Extracción & 13/14 & \bien{14/14} & \bien{14/14} & \bien{14/14} \\
     3 Reescritura & \mal{11/13} & 12/13 & \bien{13/13} & \bien{13/13} \\
     \midrule
-    4 Codificación & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{16/16} \\
+    4 Codificación & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{15/16} \\
     5 Razonamiento & \mal{1/3} & 2/3 & \bien{3/3} & \bien{3/3} \\
     \bottomrule
   \end{tabular}
 
   \vspace{.8em}
   \begin{center}\footnotesize
-  La última columna se obtuvo enviando el informe a un servicio en la nube.
-  \textbf{Sólo es posible porque el informe es sintético}, y \alert{no es una
-  medición ciega}: se produjo con los patrones de evaluación a la vista.\\
-  Dice qué admite cada tarea —la 4 tiene solución— no cuánto separa a un modelo
-  de otro.
+  La última columna se obtiene enviando el informe a un modelo de frontera, con
+  los mismos prompts y \textbf{a ciegas}: sin los patrones de evaluación
+  delante.\\
+  \textbf{Sólo es posible porque el informe es sintético.}
   \end{center}
   \vspace{.4em}
   \centering\small Y es el techo, no una opción: para un informe real hay que

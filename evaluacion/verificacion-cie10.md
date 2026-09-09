@@ -38,47 +38,55 @@ qué significa «acierto» cuando se lo exigimos a una máquina.
 Para cada código que aparezca en `_sobrantes` de `evaluar.py --tarea 4 --detalle`,
 búsquelo en <https://eciemaps.sanidad.gob.es/> y anote el resultado.
 
-| Código | Lo emitió | ¿Existe en CIE-10-ES? | ¿Aplica a este caso? | Veredicto |
+| Código | Lo emitió | Veredicto | Por qué |
+|---|---|---|---|
+| `B96.2` | 27B | no facturable | categoría; exige 5.º carácter (B96.20/.21/.29) |
+| `E11.31` | 27B | no facturable | exige 5.º carácter (E11.311/E11.319) |
+| `E11.9` | 3B | no aplica | DM2 sin complicaciones; el paciente las tiene |
+| `F17.9` | 3B | no facturable | la serie facturable es F17.2xx |
+| `H36.0` | 27B | **NO EXISTE** | excluido en CIE-10-ES: la retinopatía diabética va en E11.3- |
+| `I10` | 3B, 8B, 27B | no aplica | la norma de combinación obliga a I13.0 |
+| `I12.0` | 3B | no aplica | hay insuficiencia cardíaca: I13.0 |
+| `I48.0` | 8B | no aplica | paroxística; el informe dice permanente (I48.21) |
+| `I48.2` | 27B | no facturable | exige 5.º carácter (I48.20/I48.21) |
+| `I48.9` | 3B | no facturable | exige 5.º carácter (I48.91/I48.92) |
+| `I50.21` | 8B | no aplica | sistólica aguda; aquí es diastólica crónica agudizada |
+| `I50.23` | 27B | no aplica | sistólica crónica agudizada; aquí diastólica (I50.33) |
+| `I50.31` | 3B | no aplica | diastólica aguda; aquí crónica agudizada (I50.33) |
+| `J41.9` | 3B | **NO EXISTE** | la categoría J41 sólo tiene .0, .1 y .8 |
+| `J44.0` | 8B | no aplica | EPOC con infección respiratoria baja; aquí es urinaria |
+| `J44.9` | 3B, 27B | no aplica | sin exacerbación; el informe la documenta (J44.1) |
+| `J96.0` | 8B | no facturable | exige 5.º carácter (J96.00/.01/.02) |
+| `J96.21` | 27B | no aplica | con hipoxia; el informe dice hipercapnia (J96.22) |
+| `K50.2` | 8B | **NO EXISTE** | la categoría K50 sólo tiene .0, .1, .8 y .9 |
+| `K50.9` | 3B | no facturable | exige 5.º carácter (K50.90...) |
+| `N18.5` | 8B | no aplica | estadio 5; el informe documenta estadio 4 |
+| `Z87.890` | 8B | no aplica | historia de otras condiciones; nicotina es Z87.891 |
+
+**Fuente y alcance.** Verificado contra ICD-10-CM, que es la clasificación de la
+que deriva CIE-10-ES, consultando las tablas publicadas (septiembre de 2026).
+**Falta el paso oficial**: comprobarlos en eCIE-Maps, porque la edición española
+puede diferir en algún código y es la que rige aquí. Los tres marcados como
+`NO EXISTE` son los que hay que buscar primero para la captura de la charla.
+
+Tres categorías, y las tres importan por motivos distintos:
+
+- **NO EXISTE** — el modelo se lo inventó. Es alucinación en sentido estricto.
+- **no facturable** — el código existe como categoría pero no es válido para
+  codificar: le falta el último carácter. En el CMBD es igual de inservible.
+- **no aplica** — existe y es válido, pero no describe a este paciente.
+
+### Recuento
+
+| Modelo | Fuera del patrón | NO EXISTE | No facturable | Existe, no aplica |
 |---|---|---|---|---|
-| `B96.2` | 27B | | | |
-| `E11.31` | 27B | | | |
-| `E11.9` | 3B | | | |
-| `F17.9` | 3B | | | |
-| `H36.0` | 27B | | | |
-| `I10` | 3B, 8B, 27B | | | |
-| `I12.0` | 3B | | | |
-| `I48.0` | 8B | | | |
-| `I48.2` | 27B | | | |
-| `I48.9` | 3B | | | |
-| `I50.21` | 8B | | | |
-| `I50.23` | 27B | | | |
-| `I50.31` | 3B | | | |
-| `J41.9` | 3B | | | |
-| `J44.0` | 8B | | | |
-| `J44.9` | 3B, 27B | | | |
-| `J96.0` | 8B | | | |
-| `J96.21` | 27B | | | |
-| `K50.2` | 8B | | | |
-| `K50.9` | 3B | | | |
-| `N18.5` | 8B | | | |
-| `Z87.890` | 8B | | | |
+| 3B | 9 | **1** (`J41.9`) | 3 | 5 |
+| 8B | 8 | **1** (`K50.2`) | 1 | 6 |
+| 27B | 8 | **1** (`H36.0`) | 3 | 4 |
+| Opus 5 | 0 | 0 | 0 | 0 |
 
-**Veredicto:** `correcto alternativo` / `existe pero no aplica` / `NO EXISTE`.
-
-Los 22 códigos de arriba son los que emitieron los modelos y no están ni en el
-patrón ni entre los discutibles. La tabla la genera
-`python3 scripts/evaluar.py --tarea 4 --detalle` en el campo `_sobrantes`.
-
-**Para la captura de la charla** (`11-ecie-sin-resultados.png`) busque primero
-los que tienen pinta de subcategoría inventada o de código no facturable, que
-son donde es más probable el «sin resultados»: `J41.9`, `I48.9`, `F17.9`,
-`K50.9`, `E11.9`, `J96.0`, `B96.2`, `I48.2`. Con uno que no exista basta: la
-diapositiva necesita **una** captura del buscador vacío.
-
-Sólo la última categoría es alucinación en sentido estricto, y es la única cifra
-que debe proyectar como tal. Es tentador contar los otros dos casos como fallo:
-no lo haga, porque alguien del público sabrá distinguirlos y perderá usted la
-credibilidad de toda la charla por dos décimas de una tabla.
+**Los tres modelos locales inventaron exactamente un código cada uno.** Ninguno
+de los tres se repite entre modelos, y los tres tienen aspecto impecable.
 
 ### Resumen para la diapositiva
 
