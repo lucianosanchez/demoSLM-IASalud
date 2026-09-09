@@ -38,19 +38,42 @@ qué significa «acierto» cuando se lo exigimos a una máquina.
 Para cada código que aparezca en `_sobrantes` de `evaluar.py --tarea 4 --detalle`,
 búsquelo en <https://eciemaps.sanidad.gob.es/> y anote el resultado.
 
-| Modelo | Código emitido | ¿Existe en CIE-10-ES? | ¿Aplica a este caso? | Veredicto |
+| Código | Lo emitió | ¿Existe en CIE-10-ES? | ¿Aplica a este caso? | Veredicto |
 |---|---|---|---|---|
-| 3B | | | | |
-| 3B | | | | |
-| 3B | | | | |
-| 8B | | | | |
-| 8B | | | | |
-| 8B | | | | |
-| 27B | | | | |
-| 27B | | | | |
-| 27B | | | | |
+| `B96.2` | 27B | | | |
+| `E11.31` | 27B | | | |
+| `E11.9` | 3B | | | |
+| `F17.9` | 3B | | | |
+| `H36.0` | 27B | | | |
+| `I10` | 3B, 8B, 27B | | | |
+| `I12.0` | 3B | | | |
+| `I48.0` | 8B | | | |
+| `I48.2` | 27B | | | |
+| `I48.9` | 3B | | | |
+| `I50.21` | 8B | | | |
+| `I50.23` | 27B | | | |
+| `I50.31` | 3B | | | |
+| `J41.9` | 3B | | | |
+| `J44.0` | 8B | | | |
+| `J44.9` | 3B, 27B | | | |
+| `J96.0` | 8B | | | |
+| `J96.21` | 27B | | | |
+| `K50.2` | 8B | | | |
+| `K50.9` | 3B | | | |
+| `N18.5` | 8B | | | |
+| `Z87.890` | 8B | | | |
 
 **Veredicto:** `correcto alternativo` / `existe pero no aplica` / `NO EXISTE`.
+
+Los 22 códigos de arriba son los que emitieron los modelos y no están ni en el
+patrón ni entre los discutibles. La tabla la genera
+`python3 scripts/evaluar.py --tarea 4 --detalle` en el campo `_sobrantes`.
+
+**Para la captura de la charla** (`11-ecie-sin-resultados.png`) busque primero
+los que tienen pinta de subcategoría inventada o de código no facturable, que
+son donde es más probable el «sin resultados»: `J41.9`, `I48.9`, `F17.9`,
+`K50.9`, `E11.9`, `J96.0`, `B96.2`, `I48.2`. Con uno que no exista basta: la
+diapositiva necesita **una** captura del buscador vacío.
 
 Sólo la última categoría es alucinación en sentido estricto, y es la única cifra
 que debe proyectar como tal. Es tentador contar los otros dos casos como fallo:

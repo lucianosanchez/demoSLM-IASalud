@@ -125,6 +125,69 @@ def comparacion_tarea3():
     return "\n".join(lineas)
 
 
+def tabla_modelos():
+    """Los modelos de la demo con lo que de verdad se midió de cada uno.
+
+    Sustituye a la captura de la lista de LM Studio: dice lo mismo —qué modelos
+    y cuánto ocupan— y además lo que la interfaz no enseña, que es a qué
+    velocidad respondieron y con qué ventana se cargaron.
+    """
+    datos = {}
+    for meta in RES.glob("*.meta.json"):
+        m = json.loads(meta.read_text(encoding="utf-8"))
+        d = datos.setdefault(m["etiqueta"], {"modelo": m["modelo"], "vel": [], "ctx": m.get("contexto"),
+                                             "raz": 0, "seg": 0.0})
+        if m.get("tokens_por_segundo"):
+            d["vel"].append(m["tokens_por_segundo"])
+        d["raz"] += m.get("tokens_razonamiento") or 0
+        d["seg"] += m.get("segundos") or 0
+    if not datos:
+        return None
+
+    L = [f"{'':6s} {'modelo':26s} {'ventana':>9s} {'tok/s':>7s} {'las 5 tareas':>13s}"]
+    for e in [x for x in ORDEN if x in datos] + sorted(set(datos) - set(ORDEN)):
+        d = datos[e]
+        vel = f"{sum(d['vel'])/len(d['vel']):.0f}" if d["vel"] else "-"
+        ctx = f"{d['ctx']:,}".replace(",", ".") if d["ctx"] else "-"
+        seg = f"{d['seg']/60:.1f} min" if d["seg"] else "-"
+        L.append(f"{e:6s} {d['modelo'][:26]:26s} {ctx:>9s} {vel:>7s} {seg:>13s}")
+    L.append("")
+    L.append("tokens de razonamiento consumidos en las cinco tareas:")
+    for e in [x for x in ORDEN if x in datos]:
+        if datos[e]["raz"]:
+            L.append(f"  {e:5s} {datos[e]['raz']:>7d}")
+    return "\n".join(L)
+
+
+def tabla_velocidad():
+    """tok/s tarea a tarea. Es la cifra que sostiene el bloque de hardware."""
+    datos, tareas = {}, []
+    for meta in sorted(RES.glob("*.meta.json")):
+        m = json.loads(meta.read_text(encoding="utf-8"))
+        if not m.get("tokens_por_segundo"):
+            continue
+        t = m["tarea"][:2]
+        if t not in tareas:
+            tareas.append(t)
+        datos[(t, m["etiqueta"])] = m
+    if not datos:
+        return None
+    etiquetas = [e for e in ORDEN if any(k[1] == e for k in datos)]
+
+    L = [f"{'tarea':24s}" + "".join(f"{e:>10s}" for e in etiquetas)]
+    nombres = {"01": "1 anonimización", "02": "2 extracción", "03": "3 reescritura",
+               "04": "4 codificación", "05": "5 razonamiento"}
+    for t in sorted(tareas):
+        fila = "".join(f"{datos[(t, e)]['tokens_por_segundo']:>10.0f}" if (t, e) in datos else f"{'-':>10s}"
+                       for e in etiquetas)
+        L.append(f"{nombres.get(t, t):24s}{fila}")
+    L.append("")
+    L.append(f"{'segundos por tarea':24s}" + "".join(
+        f"{sum(datos[(t, e)]['segundos'] for t in tareas if (t, e) in datos)/len(tareas):>10.0f}"
+        for e in etiquetas))
+    return "\n".join(L)
+
+
 def salida_del_evaluador(*args):
     r = subprocess.run([sys.executable, str(RAIZ / "scripts" / "evaluar.py"), *args],
                        capture_output=True, text=True, cwd=RAIZ)
@@ -182,6 +245,8 @@ def recetas():
     r.append(("12-t5-falsas-alarmas", primeras(t, 17) if t else None))
 
     r.append(("19-trazador-matriz", salida_del_evaluador("--trazador")))
+    r.append(("02-modelos", tabla_modelos()))
+    r.append(("13-velocidad", tabla_velocidad()))
     return r
 
 

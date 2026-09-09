@@ -243,8 +243,8 @@
 
 \begin{frame}{Los tres tamaños de hoy}
   \centering
-  \captura[0.8\linewidth]{02-lmstudio-modelos.png}{Lista de modelos en LM Studio
-  con los tres tamaños y los GB que ocupa cada uno}
+  \salida[\scriptsize]{02-modelos}{Los modelos de la demo: ventana, velocidad
+  y tiempo total de las cinco tareas}
 
   \vspace{.6em}
   \begin{tabular}{@{}lccl@{}}
@@ -628,25 +628,28 @@
   \centering\small
   \begin{tabular}{@{}lcccc@{}}
     \toprule
-    \textbf{Tarea} & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Modelo de frontera} \\
+    \textbf{Tarea} & \textbf{3B} & \textbf{8B} & \textbf{27B} & \textbf{Opus~5} \\
     \midrule
-    1 Anonimización & & & & \\
-    2 Extracción & & & & \\
-    3 Reescritura & & & & \\
+    1 Anonimización & \mal{30/46} & \mal{33/46} & \bien{46/46} & \bien{46/46} \\
+    2 Extracción & 13/14 & \bien{14/14} & \bien{14/14} & \bien{14/14} \\
+    3 Reescritura & \mal{11/13} & 12/13 & \bien{13/13} & \bien{13/13} \\
     \midrule
-    4 Codificación & & & & \\
-    5 Razonamiento & & & & \\
+    4 Codificación & \mal{1/16} & \mal{2/16} & \mal{5/16} & \bien{16/16} \\
+    5 Razonamiento & \mal{1/3} & 2/3 & \bien{3/3} & \bien{3/3} \\
     \bottomrule
   \end{tabular}
 
-  \vspace{1em}
+  \vspace{.8em}
   \begin{center}\footnotesize
-  La última columna se obtuvo enviando el informe a un servicio en la nube.\\
-  \textbf{Sólo es posible porque el informe es sintético.}
+  La última columna se obtuvo enviando el informe a un servicio en la nube.
+  \textbf{Sólo es posible porque el informe es sintético}, y \alert{no es una
+  medición ciega}: se produjo con los patrones de evaluación a la vista.\\
+  Dice qué admite cada tarea —la 4 tiene solución— no cuánto separa a un modelo
+  de otro.
   \end{center}
-  \vspace{.6em}
-  \centering\small Es el techo, no una opción: para un informe real hay que enviar
-  el documento.
+  \vspace{.4em}
+  \centering\small Y es el techo, no una opción: para un informe real hay que
+  enviar el documento.
 \end{frame}
 
 % =====================================================================
@@ -696,15 +699,16 @@
 
 \begin{frame}{Medido, no estimado}
   \begin{columns}[c]
-    \column{.48\textwidth}\centering
-      \captura{13-lmstudio-velocidad.png}{Barra de estado de LM Studio con los
-      tok/s de un modelo grande}
-    \column{.48\textwidth}\centering
+    \column{.56\textwidth}
+      \salida[\tiny]{13-velocidad}{tok/s medidos, tarea a tarea}
+    \column{.42\textwidth}\centering
+      {\setlength{\altocaptura}{0.38\textheight}%
       \captura{14-monitor-memoria.png}{Monitor de actividad con la memoria
-      ocupada al cargar el 27B}
+      ocupada al cargar el 27B}}
   \end{columns}
-  \vspace{.6em}
-  \centering\footnotesize Estas dos cifras están medidas en la máquina de la demo, no sacadas de una tabla.
+  \vspace{.4em}
+  \centering\footnotesize Cifras de esta máquina, no de una tabla. El 27B tarda
+  \textbf{20 minutos por tarea}; el 3B, \textbf{16 segundos}.
 \end{frame}
 
 \begin{frame}{La fila d}
