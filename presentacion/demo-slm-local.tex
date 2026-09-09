@@ -490,7 +490,7 @@
   \end{tabular}
 
   \vspace{.8em}
-  {\footnotesize Las dos últimas filas se comprueban a mano, código a código.
+  {\footnotesize Los 22 códigos fuera del patrón, comprobados uno a uno.
   \emph{No facturable} = existe como categoría pero le falta el último carácter:
   en el CMBD es igual de inservible.\par}
 
@@ -503,18 +503,25 @@
 
 \begin{frame}{El esquema le obliga a devolver algo con forma de código}
   \centering
-  \captura[0.62\linewidth]{11-ecie-sin-resultados.png}{eCIE-Maps buscando uno de
-  los códigos que emitieron los modelos: «sin resultados»}
+  \begin{columns}[T]
+    \column{.45\textwidth}\centering
+      {\setlength{\altocaptura}{0.42\textheight}%
+      \captura{11-ecie-sin-resultados.png}{eCIE-Maps buscando \texttt{J41.9}:
+      «sin resultados»}}
 
-  \vspace{.6em}
-  {\small Cada modelo se inventó \textbf{uno}, y ninguno coincide:\\
-  \mal{\texttt{J41.9}} el 3B \quad \mal{\texttt{K50.2}} el 8B \quad
-  \mal{\texttt{H36.0}} el 27B\par}
+      \vspace{.6em}
+      {\small Cada modelo se inventó \textbf{uno}, y ninguno coincide:\\[.3em]
+      \mal{\texttt{J41.9}} el 3B\\
+      \mal{\texttt{K50.2}} el 8B\\
+      \mal{\texttt{H36.0}} el 27B\par}
+    \column{.53\textwidth}
+      \salida[\tiny]{11-codigos}{Los 22 códigos fuera del patrón, con su
+      veredicto}
+  \end{columns}
 
-  \vspace{.5em}
-  \texttt{J41.9} tiene exactamente el mismo aspecto que \texttt{J41.0}, que sí
-  existe.\\[.2em]
-  \mal{El esquema no distingue el que existe del que no.}
+  \vspace{.3em}
+  \centering\small \texttt{J41.9} tiene el mismo aspecto que \texttt{J41.0},
+  que sí existe. \mal{El esquema no distingue uno del otro.}
 \end{frame}
 
 \begin{frame}{Tarea 5 — Tres incoherencias plantadas}

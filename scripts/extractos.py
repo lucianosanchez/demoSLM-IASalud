@@ -188,6 +188,49 @@ def tabla_velocidad():
     return "\n".join(L)
 
 
+def codigos_verificados():
+    """Los códigos emitidos y su veredicto, leídos de la hoja de verificación.
+
+    La fuente es evaluacion/verificacion-cie10.md, que es donde se anota lo que
+    dice eCIE-Maps. Si un veredicto cambia allí, cambia aquí y en la diapositiva:
+    no hay una segunda copia que se pueda quedar vieja.
+    """
+    f = RAIZ / "evaluacion" / "verificacion-cie10.md"
+    if not f.exists():
+        return None
+    filas = []
+    for linea in f.read_text(encoding="utf-8").splitlines():
+        if not linea.startswith("| `"):
+            continue
+        celdas = [c.strip(" `*") for c in linea.strip("|").split("|")]
+        if len(celdas) >= 4 and celdas[2]:
+            filas.append(celdas[:4])
+    if not filas:
+        return None
+
+    # En la diapositiva sólo caben los que son un problema de verdad; los que
+    # existen y son válidos pero no describen a este paciente van contados.
+    orden = {"NO EXISTE": 0, "no facturable": 1}
+    graves = sorted((f for f in filas if f[2] in orden), key=lambda f: (orden[f[2]], f[0]))
+    otros = [f for f in filas if f[2] not in orden]
+    ancho = max(len(f[0]) for f in graves) if graves else 6
+
+    L, actual = [], None
+    titulos = {"NO EXISTE": "NO EXISTEN. El modelo se los inventó:",
+               "no facturable": "NO SON FACTURABLES. Les falta el último carácter:"}
+    for cod, quien, veredicto, porque in graves:
+        if veredicto != actual:
+            actual = veredicto
+            L += ["", titulos[veredicto]]
+        L.append(f"  {cod:<{ancho}}  {quien:<10s} {porque[:52]}")
+    if otros:
+        L += ["", f"Y otros {len(otros)} que existen y son válidos, pero no describen",
+              "a este paciente (I10 en vez de I13.0, J44.9 en vez de J44.1,",
+              "N18.5 en vez de N18.4...). La lista entera, con el porqué de",
+              "cada uno, en evaluacion/verificacion-cie10.md"]
+    return "\n".join(L).strip()
+
+
 def salida_del_evaluador(*args):
     r = subprocess.run([sys.executable, str(RAIZ / "scripts" / "evaluar.py"), *args],
                        capture_output=True, text=True, cwd=RAIZ)
@@ -247,6 +290,7 @@ def recetas():
     r.append(("19-trazador-matriz", salida_del_evaluador("--trazador")))
     r.append(("02-modelos", tabla_modelos()))
     r.append(("13-velocidad", tabla_velocidad()))
+    r.append(("11-codigos", codigos_verificados()))
     return r
 
 
