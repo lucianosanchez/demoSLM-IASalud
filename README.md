@@ -168,7 +168,7 @@ Principado de Asturias:
   despliega (art. 3.h, supervisión humana; art. 12, verificación previa).
 - La tarea 5 termina en retirada del modelo (art. 29).
 
-Un modelo local elimina las preguntas del art. 23 —encargado del tratamiento,
-subencargados, ubicación de los datos, transferencias—. **No elimina** el resto.
+Al usarse un modelo local, el art. 23 (encargado del tratamiento,
+subencargados, ubicación de los datos, transferencias) se cumple. 
 
 ---
