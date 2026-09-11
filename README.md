@@ -1,21 +1,20 @@
 # Modelos de lenguaje pequeños en local: qué se pierde y qué se gana
 
 Material de la demostración presentada en **IAS 2026**
-(<https://asturiasias.github.io/ias2026/>) por Luciano Sánchez.
+(<https://asturiasias.github.io/ias2026/>) por Luciano Sánchez (Cátedra de Análisis Inteligente de Datos relacionados con la Salud, Universidad de Oviedo/Principado de Asturias).
 
 **Cinco tareas clínicas de dificultad creciente sobre un mismo informe de alta,
 en tres tamaños de modelo, ejecutadas en local y sin conexión a la red.**
 
-### 👉 [Ver los resultados](RESULTADOS.md) · [el informe de alta](informes/informe-alta-001.txt) · [los prompts](prompts/) · [la presentación en PDF](presentacion/demo-slm-local.pdf)
+### [Ver los resultados](RESULTADOS.md) · [el informe de alta](informes/informe-alta-001.txt) · [los prompts](prompts/) · [la presentación en PDF](presentacion/demo-slm-local.pdf)
 
-El informe es **sintético**: ningún dato corresponde a una persona real. Por eso
-se puede publicar entero, y por eso se pudo ejecutar la referencia en la nube.
+El informe es **sintético**: ningún dato corresponde a una persona real. 
 
 ---
 
 ## Las cinco tareas
 
-| # | Tarea | Qué exige de verdad | Tamaño mínimo |
+| # | Tarea | Qué exige  | Tamaño mínimo |
 |---|---|---|---|
 | 1 | Anonimización / seudonimización | Reconocer entidades | 3B |
 | 2 | Extracción estructurada | Leer y ordenar | 3B–8B |
@@ -45,14 +44,15 @@ correcto es opuesto según la tarea**:
 
 Un modelo que en la tarea 3 escriba «no tome este antibiótico, usted es alérgico»
 tiene razón **y ha incumplido el contrato**. Ésa es la diferencia entre
-transformar un texto y validarlo, y es medible:
+transformar un texto y validarlo. Esto se mide de la forma siguiente:
 
 ```bash
 make trazador
 ```
 
-Toda la evidencia necesaria está dentro del informe, así que cuando la tarea 5
-no lo detecta no vale la excusa de que el modelo no sabe medicina. Definición
+Toda la evidencia necesaria está dentro del informe. Si la tarea 5
+no lo detecta es un error y no una consecuencia de la falta de conocimientos
+de medicina del modelo. Definición
 completa en [`evaluacion/trazador.json`](evaluacion/trazador.json).
 
 ---
@@ -62,7 +62,7 @@ completa en [`evaluacion/trazador.json`](evaluacion/trazador.json).
 ### 1. LM Studio
 
 Instale [LM Studio](https://lmstudio.ai), descargue los tres modelos indicados en
-[`docs/MODELOS.md`](docs/MODELOS.md) —la mejor cuantización que le quepa— y arranque el
+[`docs/MODELOS.md`](docs/MODELOS.md) (elija una cuantización apropiada para su equipo) y arranque el
 servidor local:
 
 ```bash
@@ -117,18 +117,16 @@ tanda puede irse a varias horas.
 
 ---
 
-## Qué hay en cada sitio
+## Qué contiene cada carpeta
 
 ```
 informes/       El informe de alta sintético
-prompts/        Los cinco prompts, con sus parámetros y notas para el ponente
+prompts/        Los cinco prompts, con sus parámetros
   schemas/      Los esquemas JSON que convierten el prompt en un contrato
-evaluacion/     Los patrones de oro, el trazador, la rúbrica y la verificación CIE-10
-scripts/        ejecutar.py, evaluar.py, hardware.py — sin dependencias
+evaluacion/     Los patrones, el trazador, la rúbrica y la verificación CIE-10
+scripts/        ejecutar.py, evaluar.py, hardware.py 
 resultados/     Salidas de los modelos y sus .meta.json (trazabilidad)
-presentacion/   La charla en Beamer
-  extractos/    El texto que se proyecta, recortado de resultados/ (generado)
-  img/          Las cuatro capturas de pantalla que hay que hacer a mano
+presentacion/   La charla en PDF
 docs/           MODELOS.md, REFERENCIA-NUBE.md, CAPTURAS.md
 ```
 
@@ -143,10 +141,10 @@ python3 scripts/hardware.py --params 70 --ancho-banda 100
 
 **Memoria.** En cuantización de 4 bits, ~0,6 GB por cada mil millones de
 parámetros, más el contexto. 8B ≈ 5 GB · 27B ≈ 17 GB · 70B ≈ 42 GB. A 8 bits,
-el doble. Y la caché KV sin cuantizar cuesta unos 7 GB en un 27B con 32k de
+el doble. La caché KV sin cuantizar cuesta unos 7 GB en un 27B con 32k de
 contexto.
 
-**Velocidad.** Generar un token obliga a leer todos los pesos, así que
+**Velocidad.** Generar un token obliga a leer todos los pesos, luego
 
 ```
 tokens/s = ancho de banda de la memoria (GB/s) / tamaño del modelo (GB)
@@ -158,7 +156,7 @@ En la práctica se alcanza entre el 50 % y el 80 % de ese techo.
 
 ## Marco normativo
 
-La demostración está construida para ser conforme al **Decreto 98/2025** del
+La demostración es conforme con el **Decreto 98/2025** del
 Principado de Asturias:
 
 - El informe es **sintético**: ningún dato corresponde a una persona real.
