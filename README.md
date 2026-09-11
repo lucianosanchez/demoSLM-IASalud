@@ -100,8 +100,7 @@ Son 15 ejecuciones (3 modelos × 5 tareas). Cargue los modelos **de uno en
 uno**: si LM Studio mantiene los tres en memoria, los tokens/s que mida no serán
 los reales.
 
-**¿Y si su máquina es más modesta?** El contexto y la cuantización se eligen al
-cargar el modelo en LM Studio, no aquí. En 32 GB —un Mac de memoria unificada o
+En 32 GB —un Mac de memoria unificada o
 un PC con NVIDIA— cabe el mismo 27B **a 4 bits** con 16k de contexto: unos 20 GB.
 Lo único que se pasa por la API es el presupuesto de salida:
 
@@ -135,7 +134,7 @@ docs/           MODELOS.md, REFERENCIA-NUBE.md, CAPTURAS.md
 
 ---
 
-## Hardware: las dos reglas
+## Hardware: 
 
 ```bash
 make hardware
