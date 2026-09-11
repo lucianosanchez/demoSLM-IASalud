@@ -83,8 +83,8 @@ hay que pasar en `--modelo`.
 
 ### 3. Ejecutarla entera y compilar la charla
 
-Un solo comando hace **todo** y en el orden correcto —las ejecuciones, la tabla
-y el PDF—:
+Generar las ejecuciones, la tabla
+y el PDF:
 
 ```bash
 make todo
