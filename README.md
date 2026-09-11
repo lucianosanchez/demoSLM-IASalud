@@ -12,17 +12,6 @@ El informe es **sintético**: ningún dato corresponde a una persona real. Por e
 se puede publicar entero, y por eso se pudo ejecutar la referencia en la nube.
 
 ---
-El mensaje de la demostración cabe en dos frases:
-
-> Las tareas 1–3 consisten en extraer y reformular información **que ya está en
-> el texto**. Las tareas 4–5 exigen conocimiento **que tiene que estar dentro de
-> los pesos**. Los parámetros gastan memoria, y el tamaño importa muchísimo en
-> unas tareas y casi nada en otras.
-
-Todo lo que hay aquí se ejecuta en un portátil con LM Studio y Python 3 de
-sistema. **No hay dependencias que instalar.**
-
----
 
 ## Las cinco tareas
 
