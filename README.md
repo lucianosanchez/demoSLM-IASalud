@@ -126,30 +126,6 @@ comparativa está en [`docs/MODELOS.md`](docs/MODELOS.md).
 Si su modelo grande razona, gastará muchos más tokens de los que devuelve y la
 tanda puede irse a varias horas.
 
-Por partes, si prefiere ir viendo:
-
-| Paso | Comando | Qué hace |
-|---|---|---|
-| 1 | `make demo` | Las 5 tareas en los 3 modelos, y puntúa |
-| 2 | `make tabla` | `presentacion/tabla-resultados.tex` — **necesita el paso 1 hecho**, porque lee todo `resultados/` |
-| 3 | `make presentacion` | Compila el PDF, que incorpora esa tabla |
-
-Ese orden importa: la tabla resume lo que haya en `resultados/` en ese momento, y
-el PDF incorpora la tabla que exista al compilar.
-
-`make evaluar` y `make trazador` se pueden repetir cuando quiera: no vuelven a
-llamar a ningún modelo, sólo releen `resultados/`.
-
-El PDF compila **aunque no haya nada todavía**: cada hueco aparece como un
-recuadro con el nombre del fichero que falta, y el `make` le enumera cuáles son.
-
-Las diapositivas que enseñan salidas de los modelos no llevan capturas de
-pantalla: leen el texto recortado de `resultados/` por `make extractos`, así que
-se rellenan solas al ejecutar la demo. Capturas de verdad hacen falta cuatro, las
-que este repositorio no puede producir —la ventana de LM Studio, su barra de
-velocidad, el monitor de memoria y el «sin resultados» de eCIE-Maps—: están en
-[`docs/CAPTURAS.md`](docs/CAPTURAS.md). El QR lo genera LaTeX; sólo hay que poner
-la URL en `\newcommand{\urlrepo}{...}` al principio del `.tex`.
 
 ---
 
@@ -180,12 +156,7 @@ python3 scripts/hardware.py --params 70 --ancho-banda 100
 **Memoria.** En cuantización de 4 bits, ~0,6 GB por cada mil millones de
 parámetros, más el contexto. 8B ≈ 5 GB · 27B ≈ 17 GB · 70B ≈ 42 GB. A 8 bits,
 el doble. Y la caché KV sin cuantizar cuesta unos 7 GB en un 27B con 32k de
-contexto: no es un detalle, es la diferencia entre caber en un portátil o no.
-
-Y el corolario que ahorra dinero: **antes de comprar memoria para meter un modelo
-más grande, gaste la que ya tiene en servir mejor uno mediano.** Un 120B a 4 bits
-ocupa 87 GB, va a 3–5 tok/s y responde peor que un 27B a 8 bits con contexto
-amplio, que ocupa 36 GB y va a 9–14.
+contexto.
 
 **Velocidad.** Generar un token obliga a leer todos los pesos, así que
 
@@ -193,14 +164,7 @@ amplio, que ocupa 36 GB y va a 9–14.
 tokens/s = ancho de banda de la memoria (GB/s) / tamaño del modelo (GB)
 ```
 
-En la práctica se alcanza entre el 50 % y el 80 % de ese techo. De ahí sale la
-conclusión que más dinero ahorra: **un servidor con 512 GB de RAM y sin GPU carga
-un modelo de 70B y lo ejecuta a 1–2 tokens por segundo.** Mucha RAM y rápido no
-son lo mismo.
-
-Y la concurrencia: un portátil sirve a una persona; 200 usuarios simultáneos
-exigen procesar por lotes, y procesar por lotes exige GPU. El coste no escala con
-lo listo que sea el modelo, sino con cuánta gente lo usa a la vez.
+En la práctica se alcanza entre el 50 % y el 80 % de ese techo. 
 
 ---
 
@@ -218,37 +182,5 @@ Principado de Asturias:
 
 Un modelo local elimina las preguntas del art. 23 —encargado del tratamiento,
 subencargados, ubicación de los datos, transferencias—. **No elimina** el resto.
-Cumplir es más fácil; no es automático.
 
 ---
-
-## Avisos
-
-**La propuesta de codificación CIE-10 de `evaluacion/gold-04-cie10.json` no es un
-patrón certificado.** Es una propuesta razonada que debe validar un técnico de
-documentación clínica antes de proyectar ninguna cifra en público. Los códigos
-marcados con confianza media o baja son precisamente los discutibles, y esa
-discusión es material de charla.
-
-**Las métricas de las tareas 3 y 5 son heurísticas** para comparar modelos entre
-sí sobre un único informe. No son una validación clínica ni un estudio.
-
-**Las tres incoherencias de la tarea 5 están plantadas a propósito.** Dígalo en
-voz alta antes de ejecutarla.
-
----
-
-## Licencia
-
-El informe sintético, los prompts, los patrones de evaluación y los scripts se
-publican para que cualquier asistente pueda reproducir la demostración en su
-propio hardware. Los modelos son de sus respectivos autores y cada uno tiene su
-propia licencia: revísela antes de cualquier uso que no sea esta demostración.
-
----
-
-## Los resultados
-
-Las salidas de los tres modelos sobre este informe, tarea por tarea, están en
-[**RESULTADOS.md**](RESULTADOS.md) y en [`resultados/`](resultados/), con el
-`.meta.json` de cada ejecución: modelo, parámetros, tiempos y tokens.
